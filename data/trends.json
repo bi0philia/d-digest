@@ -1,75 +1,107 @@
 {
-  "updated_at": "2026-11-09 13:40",
+  "updated_at": "2026-11-12 11:29",
   "total_digests": 22,
   "total_papers_analyzed": 176,
-  "total_gurus": 17,
+  "total_gurus": 7,
   "total_periodicals": 50,
-  "total_tracked_keywords": 11,
+  "total_tracked_keywords": 17,
   "category_distribution": [
     {
       "category": "공간사회·도시커먼즈",
-      "count": 66
+      "count": 61
     },
     {
       "category": "재난안전·공공인프라",
-      "count": 43
+      "count": 41
     },
     {
       "category": "농생태·식량주권",
-      "count": 37
+      "count": 33
     },
     {
       "category": "시빅HCI·UXR",
-      "count": 23
+      "count": 20
     },
     {
       "category": "과학기술학·STS",
-      "count": 7
+      "count": 18
+    },
+    {
+      "category": "돌봄·상호부조",
+      "count": 2
+    },
+    {
+      "category": "커먼즈·공유재",
+      "count": 1
     }
   ],
   "top_keywords": [
     {
       "keyword": "#공간사회",
-      "count": 66
+      "count": 61
     },
     {
       "keyword": "#도시공간",
-      "count": 54
+      "count": 51
     },
     {
       "keyword": "#재난안전",
-      "count": 43
+      "count": 41
     },
     {
       "keyword": "#농생태",
-      "count": 37
+      "count": 33
+    },
+    {
+      "keyword": "#동시대학술",
+      "count": 31
     },
     {
       "keyword": "#다종공생",
-      "count": 26
+      "count": 21
     },
     {
       "keyword": "#시빅HCI",
-      "count": 23
-    },
-    {
-      "keyword": "#커머닝",
       "count": 20
     },
     {
-      "keyword": "#토지개간미술",
-      "count": 7
-    },
-    {
       "keyword": "#과학기술학",
-      "count": 7
+      "count": 18
     },
     {
-      "keyword": "#비건에코페미니즘",
+      "keyword": "#커머닝",
+      "count": 18
+    },
+    {
+      "keyword": "#책임있는AI",
+      "count": 12
+    },
+    {
+      "keyword": "#존중의수사학",
+      "count": 3
+    },
+    {
+      "keyword": "#알고리즘정의",
+      "count": 2
+    },
+    {
+      "keyword": "#돌봄",
+      "count": 2
+    },
+    {
+      "keyword": "#대지윤리",
+      "count": 2
+    },
+    {
+      "keyword": "#태양성에너지",
       "count": 1
     },
     {
-      "keyword": "#참여디자인",
+      "keyword": "#자원추출주의",
+      "count": 1
+    },
+    {
+      "keyword": "#커먼즈",
       "count": 1
     }
   ],
