@@ -4,6 +4,11 @@ import re
 from collections import Counter
 from datetime import datetime
 
+try:
+    from researcher_engine import update_gurus_file
+except ImportError:
+    update_gurus_file = None
+
 WEB_DATA_DIR = os.path.join(os.path.dirname(__file__), "web", "data")
 ARCHIVE_FILE = os.path.join(WEB_DATA_DIR, "archive.json")
 LATEST_FILE = os.path.join(WEB_DATA_DIR, "latest_digest.json")
@@ -130,6 +135,13 @@ def export_digest(curated_items, daily_summary=None, edition="morning"):
 
     with open(TRENDS_FILE, "w", encoding="utf-8") as f:
         json.dump(trends, f, ensure_ascii=False, indent=2)
+
+    # 4. 동시대 핫한 연구자 및 올타임 레전드 인덱스 동적 갱신
+    if update_gurus_file:
+        try:
+            update_gurus_file(archive)
+        except Exception as ge:
+            print(f"Notice: Failed to update gurus dynamically: {ge}")
 
     print(f"Exported web digest to {LATEST_FILE} & {ARCHIVE_FILE}")
 

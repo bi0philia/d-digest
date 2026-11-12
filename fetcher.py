@@ -42,6 +42,36 @@ def reconstruct_abstract(inverted_index):
     return " ".join(w[1] for w in word_pos)
 
 
+def get_best_url(item):
+    """안전하고 접근 가능한 최적의 학술 URL 도출 (DOI, 랜딩페이지, 오픈액세스 URL 검증)"""
+    doi = item.get("doi")
+    prim_loc = item.get("primary_location") or {}
+    landing_url = prim_loc.get("landing_page_url")
+    best_oa = item.get("best_oa_location") or {}
+    oa_url = best_oa.get("landing_page_url") or item.get("open_access", {}).get("oa_url")
+
+    # Humanities Commons / MLA Core(10.17613) 등 로그인 루프가 발생할 수 있는 DOI는 랜딩페이지 우선
+    if doi and "10.17613" in doi and landing_url:
+        return landing_url
+
+    if doi:
+        if not doi.startswith("http"):
+            return f"https://doi.org/{doi}"
+        return doi
+
+    if landing_url:
+        return landing_url
+
+    if oa_url:
+        return oa_url
+
+    openalex_id = item.get("id")
+    if openalex_id and openalex_id.startswith("http"):
+        return openalex_id
+
+    return ""
+
+
 def fetch_openalex_journal(journal_config, limit=6):
     """OpenAlex API를 통해 특정 핵심 저널의 최신 논문 수집"""
     results = []
@@ -63,12 +93,13 @@ def fetch_openalex_journal(journal_config, limit=6):
                         name = auth.get("display_name", "")
                         if name:
                             authors.append(name)
-                doi = item.get("doi") or item.get("id")
+                best_url = get_best_url(item)
+                item_id = item.get("doi") or item.get("id") or best_url
                 results.append({
-                    "id": doi,
+                    "id": item_id,
                     "title": title,
                     "abstract": abstract[:1000] if abstract else "Abstract not available in metadata.",
-                    "url": doi,
+                    "url": best_url,
                     "source": journal_config["name"],
                     "category": journal_config["category"],
                     "authors": ", ".join(filter(None, authors)) or "연구진",
@@ -102,15 +133,16 @@ def fetch_openalex_search(query_config, limit=6):
                         if name:
                             authors.append(name)
 
-                doi = item.get("doi") or item.get("id")
+                best_url = get_best_url(item)
+                item_id = item.get("doi") or item.get("id") or best_url
                 prim_loc = item.get("primary_location") or {}
                 source_obj = prim_loc.get("source") or {}
                 source_name = source_obj.get("display_name") or "Scholarly Pre-print / Journal"
                 results.append({
-                    "id": doi,
+                    "id": item_id,
                     "title": title,
                     "abstract": abstract[:1000] if abstract else "",
-                    "url": doi,
+                    "url": best_url,
                     "source": source_name,
                     "category": query_config["category"],
                     "authors": ", ".join(filter(None, authors)) or "연구진",
