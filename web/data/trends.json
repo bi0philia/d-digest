@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-18 17:03",
+  "updated_at": "2026-11-18 17:39",
   "total_digests": 40,
   "total_papers_analyzed": 321,
   "total_gurus": 38,
@@ -8,11 +8,11 @@
   "category_distribution": [
     {
       "category": "농생태·식량주권",
-      "count": 86
+      "count": 90
     },
     {
       "category": "공간사회·도시커먼즈",
-      "count": 81
+      "count": 82
     },
     {
       "category": "재난안전·공공인프라",
@@ -24,33 +24,37 @@
     },
     {
       "category": "시빅HCI·UXR",
-      "count": 26
-    },
-    {
-      "category": "커먼즈·공유재",
-      "count": 8
+      "count": 24
     },
     {
       "category": "돌봄·상호부조",
       "count": 8
+    },
+    {
+      "category": "커먼즈·공유재",
+      "count": 5
     }
   ],
   "top_keywords": [
     {
       "keyword": "#동시대학술",
-      "count": 168
+      "count": 164
     },
     {
       "keyword": "#농생태",
-      "count": 86
+      "count": 90
     },
     {
       "keyword": "#공간사회",
-      "count": 81
+      "count": 82
     },
     {
       "keyword": "#재난안전",
       "count": 58
+    },
+    {
+      "keyword": "#책임있는AI",
+      "count": 55
     },
     {
       "keyword": "#과학기술학",
@@ -58,18 +62,10 @@
     },
     {
       "keyword": "#도시공간",
-      "count": 53
-    },
-    {
-      "keyword": "#책임있는AI",
-      "count": 47
+      "count": 54
     },
     {
       "keyword": "#시빅HCI",
-      "count": 26
-    },
-    {
-      "keyword": "#커머닝",
       "count": 24
     },
     {
@@ -77,12 +73,12 @@
       "count": 23
     },
     {
-      "keyword": "#존중의수사학",
-      "count": 9
+      "keyword": "#커머닝",
+      "count": 22
     },
     {
-      "keyword": "#커먼즈",
-      "count": 8
+      "keyword": "#존중의수사학",
+      "count": 9
     },
     {
       "keyword": "#돌봄",
@@ -90,10 +86,14 @@
     },
     {
       "keyword": "#대지윤리",
-      "count": 6
+      "count": 7
     },
     {
       "keyword": "#알고리즘정의",
+      "count": 5
+    },
+    {
+      "keyword": "#커먼즈",
       "count": 5
     },
     {
@@ -101,19 +101,19 @@
       "count": 4
     },
     {
+      "keyword": "#돌봄소통",
+      "count": 2
+    },
+    {
+      "keyword": "#참여디자인",
+      "count": 1
+    },
+    {
+      "keyword": "#위기안전망",
+      "count": 1
+    },
+    {
       "keyword": "#에코페미니즘",
-      "count": 1
-    },
-    {
-      "keyword": "#농민협동",
-      "count": 1
-    },
-    {
-      "keyword": "#녹색사회복지",
-      "count": 1
-    },
-    {
-      "keyword": "#태양성에너지",
       "count": 1
     }
   ],
