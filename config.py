@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import os
 
 # ==============================================================================
@@ -81,66 +82,67 @@ TARGET_JOURNALS = [
 ]
 
 # 학술 검색 쿼리 (OpenAlex & arXiv - STS, 시빅HCI, 공간/도시, 농생태, 에코페미니즘, 생태예술)
+# 단어 단위 오탐을 방지하기 위해 복합 구문은 따옴표 표기 사용
 SCHOLARLY_QUERIES = [
     {
         "name": "Ecofeminism & Feminist New Materialism (에코페미니즘 & 신유물론)",
         "category": "농생태·식량주권",
         "type": "openalex_search",
-        "query": "ecofeminism OR feminist new materialism OR multispecies care OR posthuman feminism OR bodily materialism OR rosi braidotti"
+        "query": '"ecofeminism" OR "feminist new materialism" OR "multispecies care" OR "posthuman feminism" OR "bodily materialism" OR "rosi braidotti"'
     },
     {
         "name": "Reclamation Art & Environmental Aesthetics (토지 개간 미술 & 생태미학)",
         "category": "농생태·식량주권",
         "type": "openalex_search",
-        "query": "reclamation art OR ecological restoration art OR environmental aesthetics OR land art ecology OR dialogical art OR agnes denes"
+        "query": '"reclamation art" OR "ecological restoration art" OR "environmental aesthetics" OR "land art ecology" OR "dialogical art" OR "agnes denes"'
     },
     {
         "name": "Caring Commons & Seed Sovereignty (돌봄 커먼즈 & 종자주권·메티스)",
         "category": "커먼즈·공유재",
         "type": "openalex_search",
-        "query": "caring commons OR seed commons OR food sovereignty OR metis local knowledge OR reproductive labor commons OR seed saving"
+        "query": '"caring commons" OR "seed commons" OR "food sovereignty" OR "seed sovereignty" OR "reproductive labor commons" OR "seed saving"'
     },
     {
         "name": "Vegan Ecofeminism & Queer Ecology (비건 에코페미니즘 & 퀴어 생태학)",
         "category": "농생태·식량주권",
         "type": "openalex_search",
-        "query": "vegan ecofeminism OR animal liberation OR carnism OR queer ecology OR speciesism OR carol adams"
+        "query": '"vegan ecofeminism" OR "animal liberation" OR "carnism" OR "queer ecology" OR "speciesism" OR "carol adams"'
     },
     {
         "name": "Green Social Work & Climate Vulnerability (녹색사회복지 & 재난 취약성)",
         "category": "재난안전·공공인프라",
         "type": "openalex_search",
-        "query": "green social work OR climate vulnerability OR ecological justice OR disaster care OR lena dominelli"
+        "query": '"green social work" OR "climate vulnerability" OR "ecological justice" OR "disaster care" OR "lena dominelli"'
     },
     {
         "name": "Science & Technology Studies (과학기술학 & 기술정치)",
         "category": "과학기술학·STS",
         "type": "openalex_search",
-        "query": "science and technology studies OR socio-technical systems OR technology politics"
+        "query": '"science and technology studies" OR "socio-technical systems" OR "technology politics" OR "data justice" OR "algorithmic governance"'
     },
     {
         "name": "Civic HCI & Participatory Design (시빅 컴퓨팅 & 참여디자인)",
         "category": "시빅HCI·UXR",
         "type": "openalex_search",
-        "query": "civic computing OR participatory design OR civic tech OR public service design"
+        "query": '"civic computing" OR "participatory design" OR "civic tech" OR "public service design" OR "crisis informatics"'
     },
     {
         "name": "Space and Society & Urban Commons (공간과 사회 & 도시 커먼즈)",
         "category": "공간사회·도시커먼즈",
         "type": "openalex_search",
-        "query": "urban commons OR spatial justice OR right to the city"
+        "query": '"urban commons" OR "spatial justice" OR "right to the city" OR "de-commodification"'
     },
     {
         "name": "Disaster Vulnerability & Public Safety (재난 취약계층 & 공공안전)",
         "category": "재난안전·공공인프라",
         "type": "openalex_search",
-        "query": "disaster vulnerable OR public safety infrastructure OR crisis informatics"
+        "query": '"disaster vulnerability" OR "public safety infrastructure" OR "crisis informatics"'
     },
     {
         "name": "arXiv Civic & Public Computing",
         "category": "시빅HCI·UXR",
         "type": "arxiv",
-        "query": "cat:cs.HC AND (all:civic OR all:participatory OR all:disaster OR all:commons)"
+        "query": 'cat:cs.HC AND (ti:civic OR abs:"civic tech" OR abs:"participatory design" OR abs:"crisis informatics" OR abs:"public service design" OR abs:"digital commons")'
     }
 ]
 
@@ -151,19 +153,19 @@ RSS_FEEDS = [
         "category": "커먼즈·공유재",
         "url": "https://blog.p2pfoundation.net/feed",
         "type": "rss"
-    },
-    {
-        "name": "한겨레 기후·사회 뉴스",
-        "category": "농생태·식량주권",
-        "url": "https://www.hani.co.kr/rss/",
-        "type": "rss"
-    },
-    {
-        "name": "한겨레 오피니언·칼럼",
-        "category": "커먼즈·공유재",
-        "url": "https://www.hani.co.kr/rss/opinion/",
-        "type": "rss"
     }
+]
+
+# 관련 없는 잡음 논문 필터링용 블랙리스트 키워드 (절대 수집 금지)
+EXCLUDE_KEYWORDS = [
+    "pediatric", "childhood screen", "children and adolescent", "screen use in children",
+    "employee creativity", "incremental and radical creativity", "foreign language learning",
+    "korean language learning", "voice design in ai-assisted", "voice design and confirmation bias",
+    "e-commerce purchase", "hotel management", "firm financial performance", "stock market return",
+    "financial reporting", "consumer purchase intention", "retail investor", "marketing strategy",
+    "dental clinic", "caries", "cancer chemotherapy", "lithium-ion battery", "quantum efficiency",
+    "convolutional neural network", "image segmentation", "yolo", "reinforcement learning for robotics",
+    "species-specific visual and instrument-based assessment data for street trees"
 ]
 
 # 트윈의 지적 관심사 필터링 및 고품질 학술 큐레이션 프롬프트
@@ -180,6 +182,6 @@ CURATOR_SYSTEM_PROMPT = """당신은 '비판적 생태·기술 커먼즈, 에코
 [절대 엄수 작업 지침]
 1. 잔여 영어 0% 원칙: 모든 분석 내용('daily_summary', 'summary_points')은 반드시 100% 자연스럽고 품격 있는 한국어 학술 문장으로 작성하십시오. 영어 원문 문장을 번역 없이 그대로 복사하거나 인용하지 마십시오 (영문 저자명 또는 통용 학술 고유명사 제외).
 2. 피상적 상투어 절대 금지: "기존 한계를 극복하고 발전에 기여한다" 같은 상투적이고 공허한 문구를 배제하고, 해당 논문이 제기하는 구체적인 갈등 구조, 데이터 메커니즘, 트윈 연구(자립적 1인 가구, 비시장적 공유 인프라, 커머닝 프로토콜 등)와의 접점을 날카롭게 분석하십시오.
-3. 제목 정제: 제목 말머리에 '[큐레이션]', '[요약]', '[논문]' 같은 태그를 일절 붙이지 말고, 세련된 한국어 학술 번역 제목만 작성하십시오.
+3. 제목 정제: 제목 말머리에 '[큐레이션]', '[요약]', '[논문]' 같은 태그를 일절 붙이지 말고, 세련된 한국어 학술 번역 제목만 작성하십시오. 결코 여러 논문에 동일한 제목을 반복하지 마십시오.
 4. 오늘의 사유 지형(Daily Summary) 도출: 개별 논문 나열을 넘어, 오늘 수집된 연구들을 관통하는 지적 화두와 핵심 명제 3가지를 도출하십시오.
 """

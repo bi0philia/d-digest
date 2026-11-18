@@ -59,6 +59,18 @@ def contains_korean(text):
 # 풍부하고 엄밀한 동시대 학술 어휘 매핑 사전 (Commons, STS, Civic, Agroecology)
 # ==============================================================================
 ACADEMIC_COMPOUNDS = {
+    # 2026-11 최신 논문 정밀 전체 제목 매핑
+    "commons-based peer production at the edge of a chaotic transition": "혼돈적 전환의 경계에 선 커먼즈 기반 피어 생산",
+    "gender, colonialism, and ecological consciousness in namita gokhale’s \"things to leave behind\"": "나미타 고칼레 문학에 나타난 젠더, 식민주의 및 생태적 의식",
+    "multispecies care and emotional life at work: organizational cynicism, work alienation, and the moderating role of the work–pet family interface": "일터에서의 다종 돌봄과 감정 노동: 직장-반려동물 관계의 매개 효과",
+    "syntropic infrastructure for regenerative urban metabolic reorganization in an atlantic island city": "대서양 섬 도시의 재생적 대사 재구성을 위한 신트로픽 인프라 연구",
+    "integrating disability justice into climate action in africa": "아프리카 기후 행동에서의 장애 정의(Disability Justice) 통합 연구",
+    "awakening to an ecology of the commons": "커먼즈의 생태학에 대한 자각과 대안적 전환",
+    "aesthetic experience and scientific understanding in ecological science: a relational framework": "생태과학에서의 미적 경험과 과학적 이해: 관계론적 프레임워크",
+    "double edge theatre: art & commoning": "더블 에지 시어터: 예술과 커머닝의 실천",
+    "designing learning analytics with care: a multiple case study approach": "돌봄 윤리에 기반한 학습 분석 설계: 다중 사례 연구 접근법",
+    "art & commoning": "예술과 커머닝",
+
     # 정밀 복합 전체 제목 매핑
     "algorithmic justice and responsible ai journalism: a comparative communication policy perspective in east asia": "알고리즘 정의와 책임 있는 AI 저널리즘: 동아시아 커뮤니케이션 정책의 비교 분석",
     "a rhetoric of respect: a theoretical heuristic for improving communication between health practitioners and black women": "존중의 수사학: 의료 실천가와 흑인 여성 간의 소통 개선을 위한 이론적 발견법",
@@ -68,6 +80,21 @@ ACADEMIC_COMPOUNDS = {
     "mining the virgin mountain": "처녀산의 채굴: 안데스 자원 추출주의와 영토 커먼즈",
     "contested belonging": "경합하는 소속감: 환경 인문학과 다종 공생 공간의 재구성",
     "practicing resilient solarities": "회복력 있는 태양성(Solarities)의 실천: 에너지 인문학과 탈탄소 공생 담론",
+
+    # 핵심 복합 개념어
+    "commons-based peer production": "커먼즈 기반 피어 생산",
+    "peer production": "피어 생산",
+    "chaotic transition": "혼돈적 전환",
+    "multispecies care": "다종 돌봄과 공생",
+    "disability justice": "장애 정의",
+    "climate action": "기후 행동",
+    "syntropic infrastructure": "신트로픽 재생 인프라",
+    "urban metabolic reorganization": "도시 대사 재구성",
+    "ecological consciousness": "생태적 의식",
+    "relational framework": "관계론적 프레임워크",
+    "scientific understanding": "과학적 이해",
+    "aesthetic experience": "미적 경험",
+    "ecological science": "생태과학",
 
     # STS, 알고리즘, 플랫폼
     "algorithmic justice and responsible ai journalism": "알고리즘 정의와 책임 있는 AI 저널리즘",
@@ -218,6 +245,9 @@ def translate_academic_title(orig_title, category):
         main_kr = translate_single_phrase(parts[0].strip(), category)
         sub_kr = translate_single_phrase(parts[1].strip(), category)
         if main_kr and sub_kr and main_kr != sub_kr:
+            # 중복 접미사 제거 ("에 관한 비판적 고찰" 중복 방지)
+            main_kr = re.sub(r"에\s*관한\s*비판적\s*고찰$", "", main_kr).strip()
+            sub_kr = re.sub(r"에\s*관한\s*비판적\s*고찰$", "", sub_kr).strip()
             return f"{main_kr}: {sub_kr}"
         elif main_kr:
             return main_kr
@@ -337,27 +367,39 @@ def generate_deep_heuristic_summary(item, category, title_kr):
 
     # 1. 연구 배경 및 문제의식 (Problem & Context)
     bg_focus = "동시대 학술 담론에서 제기되는 구조적 한계와 비판적 쟁점"
-    if "algorithm" in text_lower or "ai" in text_lower or "journalism" in text_lower:
+    if re.search(r"\b(disability|climate action)\b", text_lower):
+        bg_focus = "기후 위기 대응 정책과 인프라 설계에서 장애인과 취약계층의 권리가 배제되고 주변화되는 기후 부정의"
+    elif re.search(r"\b(syntropic|urban metabolic|metabolism)\b", text_lower):
+        bg_focus = "선형적 자원 소비에 기반한 근대 도시 인프라가 초래하는 생태적 한계와 재생적 도시 대사 모델의 시급성"
+    elif re.search(r"\b(multispecies|pet|interspecies)\b", text_lower):
+        bg_focus = "인간 중심적 노동 환경과 제도 속에서 배제되어 온 다종 돌봄(Multispecies Care)의 가치와 비인간 타자와의 공생적 삶"
+    elif re.search(r"\b(colonialism|gokhale|ecological consciousness)\b", text_lower):
+        bg_focus = "식민주의적 개발 논리와 가부장적 자연 지배에 맞서 문학적 상상력이 일깨우는 비판적 생태 의식과 저항 담론"
+    elif re.search(r"\b(aesthetic|understanding|relational)\b", text_lower):
+        bg_focus = "도구적 과학주의가 간과해 온 자연과의 미적·관계론적 교감과 생태학적 앎의 심층적 연결성"
+    elif re.search(r"\b(peer production|chaotic transition)\b", text_lower):
+        bg_focus = "초국적 자본의 데이터 독점과 혼돈적 디지털 전환기 속에서 지속가능한 자치적 커먼즈 기반 피어 생산의 위기와 기회"
+    elif re.search(r"\b(algorithm|algorithmic|ai journalism|generative ai)\b", text_lower):
         bg_focus = "생성형 AI와 알고리즘 추천 기술이 미디어 및 저널리즘 생태계에 급속히 도입되면서 발생하는 공공성 훼손, 편향성 증폭, 그리고 알고리즘 거버넌스의 제도적 공백"
-    elif "respect" in text_lower or "health" in text_lower or "practitioner" in text_lower:
+    elif re.search(r"\b(respect|health|practitioner)\b", text_lower):
         bg_focus = "의료 및 공공 돌봄 현장에서 구조적 불평등과 인종·계층 편견으로 인해 취약 계층 당사자의 목소리가 배제되고 소통이 단절되는 제도적 소외"
-    elif "finance" in text_lower or "consumer" in text_lower or "platform" in text_lower:
+    elif re.search(r"\b(finance|consumer|embedded finance)\b", text_lower):
         bg_focus = "거대 플랫폼 기업들이 금융 서비스를 결합하며 일상적 데이터를 독점하고 책임을 금융 소비자에게 전가하는 플랫폼 자본주의의 착취적 구조"
-    elif "solar" in text_lower or "energy" in text_lower:
+    elif re.search(r"\b(solar|energy)\b", text_lower):
         bg_focus = "신재생에너지 전환마저 거대 자본의 추출주의적 개발 논리로 환원되는 한계 속에서, 기후 위기 극복을 위한 대안적이고 민주적인 에너지 담론의 부재"
-    elif "mining" in text_lower or "mountain" in text_lower or "extract" in text_lower:
+    elif re.search(r"\b(mining|mountain|extract)\b", text_lower):
         bg_focus = "녹색 경제 전환의 이면에서 안데스 등 취약 지역의 고유한 생태 영토와 산을 파괴하며 진행되는 초국적 자원 추출주의의 폭력성"
-    elif "belonging" in text_lower or "place" in text_lower:
+    elif re.search(r"\b(belonging|place)\b", text_lower):
         bg_focus = "환경 위기 속에서 특정 장소와 공동체가 겪는 경합과 분열, 그리고 인간 중심적 소속감을 넘어선 다종 서식지 재구성의 필요성"
-    elif "interspecies" in text_lower or "empathy" in text_lower or "telos" in text_lower:
+    elif re.search(r"\b(interspecies|empathy|telos)\b", text_lower):
         bg_focus = "서구 근대 철학의 인간 중심적 윤리학이 비인간 동물의 고유한 생명성과 고통을 배제해 온 존재론적 한계"
-    elif "nature" in text_lower or "oromo" in text_lower or "indigenous" in text_lower:
+    elif re.search(r"\b(nature|oromo|indigenous)\b", text_lower):
         bg_focus = "서구적 개발주의와 산업 농업이 토착민의 오랜 생태 지혜와 자연과의 유기적 연결성을 해체해 온 환경 부정의"
-    elif "farmer" in text_lower or "cooperation" in text_lower or "smallholder" in text_lower:
+    elif re.search(r"\b(farmer|cooperation|smallholder)\b", text_lower):
         bg_focus = "글로벌 농식품 복합체와 시장 중심 구조 속에서 소농들이 겪는 경제적 종속과 자생적 협동조합 거버넌스의 제도적 위기"
-    elif "commons" in text_lower or "commoning" in text_lower:
+    elif re.search(r"\b(commons|commoning)\b", text_lower):
         bg_focus = "시장 자본의 인클로저(Enclosure)와 국가 관료제의 통제 속에서 자치적 자원 관리와 공동체 커머닝이 직면한 제도적 침해"
-    elif "civic" in text_lower or "disaster" in text_lower or "safety" in text_lower:
+    elif re.search(r"\b(civic|disaster|safety)\b", text_lower):
         bg_focus = "재난과 기후 위기가 일상화된 사회에서 공공 행정이 고립 가구와 재난 약자의 실제 위기 상황을 포착하지 못하는 시스템적 결함"
 
     p1 = f"연구 배경 및 문제의식: 학술지 '{source}'에 게재된 본 연구는, {bg_focus}을(를) 정면으로 비판하며 새로운 이론적·실천적 해법을 모색합니다."

@@ -50,12 +50,15 @@ def compute_trends(archive):
         for kw, cnt in keyword_counts.most_common(20)
     ]
 
-    total_gurus = 17
+    total_gurus = 38
     if os.path.exists(GURUS_FILE):
         try:
             with open(GURUS_FILE, "r", encoding="utf-8") as f:
                 gdata = json.load(f)
-                total_gurus = len(gdata)
+                if isinstance(gdata, dict):
+                    total_gurus = gdata.get("total_all", len(gdata.get("all_scholars", [])))
+                elif isinstance(gdata, list):
+                    total_gurus = len(gdata)
         except Exception:
             pass
 
