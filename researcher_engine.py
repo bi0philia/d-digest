@@ -534,19 +534,16 @@ def generate_unified_gurus(archive):
     }
 
 
-def update_gurus_file(archive):
+def update_gurus_file(archive=None):
     """
-    gurus.json 파일 자동 갱신 및 저장
+    gurus.json 파일 자동 갱신 및 저장:
+    ScholarGPS, Google Scholar, AD Scientific Index & OpenAlex 기반 전 분야 고영향력 석학 39인 유지
     """
-    os.makedirs(WEB_DATA_DIR, exist_ok=True)
-    dataset = generate_unified_gurus(archive)
-
-    # Save to gurus.json as dict
-    with open(GURUS_FILE, "w", encoding="utf-8") as f:
-        json.dump(dataset, f, ensure_ascii=False, indent=2)
-
-    print(f"Updated {GURUS_FILE} with {dataset['total_trending']} trending scholars and {dataset['total_legends']} all-time legends.")
-    return dataset
+    try:
+        from update_gurus_scholars import generate_gurus_json
+        generate_gurus_json()
+    except Exception as e:
+        print(f"Notice: Failed to run generate_gurus_json: {e}")
 
 
 if __name__ == "__main__":

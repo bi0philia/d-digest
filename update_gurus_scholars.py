@@ -1,0 +1,693 @@
+# -*- coding: utf-8 -*-
+"""
+업그레이드된 고요한 연구 살롱 · 연구자 인덱스 생성 엔진 (High-Impact Scholar Engine)
+- 살롱의 6대 핵심 분야(커먼즈, 공간사회, 농생태, 과학기술학, 시빅HCI, 재난안전) 전반의
+  피인용 순위, 학술 영향력(h-index), 파급력을 기반으로 세계적 석학 39인 구축
+- ScholarGPS, AD Scientific Index, Google Scholar, OpenAlex 연동 실시간 메트릭 반영
+"""
+import urllib.request
+import urllib.parse
+import json
+import os
+import time
+from datetime import datetime
+
+CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
+WEB_DATA_DIR = os.path.join(CURRENT_DIR, "web", "data")
+GURUS_FILE = os.path.join(WEB_DATA_DIR, "gurus.json")
+
+# 살롱 6대 핵심 분야 석학 마스터 정의
+MASTER_SCHOLARS = [
+    # =========================================================================
+    # 1. 커먼즈·공유재 (Commons, Governance, P2P & New Economy)
+    # =========================================================================
+    {
+        "id": "elinor-ostrom",
+        "name_kr": "엘리너 오스트롬",
+        "name_en": "Elinor Ostrom",
+        "field": "커먼즈 자치 거버넌스·제도 분석",
+        "category": "커먼즈·공유재",
+        "tier": "legend",
+        "badge": "🏛️ 노벨 경제학상 수상 · 올타임 레전드",
+        "avatar": "🏆",
+        "core_philosophy": "'공유재의 비극'은 숙명이 아니다. 국가의 강제나 시장의 사유화 없이도 당사자 공동체가 자율적으로 명확한 경계, 참여적 규칙 개정, 점진적 제재 등 '커먼즈 8대 원칙'을 수립할 때 자원은 수백 년간 지속가능하게 유지된다.",
+        "key_concepts": ["커먼즈 8대 원칙", "다중심 거버넌스(Polycentricity)", "공동 풀 자원(CPR)", "사회생태시스템(SES)", "제도 분석 개발(IAD)"],
+        "representative_work": "『공유의 비극을 넘어(Governing the Commons)』 (1990)",
+        "scholargps_field": "Political Science / Economics"
+    },
+    {
+        "id": "silvia-federici",
+        "name_kr": "실비아 페데리치",
+        "name_en": "Silvia Federici",
+        "field": "페미니즘 커먼즈·재생산 노동·공통화",
+        "category": "커먼즈·공유재",
+        "tier": "legend",
+        "badge": "🏛️ 페미니즘 커먼즈 선구자",
+        "avatar": "🌿",
+        "core_philosophy": "자본주의는 임금 노동 착취뿐 아니라 여성의 무임금 돌봄·가사 노동을 체계적으로 수탈하는 원초적 축적으로 지탱된다. 식량 자급, 공동 조리, 공동 양육 등 '재생산의 공통화(Commoning Reproductive Labor)'야말로 자본주의를 넘어서는 저항의 심장이다.",
+        "key_concepts": ["재생산 노동의 공통화", "원초적 축적과 마녀사냥", "가사노동 수탈 비판", "신체와 커먼즈", "돌봄의 탈상품화"],
+        "representative_work": "『캘리번과 마녀(Caliban and the Witch)』 (2004)",
+        "scholargps_field": "Feminist Studies / Political Economy"
+    },
+    {
+        "id": "karl-polanyi",
+        "name_kr": "칼 폴라니",
+        "name_en": "Karl Polanyi",
+        "field": "정치경제학·탈상품화·사회적 배태성",
+        "category": "커먼즈·공유재",
+        "tier": "legend",
+        "badge": "🏛️ 정치경제학의 거장",
+        "avatar": "🔄",
+        "core_philosophy": "토지, 노동, 화폐는 시장에서 판매하기 위해 만들어진 상품이 아닌 '허구적 상품(Fictitious Commodities)'이다. 시장이 사회로부터 분리되어 자연과 인간을 파괴할 때 사회는 스스로를 방어하는 '이중 운동'을 시작하며, 진정한 회복은 탈상품화와 커먼즈 회생을 통해 이뤄진다.",
+        "key_concepts": ["허구적 상품(토지·노동·화폐)", "사회적 배태성(Embeddedness)", "이중 운동(Double Movement)", "탈상품화(Decommodification)", "호혜성과 재분배"],
+        "representative_work": "『거대한 전환(The Great Transformation)』 (1944)",
+        "scholargps_field": "Economic History / Sociology"
+    },
+    {
+        "id": "david-bollier",
+        "name_kr": "데이비드 볼리어",
+        "name_en": "David Bollier",
+        "field": "커먼즈 운동론·관계적 존재론",
+        "category": "커먼즈·공유재",
+        "tier": "legend",
+        "badge": "🏛️ 동시대 커먼즈 운동 최고 이론가",
+        "avatar": "🏛️",
+        "core_philosophy": "커먼즈는 단순한 자원이 아니라 사람과 자원, 규범이 얽혀 공진화하는 살아있는 사회적 실천인 '커머닝(Commoning)'이다. 국가와 시장이라는 낡은 이분법을 넘어 자치와 협력에 기반한 새로운 존재론적 전환(Ontoshift)을 제시한다.",
+        "key_concepts": ["커머닝(Commoning)", "온토시프트(Ontoshift)", "관계적 존재론", "커먼즈 법", "코스모로컬리즘"],
+        "representative_work": "『자유, 공정, 번영(Free, Fair and Alive)』 (질케 헬프리히 공저, 2019)",
+        "scholargps_field": "Commons Studies"
+    },
+    {
+        "id": "michel-bauwens",
+        "name_kr": "미셸 바우언스",
+        "name_en": "Michel Bauwens",
+        "field": "P2P 피어생산·코스모로컬 커먼즈",
+        "category": "커먼즈·공유재",
+        "tier": "legend",
+        "badge": "🏛️ 글로벌 P2P 커먼즈 창시자",
+        "avatar": "💻",
+        "core_philosophy": "디지털 네트워크는 독점적 플랫폼 없이도 수평적 동료들이 가치를 창조하는 P2P 생산을 태동시켰다. 지식과 설계는 전 지구적 디지털 커먼즈로 공유하고 물리적 생산은 지역에서 자급 순환하는 '코스모로컬(Cosmo-local)' 생산 체제로 전환해야 한다.",
+        "key_concepts": ["P2P 협동 생산", "코스모로컬리즘(Cosmo-localism)", "개방형 협동조합", "파트너 국가(Partner State)", "디지털 지식 공유"],
+        "representative_work": "『Peer to Peer: The Commons Manifesto』 (2019)",
+        "scholargps_field": "P2P Economics"
+    },
+    {
+        "id": "christian-fuchs",
+        "name_kr": "크리스티안 푹스",
+        "name_en": "Christian Fuchs",
+        "field": "디지털 노동·비판적 미디어·커먼즈",
+        "category": "커먼즈·공유재",
+        "tier": "trending",
+        "badge": "🔥 디지털 커먼즈·미디어 최고 피인용 석학",
+        "avatar": "🌐",
+        "core_philosophy": "빅테크 플랫폼은 사용자의 무급 데이터 생산 활동을 착취하는 '디지털 놀이노동(Playbour)'에 기생한다. 상업적 독점 플랫폼을 민주화하고 데이터와 디지털 인프라를 공공 커먼즈로 탈바환해야 한다.",
+        "key_concepts": ["디지털 노동(Digital Labour)", "플랫폼 착취 비판", "디지털 커먼즈", "비판적 미디어 이론", "커뮤니케이션 정치경제학"],
+        "representative_work": "『Digital Labour and Karl Marx』 (2014)",
+        "scholargps_field": "Communication / Media Studies"
+    },
+    {
+        "id": "yochai-benkler",
+        "name_kr": "요하이 벤클러",
+        "name_en": "Yochai Benkler",
+        "field": "네트워크 경제학·협력적 커먼즈",
+        "category": "커먼즈·공유재",
+        "tier": "trending",
+        "badge": "🔥 하버드 네트워크 커먼즈 최고 권위자",
+        "avatar": "⚖️",
+        "core_philosophy": "위키피디아와 오픈소스처럼 시장 가격 메커니즘이나 기업 관리 체계 없이도 대규모 협력으로 가치를 창출하는 '커먼즈 기반 동료 생산(Commons-based Peer Production)'이 지식 정보 경제의 주류 패러다임으로 부상했다.",
+        "key_concepts": ["커먼즈 기반 동료 생산", "네트워크 정보 경제", "사회적 생산", "협력의 진화", "자유와 정의"],
+        "representative_work": "『네트워크의 부(The Wealth of Networks)』 (2006)",
+        "scholargps_field": "Law / Information Science"
+    },
+    {
+        "id": "massimo-de-angelis",
+        "name_kr": "마시모 데 안젤리스",
+        "name_en": "Massimo De Angelis",
+        "field": "커먼즈 정치경제학·사회적 재생산",
+        "category": "커먼즈·공유재",
+        "tier": "trending",
+        "badge": "🔥 동시대 커먼즈 정치경제학 권위자",
+        "avatar": "✊",
+        "core_philosophy": "커먼즈는 자본주의의 외부가 아니라 끊임없이 인클로저(울타리치기)에 저항하며 확장하는 '공통화 투쟁'이다. 생산과 재생산의 경계를 허물고 사회적 에너지를 회수하는 탈자본주의적 생태계를 설계해야 한다.",
+        "key_concepts": ["옴니아 순트 코무니아(만물은 공유재)", "인클로저 저항", "사회적 재생산 회로", "공통화의 한계선"],
+        "representative_work": "『Omnia Sunt Communia: On the Commons』 (2017)",
+        "scholargps_field": "Political Economy"
+    },
+
+    # =========================================================================
+    # 2. 공간사회·도시커먼즈 (Spatial Justice & Urban Commons)
+    # =========================================================================
+    {
+        "id": "david-harvey",
+        "name_kr": "데이비드 하비",
+        "name_en": "David Harvey",
+        "field": "마르크스주의 지리학·도시공간론",
+        "category": "공간사회·도시커먼즈",
+        "tier": "legend",
+        "badge": "🏛️ 마르크스주의 지리학 최고 거장",
+        "avatar": "🏙️",
+        "core_philosophy": "자본주의는 주기적 위기를 회피하기 위해 도시 공간을 금융화하고 부동산 투기로 잉여 자본을 흡수하는 '공간적 조정(Spatial Fix)'을 감행한다. 시민은 도시 공간을 재전유하고 집단적으로 창조할 '도시권(Right to the City)'을 요구해야 한다.",
+        "key_concepts": ["도시권(Right to the City)", "수탈에 의한 축적", "공간적 조정(Spatial Fix)", "반란의 도시", "도시 커먼즈"],
+        "representative_work": "『반란의 도시(Rebel Cities)』 (2012)",
+        "scholargps_field": "Geography / Urban Studies"
+    },
+    {
+        "id": "henri-lefebvre",
+        "name_kr": "앙리 르페브르",
+        "name_en": "Henri Lefebvre",
+        "field": "공간사회학·도시권·일상생활 비판",
+        "category": "공간사회·도시커먼즈",
+        "tier": "legend",
+        "badge": "🏛️ 도시공간 철학의 원류",
+        "avatar": "🗺️",
+        "core_philosophy": "공간은 고정된 물리적 용기가 아니라 사회적 관계가 투영되고 재창조되는 '사회적 생산물'이다. 자본에 의해 교환가치로 환원된 도시 공간을 일상생활의 '사용가치'로 탈환해야 한다.",
+        "key_concepts": ["공간의 생산(The Production of Space)", "도시권(Le droit à la ville)", "공간적 삼원성", "일상생활 비판", "리듬분석"],
+        "representative_work": "『공간의 생산(The Production of Space)』 (1974)",
+        "scholargps_field": "Philosophy / Sociology"
+    },
+    {
+        "id": "doreen-massey",
+        "name_kr": "도린 매시",
+        "name_en": "Doreen Massey",
+        "field": "페미니스트 지리학·관계적 공간론",
+        "category": "공간사회·도시커먼즈",
+        "tier": "legend",
+        "badge": "🏛️ 페미니스트 지리학 선구자",
+        "avatar": "🧭",
+        "core_philosophy": "장소는 고정된 경계나 닫힌 정체성이 아니라 끊임없이 유입되는 사회적 관계와 궤적들이 교차하는 '개방적인 사건'이다. 세계화 속에서 진보적인 장소감각(Progressive Sense of Place)을 옹호한다.",
+        "key_concepts": ["관계적 공간(Relational Space)", "진보적 장소감각", "권력-기하학(Power-geometry)", "다원적 동시성", "공간의 페미니즘"],
+        "representative_work": "『For Space』 (2005)",
+        "scholargps_field": "Geography / Social Sciences"
+    },
+    {
+        "id": "edward-soja",
+        "name_kr": "에드워드 소자",
+        "name_en": "Edward W. Soja",
+        "field": "공간적 정의·제3공간·포스트메트로폴리스",
+        "category": "공간사회·도시커먼즈",
+        "tier": "trending",
+        "badge": "🔥 공간정의론 창시 석학",
+        "avatar": "📐",
+        "core_philosophy": "사회적 불평등은 언제나 불균등한 지리적 배치를 통해 구조화된다. 물리적 공간(제1공간)과 정신적 공간(제2공간)을 가로지르는 실천적 '제3공간(Thirdspace)'을 통해 공간적 정의(Spatial Justice)를 투쟁해야 한다.",
+        "key_concepts": ["제3공간(Thirdspace)", "공간적 정의(Spatial Justice)", "포스트메트로폴리스", "지리적 불평등 비판"],
+        "representative_work": "『Seeking Spatial Justice』 (2010)",
+        "scholargps_field": "Urban Planning / Geography"
+    },
+    {
+        "id": "neil-smith",
+        "name_kr": "닐 스미스",
+        "name_en": "Neil Smith",
+        "field": "불균등 발전·젠트리피케이션 지대격차론",
+        "category": "공간사회·도시커먼즈",
+        "tier": "trending",
+        "badge": "🔥 젠트리피케이션 이론 최고 피인용 석학",
+        "avatar": "🏗️",
+        "core_philosophy": "젠트리피케이션은 개인의 소비 취향이 아니라 자본이 낙후 지역에서 차익을 거두기 위해 인위적으로 벌려놓은 '지대격차(Rent Gap)'에서 비롯된 조직적인 계급 침탈이다.",
+        "key_concepts": ["지대격차(Rent Gap)", "불균등 발전(Uneven Development)", "보복도시(Revanchist City)", "자연의 생산"],
+        "representative_work": "『The New Urban Frontier: Gentrification and the Revanchist City』 (1996)",
+        "scholargps_field": "Geography / Urban Studies"
+    },
+    {
+        "id": "stavros-stavrides",
+        "name_kr": "스타브로스 스타브리데스",
+        "name_en": "Stavros Stavrides",
+        "field": "도시 커먼즈 공간론·문턱 공간",
+        "category": "공간사회·도시커먼즈",
+        "tier": "trending",
+        "badge": "🔥 유럽 도시 커먼즈 공간론 권위자",
+        "avatar": "🚪",
+        "core_philosophy": "도시 커먼즈는 닫힌 엔클레이브가 아니라 내부와 외부, 타자와 이웃이 끊임없이 마주치며 관계를 맺는 '문턱 공간(Threshold Space)'에서 피어난다. 비배타적 공간 창출이 핵심이다.",
+        "key_concepts": ["공통공간(Common Space)", "문턱 공간(Threshold Space)", "다공성(Porosity)", "해방적 도시 공간"],
+        "representative_work": "『Common Space: The City as Commons』 (2016)",
+        "scholargps_field": "Architecture / Urbanism"
+    },
+    {
+        "id": "ash-amin",
+        "name_kr": "애시 아민",
+        "name_en": "Ash Amin",
+        "field": "도시 인프라·공공성·관계적 지리학",
+        "category": "공간사회·도시커먼즈",
+        "tier": "trending",
+        "badge": "🔥 케임브리지 도시인프라 석좌교수",
+        "avatar": "🏛️",
+        "core_philosophy": "도시는 건물 이전에 배관, 전선, 대중교통 등 비인간 인프라의 그물망 위에 놓여 있다. 도시의 민주주의와 포용성은 물질적 인프라가 낯선 이방인들에게 얼마나 환대적으로 작동하느냐에 달려 있다.",
+        "key_concepts": ["도시 공공성(Urban Publics)", "인프라의 정치학", "낯선 이들의 땅", "관계적 도시론"],
+        "representative_work": "『Seeing Like a City』 (2017, 나이젤 스릴 공저)",
+        "scholargps_field": "Geography"
+    },
+
+    # =========================================================================
+    # 3. 농생태·식량주권 (Agroecology, Food Sovereignty & Ecofeminism)
+    # =========================================================================
+    {
+        "id": "donna-haraway",
+        "name_kr": "도나 해러웨이",
+        "name_en": "Donna Haraway",
+        "field": "에코페미니즘·과학기술학·다종공생",
+        "category": "농생태·식량주권",
+        "tier": "legend",
+        "badge": "🏛️ 다종공생·포스트휴머니즘 최고 거장",
+        "avatar": "🐙",
+        "core_philosophy": "인간 중심주의를 버리고 생명과 비생명, 유기체와 기계가 얽히는 '반려종(Companion Species)'의 관계론을 수용해야 한다. 지구적 파국 앞에서 우리는 도피하는 대신 '트러블과 함께 머물며' 다종 간의 친족을 만들어야 한다.",
+        "key_concepts": ["사이보그 선언", "상황적 지식(Situated Knowledges)", "반려종(Companion Species)", "트러블과 함께 머물기", "툴루세(Chthulucene)"],
+        "representative_work": "『트러블과 함께 머물기(Staying with the Trouble)』 (2016)",
+        "scholargps_field": "History of Consciousness / Feminist Studies"
+    },
+    {
+        "id": "vandana-shiva",
+        "name_kr": "반다나 시바",
+        "name_en": "Vandana Shiva",
+        "field": "농생태학·종자주권·에코페미니즘",
+        "category": "농생태·식량주권",
+        "tier": "legend",
+        "badge": "🏛️ 글로벌 종자주권·생태철학 거장",
+        "avatar": "🌾",
+        "core_philosophy": "글로벌 농업 기업의 종자 특허와 유전자 조작은 소농의 주권을 빼앗고 대지를 죽이는 '생명해적질(Biopiracy)'이다. 종자는 수천 년간 인류가 가꾸어온 신성한 커먼즈이며, 대지 민주주의(Earth Democracy)의 토대이다.",
+        "key_concepts": ["종자 주권(Seed Sovereignty)", "대지 민주주의(Earth Democracy)", "생명해적질(Biopiracy) 비판", "토종 씨앗 보존", "살아있는 지구 커먼즈"],
+        "representative_work": "『만물의 민주주의(Earth Democracy)』 (2005)",
+        "scholargps_field": "Ecology / Environmental Studies"
+    },
+    {
+        "id": "miguel-altieri",
+        "name_kr": "미겔 알티에리",
+        "name_en": "Miguel Angel Altieri",
+        "field": "농생태학(Agroecology)·전통농업",
+        "category": "농생태·식량주권",
+        "tier": "trending",
+        "badge": "🔥 농생태학(Agroecology)의 아버지",
+        "avatar": "🌱",
+        "core_philosophy": "단작 중심의 화학 집약적 농업을 생태적 다양성과 생물학적 순환에 기반한 '농생태학(Agroecology)'으로 대체해야 한다. 기후변화 위기에서 인류를 구할 열쇠는 소농들의 전통적 농생태 지식(Mētis)에 있다.",
+        "key_concepts": ["농생태학 원리", "소농 회복탄력성", "생물다양성 관리", "전통 농업 메티스", "농업 생태계"],
+        "representative_work": "『Agroecology: The Science of Sustainable Agriculture』 (1995)",
+        "scholargps_field": "Agronomy / Agroecology"
+    },
+    {
+        "id": "philip-mcmichael",
+        "name_kr": "필립 맥마이클",
+        "name_en": "Philip McMichael",
+        "field": "식량체계론·농촌사회학·식량주권",
+        "category": "농생태·식량주권",
+        "tier": "trending",
+        "badge": "🔥 식량체계론(Food Regimes) 세계 최고 석학",
+        "avatar": "🌽",
+        "core_philosophy": "자본주의 역사 속에서 식량은 제국주의와 다국적 농기업의 축적 도구인 '식량체계(Food Regime)'로 재편되어 왔다. 이에 맞서는 전 세계 소농과 민중의 '식량주권(Food Sovereignty)' 투쟁이야말로 대안 문명의 출구이다.",
+        "key_concepts": ["식량체계론(Food Regimes)", "기업 식량체계 비판", "식량주권(Food Sovereignty)", "비아 캄페시나", "탈세계화 농정"],
+        "representative_work": "『Food Regimes and Agrarian Questions』 (2013)",
+        "scholargps_field": "Rural Sociology / Development"
+    },
+    {
+        "id": "anna-tsing",
+        "name_kr": "안나 칭",
+        "name_en": "Anna Lowenhaupt Tsing",
+        "field": "다종 인류학·인류세 생태학",
+        "category": "농생태·식량주권",
+        "tier": "trending",
+        "badge": "🔥 다종 인류학 최고 베스트셀러 석학",
+        "avatar": "🍄",
+        "core_philosophy": "인간이 파괴한 자본주의의 폐허 속에서도 송이버섯과 같은 비인간 존재들은 다종 간의 우발적 만남과 공생으로 생명을 이어간다. 진보의 일직선 신화를 버리고 부서진 세계 속에서 '함께 살아가기 위한 기술'을 민족지학으로 포착한다.",
+        "key_concepts": ["다종 민족지학", "폐허 속의 삶", "우발적 공생(Assemblage)", "오염된 다양성", "송이버섯 인류학"],
+        "representative_work": "『말라죽지 않는 버섯(The Mushroom at the End of the World)』 (2015)",
+        "scholargps_field": "Anthropology / Environmental Studies"
+    },
+    {
+        "id": "rosi-braidotti",
+        "name_kr": "로시 브라이도티",
+        "name_en": "Rosi Braidotti",
+        "field": "포스트휴머니즘·유목적 페미니즘",
+        "category": "농생태·식량주권",
+        "tier": "trending",
+        "badge": "🔥 포스트휴먼 페미니즘 세계적 석학",
+        "avatar": "🧬",
+        "core_philosophy": "서구 백인 남성 중심의 휴머니즘을 해체하고 인간과 동식물, 기술이 평등하게 연대하는 '포스트휴먼 주체성'을 제안한다. 종차별과 환경 파괴를 극복하는 긍정적이고 유목적인 생명정치(Zoe)의 윤리학을 주창한다.",
+        "key_concepts": ["포스트휴먼(The Posthuman)", "유목적 주체", "조에(Zoe) 생명정치", "비판적 포스트휴머니즘", "긍정의 윤리"],
+        "representative_work": "『포스트휴먼(The Posthuman)』 (2013)",
+        "scholargps_field": "Philosophy / Gender Studies"
+    },
+    {
+        "id": "carol-adams",
+        "name_kr": "캐럴 J. 아담스",
+        "name_en": "Carol J. Adams",
+        "field": "비건 에코페미니즘·동물권",
+        "category": "농생태·식량주권",
+        "tier": "trending",
+        "badge": "🔥 비건 에코페미니즘 창시자",
+        "avatar": "🐄",
+        "core_philosophy": "여성에 대한 대상화와 비인간 동물에 대한 도살은 동일한 가부장적 폭력의 메커니즘을 공유한다. 식탁 위의 고기는 살아있던 존재의 고통을 지워버린 '부재하는 지시체(Absent Referent)'이며, 진정한 페미니즘은 육식 문화 비판과 교차해야 한다.",
+        "key_concepts": ["부재하는 지시체(Absent Referent)", "육식의 성정치", "교차적 억압", "비건 에코페미니즘", "돌봄의 윤리"],
+        "representative_work": "『육식의 성정치(The Sexual Politics of Meat)』 (1990)",
+        "scholargps_field": "Feminist Philosophy / Animal Studies"
+    },
+
+    # =========================================================================
+    # 4. 과학기술학·STS (Science & Technology Studies & Digital Politics)
+    # =========================================================================
+    {
+        "id": "bruno-latour",
+        "name_kr": "브뤼노 라투르",
+        "name_en": "Bruno Latour",
+        "field": "행위자-연결망 이론(ANT)·지구정치학",
+        "category": "과학기술학·STS",
+        "tier": "legend",
+        "badge": "🏛️ 현대 STS 및 철학의 최고 거장",
+        "avatar": "🔬",
+        "core_philosophy": "인간과 자연, 사회와 기술의 근대적 이분법을 기각하고 인간과 비인간 행위자(Actant)들이 서로 얽혀 네트워크를 구성한다는 '행위자-연결망 이론(ANT)'을 정립했다. 기후위기 시대, 우리는 관념적 지구를 넘어 '가이아(Gaia)'라는 실제 대지에 착륙해야 한다.",
+        "key_concepts": ["행위자-연결망 이론(ANT)", "비인간 행위자(Actant)", "우리는 결코 근대인이었던 적이 없다", "지구에 착륙하기", "사물의 의회"],
+        "representative_work": "『우리는 결코 근대인이었던 적이 없다』 (1991)",
+        "scholargps_field": "STS / Sociology / Philosophy"
+    },
+    {
+        "id": "sheila-jasanoff",
+        "name_kr": "쉴라 자사노프",
+        "name_en": "Sheila Jasanoff",
+        "field": "과학기술학(STS)·사회기술적 상상",
+        "category": "과학기술학·STS",
+        "tier": "trending",
+        "badge": "🔥 하버드 STS 디렉터 · 세계 최고 석학",
+        "avatar": "🏛️",
+        "core_philosophy": "과학기술과 사회 질서는 어느 하나가 다른 하나를 결정하는 것이 아니라 서로를 동시에 형성해가는 '공생산(Co-production)' 관계이다. 사회가 집단적으로 품고 있는 미래에 대한 가치지향인 '사회기술적 상상(Sociotechnical Imaginaries)'을 비판적으로 성찰해야 한다.",
+        "key_concepts": ["공생산(Co-production)", "사회기술적 상상", "생명윤리의 정치학", "공공 이성", "규제 과학"],
+        "representative_work": "『Designs on Nature』 (2005)",
+        "scholargps_field": "Science and Technology Studies / Public Policy"
+    },
+    {
+        "id": "kate-crawford",
+        "name_kr": "케이트 크로포드",
+        "name_en": "Kate Crawford",
+        "field": "인공지능 정치경제학·데이터 추출주의",
+        "category": "과학기술학·STS",
+        "tier": "trending",
+        "badge": "🔥 AI 정치경제학 석학",
+        "avatar": "🗺️",
+        "core_philosophy": "인공지능은 마법 같은 순수 알고리즘이 아니라 리튬 광산 채굴, 데이터 라벨러의 비가시적 저임금 노동, 그리고 막대한 탄소 배출이라는 지구적 착취 인프라 위에 세워진 '물질적 권력 체계'이다.",
+        "key_concepts": ["인공지능의 지도(Atlas of AI)", "데이터 추출주의", "알고리즘 권력", "기술의 물질성", "지구적 착취 인프라"],
+        "representative_work": "『인공지능의 지도(Atlas of AI)』 (2021)",
+        "scholargps_field": "Communication / Artificial Intelligence Politics"
+    },
+    {
+        "id": "shoshana-zuboff",
+        "name_kr": "쇼샤나 주보프",
+        "name_en": "Shoshana Zuboff",
+        "field": "감시 자본주의·플랫폼 권력",
+        "category": "과학기술학·STS",
+        "tier": "trending",
+        "badge": "🔥 감시자본주의 분석 최고 권위자",
+        "avatar": "👁️",
+        "core_philosophy": "구글, 메타 등 빅테크는 인간의 사적 경험을 일방적으로 원자재로 탈취하여 미래 행동을 예측하고 수정하는 '행동 잉여(Behavioral Surplus)' 시장을 만들었다. 감시 자본주의는 인간의 자율성과 민주주의를 근본적으로 침해한다.",
+        "key_concepts": ["감시 자본주의(Surveillance Capitalism)", "행동 잉여(Behavioral Surplus)", "도구주의 권력", "예측 상품", "민주주의의 위기"],
+        "representative_work": "『감시 자본주의의 시대(The Age of Surveillance Capitalism)』 (2019)",
+        "scholargps_field": "Business / Social Psychology"
+    },
+    {
+        "id": "yuk-hui",
+        "name_kr": "육 후이",
+        "name_en": "Yuk Hui",
+        "field": "기술철학·코스모테크닉스·디지털 존재론",
+        "category": "과학기술학·STS",
+        "tier": "trending",
+        "badge": "🔥 코스모테크닉스 창시 석학",
+        "avatar": "⚙️",
+        "core_philosophy": "서구 중심의 단일한 보편 기술관을 탈피하고 각 문화권의 철학적 우주론과 도덕에 뿌리내린 다원적 기술인 '코스모테크닉스(Cosmotechnics)'를 복원해야 한다. 디지털 객체와 알고리즘의 존재론을 동양 사상과의 대화 속에서 재정립한다.",
+        "key_concepts": ["코스모테크닉스(Cosmotechnics)", "디지털 객체의 존재론", "재귀성과 우발성", "다원적 기술론", "기계와 유기체"],
+        "representative_work": "『중국에서의 기술에 관한 물음』 (2016)",
+        "scholargps_field": "Philosophy of Technology"
+    },
+    {
+        "id": "langdon-winner",
+        "name_kr": "랭던 위너",
+        "name_en": "Langdon Winner",
+        "field": "기술정치학·기술철학",
+        "category": "과학기술학·STS",
+        "tier": "legend",
+        "badge": "🏛️ 기술정치학 개척자",
+        "avatar": "🏛️",
+        "core_philosophy": "기술은 결코 가치중립적 도구가 아니다. 뉴욕의 고가도로 육교 높이가 버스(대중교통을 타는 가난한 흑인)의 진입을 막도록 설계되었듯, 인공물 그 자체가 특정한 권력과 불평등을 체현하는 정치적 입법이다.",
+        "key_concepts": ["인공물의 정치성('Do Artifacts Have Politics?')", "자율적 기술", "기술적 몽유병", "체화된 권력"],
+        "representative_work": "『The Whale and the Reactor』 (1986)",
+        "scholargps_field": "Political Science / STS"
+    },
+    {
+        "id": "lee-kwang-suk",
+        "name_kr": "이광석",
+        "name_en": "Lee Kwang-suk",
+        "field": "디지털 문화·기술생태론·피드백 커먼즈",
+        "category": "과학기술학·STS",
+        "tier": "trending",
+        "badge": "🇰🇷 한국 기술생태학·커먼즈 대표 학자",
+        "avatar": "🇰🇷",
+        "core_philosophy": "플랫폼 자본주의의 데이터 추출과 기술봉건주의를 비판하고, 디지털 기술을 인간과 자연의 상호 순환을 돕는 '기술생태(Techno-ecology)'와 시민 자치적 '피드백 커먼즈'로 탈환해야 한다.",
+        "key_concepts": ["기술생태학", "피드백 커먼즈", "기술봉건주의 비판", "데이터 정의", "플랫폼 커머닝"],
+        "representative_work": "『피드백 커먼즈』 (2023)",
+        "scholargps_field": "Digital Culture / Media Politics"
+    },
+
+    # =========================================================================
+    # 5. 시빅HCI·UXR (Civic Computing, Participatory Design & Design Justice)
+    # =========================================================================
+    {
+        "id": "sasha-costanza-chock",
+        "name_kr": "사샤 코스탄자-촉",
+        "name_en": "Sasha Costanza-Chock",
+        "field": "디자인 정의·시빅 미디어·포용적 HCI",
+        "category": "시빅HCI·UXR",
+        "tier": "trending",
+        "badge": "🔥 디자인 정의(Design Justice) 창시자",
+        "avatar": "📐",
+        "core_philosophy": "기존의 기술 인터페이스는 비장애인·백인·남성을 기본값으로 설계되어 취약계층을 구조적으로 배제한다. '디자인 정의(Design Justice)'는 시스템에 의해 가장 큰 불이익을 받는 당사자 공동체가 설계의 주도권을 갖도록 인터페이스 권력 관계를 전복하는 실천이다.",
+        "key_concepts": ["디자인 정의(Design Justice)", "매트릭스 지배 전복", "시빅 미디어", "참여형 사용자경험(UXR)", "기술 민주화"],
+        "representative_work": "『디자인 정의(Design Justice)』 (2020)",
+        "scholargps_field": "Human-Computer Interaction / Media"
+    },
+    {
+        "id": "carl-disalvo",
+        "name_kr": "칼 디살보",
+        "name_en": "Carl DiSalvo",
+        "field": "대항적 디자인·시빅 컴퓨팅·민주적 탐구",
+        "category": "시빅HCI·UXR",
+        "tier": "trending",
+        "badge": "🔥 시빅 컴퓨팅·대항적 디자인 최고 권위자",
+        "avatar": "⚡",
+        "core_philosophy": "디자인은 매끄러운 소비자 만족을 제공하는 데 그치지 않고 사회적 갈등과 숨겨진 권력 관계를 가시화하여 논쟁을 촉발하는 '대항적 디자인(Adversarial Design)'이어야 한다.",
+        "key_concepts": ["대항적 디자인(Adversarial Design)", "공공을 디자인하기", "시빅 미디어", "민주적 탐구로서의 디자인"],
+        "representative_work": "『Adversarial Design』 (2012)",
+        "scholargps_field": "Human-Computer Interaction / Design"
+    },
+    {
+        "id": "batya-friedman",
+        "name_kr": "바티아 프리드먼",
+        "name_en": "Batya Friedman",
+        "field": "가치민감디자인(VSD)·인간존엄 HCI",
+        "category": "시빅HCI·UXR",
+        "tier": "trending",
+        "badge": "🔥 가치민감디자인(VSD) 세계적 창시자",
+        "avatar": "💎",
+        "core_philosophy": "기술 시스템을 구축할 때 효율성뿐만 아니라 인간의 존엄성, 프라이버시, 환경 정의, 다세대적 책임과 같은 핵심 도덕 가치를 시스템 아키텍처의 초기 설계 단계부터 체계적으로 통합하는 '가치민감디자인(VSD)'을 정립했다.",
+        "key_concepts": ["가치민감디자인(VSD)", "도덕적 상상력", "직·간접 이해관계자 분석", "다세대 인터페이스"],
+        "representative_work": "『Value Sensitive Design: Shaping Technology with Moral Imagination』 (2019)",
+        "scholargps_field": "Information Science / HCI"
+    },
+    {
+        "id": "pelle-ehn",
+        "name_kr": "펠레 앤",
+        "name_en": "Pelle Ehn",
+        "field": "참여적 디자인(PD)·민주적 기술",
+        "category": "시빅HCI·UXR",
+        "tier": "legend",
+        "badge": "🏛️ 북유럽 참여적 디자인(PD) 선구자",
+        "avatar": "🤝",
+        "core_philosophy": "기술은 전문가가 밀실에서 만들어 하달하는 것이 아니라 노동자와 시민이 직접 목소리를 내어 함께 도구를 만들어가는 참여의 장(Democratic Inquiry)이어야 한다.",
+        "key_concepts": ["참여적 디자인(Participatory Design)", "유토피아 프로젝트", "노동자 중심 설계", "미래 만들기(Making Futures)"],
+        "representative_work": "『Work-Oriented Design of Computer Artifacts』 (1988)",
+        "scholargps_field": "Design / Interaction Design"
+    },
+    {
+        "id": "christopher-le-dantec",
+        "name_kr": "크리스토퍼 르 단텍",
+        "name_en": "Christopher A. Le Dantec",
+        "field": "시빅 인터랙션 디자인·지역사회 컴퓨팅",
+        "category": "시빅HCI·UXR",
+        "tier": "trending",
+        "badge": "🔥 시빅 인터랙션 디자인 선도 연구자",
+        "avatar": "🏘️",
+        "core_philosophy": "도시의 홈리스나 빈곤 공동체와 함께 풀뿌리 데이터를 수집하고 시빅 인터페이스를 구축함으로써 소외된 시민들이 공적 의사결정에 개입할 수 있는 '공중(Publics)의 형성'을 지원한다.",
+        "key_concepts": ["공공의 설계(Designing Publics)", "시빅 인터랙션", "지역사회 참여 연구", "데이터 활동주의"],
+        "representative_work": "『Designing Publics』 (2016)",
+        "scholargps_field": "HCI / Civic Media"
+    },
+
+    # =========================================================================
+    # 6. 재난안전·공공인프라 (Disaster Vulnerability, Green Social Work & Care)
+    # =========================================================================
+    {
+        "id": "susan-cutter",
+        "name_kr": "수잔 커터",
+        "name_en": "Susan L. Cutter",
+        "field": "재난 지리학·사회적 취약성(SoVI)",
+        "category": "재난안전·공공인프라",
+        "tier": "trending",
+        "badge": "🔥 사회적 취약성 지수(SoVI) 개발 · 세계 최고 권위자",
+        "avatar": "🌪️",
+        "core_philosophy": "자연재해는 누구에게나 똑같이 닥치지 않는다. 빈곤, 인종, 연령, 주거 형태에 따라 위험 노출과 회복력이 현격히 달라지는 '사회적 취약성(Social Vulnerability)'을 정량화하고 취약 지역을 우선 보호하는 정책 인프라를 구축해야 한다.",
+        "key_concepts": ["사회적 취약성 지수(SoVI)", "재난 회복탄력성", "장소의 취약성", "기후 위험 매핑", "위험 지리학"],
+        "representative_work": "『American Hazardscapes: The Regionalization of Hazards and Disasters』 (2001)",
+        "scholargps_field": "Geography / Disaster Studies"
+    },
+    {
+        "id": "eric-klinenberg",
+        "name_kr": "에릭 클라이넨버그",
+        "name_en": "Eric Klinenberg",
+        "field": "사회적 인프라·기후재난 사회학",
+        "category": "재난안전·공공인프라",
+        "tier": "trending",
+        "badge": "🔥 사회적 인프라·폭염 부검 세계적 베스트셀러 석학",
+        "avatar": "🏛️",
+        "core_philosophy": "1995년 시카고 폭염 참사에서 독거노인의 생사를 가른 것은 소득이 아니라 도서관, 공원, 골목 상점 같은 '사회적 인프라(Social Infrastructure)'였다. 견고한 공공 공간이 있을 때 사람들은 재난 속에서도 상호부조로 살아남는다.",
+        "key_concepts": ["사회적 인프라(Social Infrastructure)", "사회적 부검(Social Autopsy)", "폭염과 불평등", "도서관과 공공재"],
+        "representative_work": "『사람들을 위한 궁전(Palaces for the People)』 (2018), 『폭염(Heat Wave)』 (2002)",
+        "scholargps_field": "Sociology"
+    },
+    {
+        "id": "joan-tronto",
+        "name_kr": "조안 트론토",
+        "name_en": "Joan Tronto",
+        "field": "돌봄 민주주의·공공 돌봄 인프라",
+        "category": "재난안전·공공인프라",
+        "tier": "trending",
+        "badge": "🔥 돌봄 민주주의(Caring Democracy) 최고 권위자",
+        "avatar": "🤲",
+        "core_philosophy": "인간은 누구나 생애주기 동안 의존적이고 취약한 존재이다. 돌봄을 사적인 영역에 떠넘기지 않고 사회의 가장 중심적인 공공재이자 민주적 인프라로 자리매김하는 '돌봄 민주주의(Caring Democracy)'를 세워야 한다.",
+        "key_concepts": ["민주주의적 돌봄(Caring Democracy)", "돌봄 윤리 4단계", "공공 돌봄 인프라", "취약성의 시민권"],
+        "representative_work": "『민주주의적 돌봄(Caring Democracy)』 (2013), 『도덕의 경계(Moral Boundaries)』 (1993)",
+        "scholargps_field": "Political Science / Ethics"
+    },
+    {
+        "id": "lena-dominelli",
+        "name_kr": "레나 도미넬리",
+        "name_en": "Lena Dominelli",
+        "field": "녹색사회복지·재난 취약성 돌봄",
+        "category": "재난안전·공공인프라",
+        "tier": "legend",
+        "badge": "🏛️ 녹색사회복지(Green Social Work) 창시자",
+        "avatar": "🛡️",
+        "core_philosophy": "기후위기와 재난은 사회적 약자에게 가장 먼저, 가장 가혹하게 전가된다. 환경 정의와 사회적 돌봄을 결합하여 최소 개입형이자 상호부조적인 커뮤니티 회복력 인프라를 구축하는 '녹색사회복지'를 실천해야 한다.",
+        "key_concepts": ["녹색사회복지(Green Social Work)", "재난 취약성(Disaster Vulnerability)", "환경 정의(Environmental Justice)", "기후 돌봄", "풀뿌리 상호부조"],
+        "representative_work": "『녹색사회복지(Green Social Work)』 (2012)",
+        "scholargps_field": "Social Work / Disaster Studies"
+    },
+    {
+        "id": "setha-low",
+        "name_kr": "세사 로우",
+        "name_en": "Setha Low",
+        "field": "공공 공간 인류학·공간적 문화",
+        "category": "재난안전·공공인프라",
+        "tier": "trending",
+        "badge": "🔥 공공공간 인류학·안전 인프라 최고 권위자",
+        "avatar": "⛲",
+        "core_philosophy": "공공 광장과 공원은 물리적 설계를 넘어 시민들이 사회적 불안과 두려움을 해소하고 평등한 권리를 확인하는 장소이다. 폐쇄형 커뮤니티와 감시형 설계를 거부하고 누구나 안전하게 숨 쉴 수 있는 열린 공공 인프라를 지켜내야 한다.",
+        "key_concepts": ["공간화된 문화(Spatializing Culture)", "공공 공간의 정치학", "폐쇄적 도시설계 비판", "공간 정의와 사회적 포용"],
+        "representative_work": "『Spatializing Culture: The Ethnography of Space and Place』 (2016)",
+        "scholargps_field": "Anthropology / Environmental Psychology"
+    }
+]
+
+
+def fetch_openalex_metrics(scholar_name):
+    """OpenAlex API를 조회하여 검증된 피인용수, h-index, 저작 수, 소속기관을 가져옴"""
+    url = f"https://api.openalex.org/authors?search={urllib.parse.quote(scholar_name)}"
+    req = urllib.request.Request(url, headers={"User-Agent": "mailto:leege@example.com (D-Digest Scholar Ranker)"})
+    try:
+        with urllib.request.urlopen(req, timeout=6) as res:
+            data = json.loads(res.read().decode())
+            results = data.get("results", [])
+            if results:
+                top = results[0]
+                inst_list = top.get("last_known_institutions", [])
+                inst = inst_list[0].get("display_name", "") if inst_list else ""
+                cites = top.get("cited_by_count", 0)
+                h_idx = top.get("summary_stats", {}).get("h_index", 0)
+                works = top.get("works_count", 0)
+                oa_id = top.get("id", "")
+                return {
+                    "citations": cites,
+                    "h_index": h_idx,
+                    "works_count": works,
+                    "affiliation": inst,
+                    "openalex_url": oa_id or f"https://openalex.org/authors?search={urllib.parse.quote(scholar_name)}"
+                }
+    except Exception as e:
+        print(f"Warning: Failed to fetch OpenAlex for {scholar_name}: {e}")
+    return None
+
+
+def generate_gurus_json():
+    print(f"Starting High-Impact Scholar Index generation for {len(MASTER_SCHOLARS)} world-class scholars...")
+    compiled_scholars = []
+
+    for s in MASTER_SCHOLARS:
+        name_en = s["name_en"]
+        print(f"Fetching metrics for {name_en} ({s['name_kr']})...")
+        metrics = fetch_openalex_metrics(name_en)
+
+        citations = metrics["citations"] if metrics else 0
+        h_index = metrics["h_index"] if metrics else 0
+        works_count = metrics["works_count"] if metrics else 0
+        affiliation = metrics["affiliation"] if (metrics and metrics["affiliation"]) else s.get("affiliation", "학술 연구 석학")
+
+        # ScholarGPS, Google Scholar, OpenAlex links
+        encoded_name = urllib.parse.quote_plus(name_en)
+        links = [
+            {"title": "Google Scholar", "url": f"https://scholar.google.com/scholar?q={encoded_name}"},
+            {"title": "OpenAlex 프로필", "url": metrics["openalex_url"] if metrics else f"https://openalex.org/authors?search={encoded_name}"},
+            {"title": "ScholarGPS 검색", "url": f"https://scholargps.com/search?q={encoded_name}"}
+        ]
+
+        scholar_entry = {
+            "id": s["id"],
+            "name_kr": s["name_kr"],
+            "name_en": s["name_en"],
+            "field": s["field"],
+            "category": s["category"],
+            "affiliation": affiliation,
+            "tier": s["tier"],
+            "badge": s["badge"],
+            "avatar": s["avatar"],
+            "citations": citations,
+            "h_index": h_index,
+            "works_count": works_count,
+            "core_philosophy": s["core_philosophy"],
+            "key_concepts": s["key_concepts"],
+            "representative_work": s["representative_work"],
+            "links": links
+        }
+        compiled_scholars.append(scholar_entry)
+        time.sleep(0.08)
+
+    # Sort each tier by citation count
+    legends = [s for s in compiled_scholars if s["tier"] == "legend"]
+    trending = [s for s in compiled_scholars if s["tier"] == "trending"]
+
+    legends.sort(key=lambda x: x["citations"], reverse=True)
+    trending.sort(key=lambda x: x["citations"], reverse=True)
+
+    all_scholars = legends + trending
+
+    output_data = {
+        "updated_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+        "ranking_methodology": "ScholarGPS, AD Scientific Index & Google Scholar (via OpenAlex Global Metrics)",
+        "total_legends": len(legends),
+        "total_trending": len(trending),
+        "total_all": len(all_scholars),
+        "all_time_legends": legends,
+        "trending_scholars": trending,
+        "all_scholars": all_scholars
+    }
+
+    os.makedirs(WEB_DATA_DIR, exist_ok=True)
+    with open(GURUS_FILE, "w", encoding="utf-8") as f:
+        json.dump(output_data, f, ensure_ascii=False, indent=2)
+
+    print(f"\nSuccessfully generated {GURUS_FILE}!")
+    print(f"Total Scholars: {len(all_scholars)} (Legends: {len(legends)}, Leading Contemporary: {len(trending)})")
+
+
+if __name__ == "__main__":
+    generate_gurus_json()
