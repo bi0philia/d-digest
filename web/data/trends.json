@@ -1,14 +1,14 @@
 {
-  "updated_at": "2026-11-21 02:56",
-  "total_digests": 45,
-  "total_papers_analyzed": 361,
+  "updated_at": "2026-11-21 16:28",
+  "total_digests": 46,
+  "total_papers_analyzed": 369,
   "total_gurus": 39,
   "total_periodicals": 50,
   "total_tracked_keywords": 20,
   "category_distribution": [
     {
       "category": "농생태·식량주권",
-      "count": 96
+      "count": 99
     },
     {
       "category": "공간사회·도시커먼즈",
@@ -28,7 +28,7 @@
     },
     {
       "category": "커먼즈·공유재",
-      "count": 10
+      "count": 15
     },
     {
       "category": "돌봄·상호부조",
@@ -38,15 +38,15 @@
   "top_keywords": [
     {
       "keyword": "#동시대학술",
-      "count": 183
+      "count": 185
     },
     {
       "keyword": "#농생태",
-      "count": 96
+      "count": 99
     },
     {
       "keyword": "#책임있는AI",
-      "count": 86
+      "count": 90
     },
     {
       "keyword": "#공간사회",
@@ -58,7 +58,7 @@
     },
     {
       "keyword": "#도시공간",
-      "count": 61
+      "count": 63
     },
     {
       "keyword": "#과학기술학",
@@ -70,19 +70,19 @@
     },
     {
       "keyword": "#커머닝",
-      "count": 25
+      "count": 30
     },
     {
       "keyword": "#다종공생",
       "count": 23
     },
     {
-      "keyword": "#대지윤리",
-      "count": 12
+      "keyword": "#커먼즈",
+      "count": 15
     },
     {
-      "keyword": "#커먼즈",
-      "count": 10
+      "keyword": "#대지윤리",
+      "count": 15
     },
     {
       "keyword": "#존중의수사학",
@@ -93,24 +93,24 @@
       "count": 8
     },
     {
+      "keyword": "#돌봄소통",
+      "count": 6
+    },
+    {
+      "keyword": "#소농협동",
+      "count": 6
+    },
+    {
+      "keyword": "#위기안전망",
+      "count": 6
+    },
+    {
       "keyword": "#참여디자인",
       "count": 6
     },
     {
-      "keyword": "#돌봄소통",
-      "count": 5
-    },
-    {
-      "keyword": "#위기안전망",
-      "count": 5
-    },
-    {
       "keyword": "#알고리즘정의",
       "count": 5
-    },
-    {
-      "keyword": "#소농협동",
-      "count": 4
     },
     {
       "keyword": "#토지개간미술",
