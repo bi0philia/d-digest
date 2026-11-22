@@ -1,9 +1,9 @@
 {
-  "id": "digest-20261122-morning",
+  "id": "digest-20261122-afternoon",
   "date": "2026-11-22",
-  "edition": "morning",
-  "edition_label": "오전",
-  "timestamp": "2026-11-22 01:51",
+  "edition": "afternoon",
+  "edition_label": "오후",
+  "timestamp": "2026-11-22 16:45",
   "daily_summary": {
     "theme": "복합 위기 시대의 대항 헤게모니와 자율적 커먼즈 인프라",
     "overview": "오늘 수집된 연구들은 자본과 국가의 이분법을 넘어, 자립적인 1인 가구와 개인이 고립되지 않고 공동의 자원을 호혜적으로 관리하는 커머닝(Commoning) 실천에 주목합니다.",
@@ -144,17 +144,38 @@
       ]
     },
     {
-      "id": "https://doi.org/10.1080/03066150.2026.2739233",
-      "title_kr": "Counterhegemony and polycrisis II: 사회운동의 과학과 돌봄의 실험",
-      "original_title": "Counter-hegemony and polycrisis II: movement science and experiments in care",
+      "id": "https://doi.org/10.1080/03066150.2026.2758256",
+      "title_kr": "Accumulation by legalization: the accelerated transformation of Californias drug war agrarianism",
+      "original_title": "Accumulation by legalization: the accelerated transformation of California’s drug war agrarianism",
       "source": "The Journal of Peasant Studies",
-      "authors": "Raj Patel",
-      "published": "2026-10-22",
-      "url": "https://doi.org/10.1080/03066150.2026.2739233",
+      "authors": "Michael Polson, Nathan F. Sayre",
+      "published": "2026-11-20",
+      "url": "https://doi.org/10.1080/03066150.2026.2758256",
       "category": "농생태·식량주권",
-      "relevance_score": 9.4,
+      "relevance_score": 8.9,
       "summary_points": [
-        "연구 배경 및 문제의식: 학술지 'The Journal of Peasant Studies'에 게재된 본 연구는, 신재생에너지 전환마저 거대 자본의 추출주의적 개발 논리로 환원되는 한계 속에서, 기후 위기 극복을 위한 대안적이고 민주적인 에너지 담론의 부재을(를) 정면으로 비판하며 새로운 이론적·실천적 해법을 모색합니다.",
+        "연구 배경 및 문제의식: 학술지 'The Journal of Peasant Studies'에 게재된 본 연구는, 글로벌 농식품 복합체와 시장 중심 구조 속에서 소농들이 겪는 경제적 종속과 자생적 협동조합 거버넌스의 제도적 위기을(를) 정면으로 비판하며 새로운 이론적·실천적 해법을 모색합니다.",
+        "핵심 분석 및 이론적 발견: 생태예술 실천과 지역 공동체의 자치적 실험을 분석하여, 에너지를 단순한 자원이 아닌 공동체의 다종 공생과 자율성을 촉진하는 문화적 커먼즈로 재개념화했습니다.",
+        "트윈 연구 시사점: 자연 기반 치유와 대지 윤리를 결합하여, 거대 산업 농업에 의존하지 않고 지역 생태계와 공생하는 지속가능한 순환 삶의 방식을 구체화하는 나침반이 됩니다."
+      ],
+      "keywords": [
+        "#농생태",
+        "#소농협동",
+        "#동시대학술"
+      ]
+    },
+    {
+      "id": "https://openalex.org/W7224692450",
+      "title_kr": "Reimagining  transforming arid  semi-arid wadi landscapes through water-led 자연 -based climate adaptation: Hydro- 생태적 Action framework  regenerative bioregional urbanism",
+      "original_title": "Reimagining and transforming arid and semi-arid wadi landscapes through water-led and nature-based climate adaptation: a hydro-ecological action framework for regenerative bioregional urbanism",
+      "source": "Research Portal (Queen's University Belfast)",
+      "authors": "Ageela Ahmad A Madkhali",
+      "published": "2026-12-01",
+      "url": "https://pure.qub.ac.uk/en/studentTheses/505049ae-792a-40e2-a01f-06cc4348b3e4",
+      "category": "농생태·식량주권",
+      "relevance_score": 8.9,
+      "summary_points": [
+        "연구 배경 및 문제의식: 학술지 'Research Portal (Queen's University Belfast)'에 게재된 본 연구는, 서구적 개발주의와 산업 농업이 토착민의 오랜 생태 지혜와 자연과의 유기적 연결성을 해체해 온 환경 부정의을(를) 정면으로 비판하며 새로운 이론적·실천적 해법을 모색합니다.",
         "핵심 분석 및 이론적 발견: 생태예술 실천과 지역 공동체의 자치적 실험을 분석하여, 에너지를 단순한 자원이 아닌 공동체의 다종 공생과 자율성을 촉진하는 문화적 커먼즈로 재개념화했습니다.",
         "트윈 연구 시사점: 자연 기반 치유와 대지 윤리를 결합하여, 거대 산업 농업에 의존하지 않고 지역 생태계와 공생하는 지속가능한 순환 삶의 방식을 구체화하는 나침반이 됩니다."
       ],
@@ -162,28 +183,7 @@
         "#농생태",
         "#책임있는AI",
         "#대지윤리",
-        "#위기안전망"
-      ]
-    },
-    {
-      "id": "https://doi.org/10.1215/22011919-12609611",
-      "title_kr": "Glossing Seabeds에 관한 비판적 고찰",
-      "original_title": "Glossing Seabeds",
-      "source": "Environmental Humanities",
-      "authors": "Kilian Quigley, Laurence Publicover, Charné Lavery",
-      "published": "2026-11-01",
-      "url": "https://doi.org/10.1215/22011919-12609611",
-      "category": "농생태·식량주권",
-      "relevance_score": 8.9,
-      "summary_points": [
-        "연구 배경 및 문제의식: 학술지 'Environmental Humanities'에 게재된 본 연구는, 동시대 학술 담론에서 제기되는 구조적 한계와 비판적 쟁점을(를) 정면으로 비판하며 새로운 이론적·실천적 해법을 모색합니다.",
-        "핵심 분석 및 이론적 발견: 생태예술 실천과 지역 공동체의 자치적 실험을 분석하여, 에너지를 단순한 자원이 아닌 공동체의 다종 공생과 자율성을 촉진하는 문화적 커먼즈로 재개념화했습니다.",
-        "트윈 연구 시사점: 자연 기반 치유와 대지 윤리를 결합하여, 거대 산업 농업에 의존하지 않고 지역 생태계와 공생하는 지속가능한 순환 삶의 방식을 구체화하는 나침반이 됩니다."
-      ],
-      "keywords": [
-        "#농생태",
-        "#책임있는AI",
-        "#대지윤리"
+        "#도시공간"
       ]
     }
   ]
