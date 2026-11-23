@@ -1,14 +1,14 @@
 {
-  "updated_at": "2026-11-23 02:07",
-  "total_digests": 49,
-  "total_papers_analyzed": 393,
+  "updated_at": "2026-11-23 20:40",
+  "total_digests": 50,
+  "total_papers_analyzed": 401,
   "total_gurus": 39,
   "total_periodicals": 50,
   "total_tracked_keywords": 20,
   "category_distribution": [
     {
       "category": "농생태·식량주권",
-      "count": 107
+      "count": 109
     },
     {
       "category": "공간사회·도시커먼즈",
@@ -16,19 +16,19 @@
     },
     {
       "category": "재난안전·공공인프라",
-      "count": 74
+      "count": 75
     },
     {
       "category": "과학기술학·STS",
       "count": 57
     },
     {
-      "category": "시빅HCI·UXR",
-      "count": 31
+      "category": "커먼즈·공유재",
+      "count": 35
     },
     {
-      "category": "커먼즈·공유재",
-      "count": 30
+      "category": "시빅HCI·UXR",
+      "count": 31
     },
     {
       "category": "돌봄·상호부조",
@@ -38,15 +38,15 @@
   "top_keywords": [
     {
       "keyword": "#동시대학술",
-      "count": 192
+      "count": 195
     },
     {
       "keyword": "#농생태",
-      "count": 107
+      "count": 109
     },
     {
       "keyword": "#책임있는AI",
-      "count": 101
+      "count": 105
     },
     {
       "keyword": "#공간사회",
@@ -54,11 +54,11 @@
     },
     {
       "keyword": "#재난안전",
-      "count": 74
+      "count": 75
     },
     {
       "keyword": "#도시공간",
-      "count": 71
+      "count": 74
     },
     {
       "keyword": "#과학기술학",
@@ -66,19 +66,19 @@
     },
     {
       "keyword": "#커머닝",
-      "count": 45
+      "count": 50
+    },
+    {
+      "keyword": "#커먼즈",
+      "count": 35
     },
     {
       "keyword": "#시빅HCI",
       "count": 31
     },
     {
-      "keyword": "#커먼즈",
-      "count": 30
-    },
-    {
       "keyword": "#대지윤리",
-      "count": 25
+      "count": 27
     },
     {
       "keyword": "#다종공생",
@@ -86,11 +86,11 @@
     },
     {
       "keyword": "#소농협동",
-      "count": 10
+      "count": 11
     },
     {
       "keyword": "#돌봄소통",
-      "count": 9
+      "count": 10
     },
     {
       "keyword": "#존중의수사학",
