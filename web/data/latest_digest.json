@@ -1,9 +1,9 @@
 {
-  "id": "digest-20261123-morning",
+  "id": "digest-20261123-afternoon",
   "date": "2026-11-23",
-  "edition": "morning",
-  "edition_label": "오전",
-  "timestamp": "2026-11-23 02:07",
+  "edition": "afternoon",
+  "edition_label": "오후",
+  "timestamp": "2026-11-23 20:40",
   "daily_summary": {
     "theme": "복합 위기 시대의 대항 헤게모니와 자율적 커먼즈 인프라",
     "overview": "오늘 수집된 연구들은 자본과 국가의 이분법을 넘어, 자립적인 1인 가구와 개인이 고립되지 않고 공동의 자원을 호혜적으로 관리하는 커머닝(Commoning) 실천에 주목합니다.",
@@ -144,46 +144,45 @@
       ]
     },
     {
-      "id": "https://doi.org/10.1080/03066150.2026.2739233",
-      "title_kr": "Counterhegemony and polycrisis II: 사회운동의 과학과 돌봄의 실험",
-      "original_title": "Counter-hegemony and polycrisis II: movement science and experiments in care",
-      "source": "The Journal of Peasant Studies",
-      "authors": "Raj Patel",
-      "published": "2026-10-22",
-      "url": "https://doi.org/10.1080/03066150.2026.2739233",
+      "id": "https://openalex.org/W7217725607",
+      "title_kr": "REFRAMING WASTE AT ABURI COMMUNITY GHANA: Art as  response to 도시 Consumerism",
+      "original_title": "REFRAMING WASTE AT ABURI COMMUNITY, GHANA: ART AS A RESPONSE TO URBAN CONSUMERISM",
+      "source": "Journal of African Arts & Culture",
+      "authors": "Samuel Prophask Asamoah, Dickson Adom, Steve Kquofi",
+      "published": "2026-11-19",
+      "url": "https://journals.uew.edu.gh/index.php/jaac/article/view/963",
       "category": "농생태·식량주권",
-      "relevance_score": 9.4,
+      "relevance_score": 8.9,
       "summary_points": [
-        "연구 배경 및 문제의식: 학술지 'The Journal of Peasant Studies'에 게재된 본 연구는, 신재생에너지 전환마저 거대 자본의 추출주의적 개발 논리로 환원되는 한계 속에서, 기후 위기 극복을 위한 대안적이고 민주적인 에너지 담론의 부재을(를) 정면으로 비판하며 새로운 이론적·실천적 해법을 모색합니다.",
+        "연구 배경 및 문제의식: 학술지 'Journal of African Arts & Culture'에 게재된 본 연구는, 도구적 과학주의가 간과해 온 자연과의 미적·관계론적 교감과 생태학적 앎의 심층적 연결성을(를) 정면으로 비판하며 새로운 이론적·실천적 해법을 모색합니다.",
         "핵심 분석 및 이론적 발견: 생태예술 실천과 지역 공동체의 자치적 실험을 분석하여, 에너지를 단순한 자원이 아닌 공동체의 다종 공생과 자율성을 촉진하는 문화적 커먼즈로 재개념화했습니다.",
         "트윈 연구 시사점: 자연 기반 치유와 대지 윤리를 결합하여, 거대 산업 농업에 의존하지 않고 지역 생태계와 공생하는 지속가능한 순환 삶의 방식을 구체화하는 나침반이 됩니다."
       ],
       "keywords": [
         "#농생태",
         "#책임있는AI",
-        "#대지윤리",
-        "#위기안전망"
+        "#도시공간"
       ]
     },
     {
-      "id": "https://doi.org/10.61838/kman.jrmde.372",
-      "title_kr": "Designing  crowdfunding investment marketing model  enhancing sustainable 도시 Revenues: A Case Study of Tehran Municipality",
-      "original_title": "Designing a Crowdfunding Investment Marketing Model for Enhancing Sustainable Urban Revenues: A Case Study of Tehran Municipality",
-      "source": "Journal of Resource Management and Decision Engineering",
-      "authors": "Abolghasem  Yousef Soltanieh, Mahmoud Ahmadi Sharif, Arezo Ahmadi Danyali",
-      "published": "2027-01-01",
-      "url": "https://doi.org/10.61838/kman.jrmde.372",
-      "category": "공간사회·도시커먼즈",
+      "id": "https://openalex.org/W7238699784",
+      "title_kr": "Contribution 농업적 Cooperatives  humanitarian assistance  food security resilience  rural development  mali",
+      "original_title": "Contribution of agricultural cooperatives and humanitarian assistance on food security resilience and rural development in Mali",
+      "source": "ORBi (University of Liège)",
+      "authors": "I Mumararungu",
+      "published": "2026-12-07",
+      "url": "https://orbi.uliege.be/handle/2268/350878",
+      "category": "재난안전·공공인프라",
       "relevance_score": 8.9,
       "summary_points": [
-        "연구 배경 및 문제의식: 학술지 'Journal of Resource Management and Decision Engineering'에 게재된 본 연구는, 거대 플랫폼 기업들이 금융 서비스를 결합하며 일상적 데이터를 독점하고 책임을 금융 소비자에게 전가하는 플랫폼 자본주의의 착취적 구조을(를) 정면으로 비판하며 새로운 이론적·실천적 해법을 모색합니다.",
+        "연구 배경 및 문제의식: 학술지 'ORBi (University of Liège)'에 게재된 본 연구는, 동시대 학술 담론에서 제기되는 구조적 한계와 비판적 쟁점을(를) 정면으로 비판하며 새로운 이론적·실천적 해법을 모색합니다.",
         "핵심 분석 및 이론적 발견: 생태예술 실천과 지역 공동체의 자치적 실험을 분석하여, 에너지를 단순한 자원이 아닌 공동체의 다종 공생과 자율성을 촉진하는 문화적 커먼즈로 재개념화했습니다.",
-        "트윈 연구 시사점: 도시 내에서 고립되지 않고 사적 자율성과 공적 연결을 동시에 누릴 수 있는 제3의 비시장적 공유 거점 공간을 형성하고 자치권을 방어하는 데 긴요한 준거를 제시합니다."
+        "트윈 연구 시사점: 개인의 사생활을 엄격히 보호하면서도 위급 시 고립사나 재난 피해를 예방할 수 있는 최소 개입형 상호부조 안전망의 실천적 설계를 뒷받침합니다."
       ],
       "keywords": [
-        "#공간사회",
+        "#재난안전",
         "#책임있는AI",
-        "#도시공간"
+        "#동시대학술"
       ]
     }
   ]
