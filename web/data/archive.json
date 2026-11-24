@@ -1,5 +1,190 @@
 [
   {
+    "id": "digest-20261124-afternoon",
+    "date": "2026-11-24",
+    "edition": "afternoon",
+    "edition_label": "오후",
+    "timestamp": "2026-11-24 19:46",
+    "daily_summary": {
+      "theme": "추출주의 농업 극복과 다종 공생 기반 대지 윤리의 회복",
+      "overview": "오늘의 연구들은 기후 붕괴와 토양 황폐화라는 복합 위기 속에서, 소농의 자치권과 흙·미생물·다종 생명 간의 유기적 얽힘을 회복하는 농생태학적 대안을 역설합니다.",
+      "key_takeaways": [
+        "생산주의 패러다임 탈피: 화학 비료와 거대 자본 중심의 녹색혁명을 넘어 생태적 지속가능성을 우선하는 패러다임 전환이 요구됩니다.",
+        "다종 공생의 대지 윤리: 인간뿐 아니라 흙과 생태계 구성원 전체의 상호 의존성을 인정하는 돌봄의 농업을 실천해야 합니다.",
+        "소농의 자치와 지역 식량 순환: 외부 공급망 충격에 흔들리지 않는 지역 중심의 자립적 식량 및 생태 네트워크를 복원해야 합니다."
+      ]
+    },
+    "items": [
+      {
+        "id": "https://doi.org/10.1177/20539517261496476",
+        "title_kr": "감시 From divine to digital: Visibility and human flourishing final revision September 2026",
+        "original_title": "Surveillance from divine to digital: Visibility and human flourishing [final revision September 2026]",
+        "source": "Big Data & Society",
+        "authors": "David Lyon",
+        "published": "2026-11-23",
+        "url": "https://doi.org/10.1177/20539517261496476",
+        "category": "과학기술학·STS",
+        "relevance_score": 9.4,
+        "summary_points": [
+          "연구 배경 및 문제의식: 학술지 'Big Data & Society'에 게재된 본 연구는, 도구적 과학주의가 간과해 온 자연과의 미적·관계론적 교감과 생태학적 앎의 심층적 연결성을(를) 정면으로 비판하며 새로운 이론적·실천적 해법을 모색합니다.",
+          "핵심 분석 및 이론적 발견: 생태예술 실천과 지역 공동체의 자치적 실험을 분석하여, 에너지를 단순한 자원이 아닌 공동체의 다종 공생과 자율성을 촉진하는 문화적 커먼즈로 재개념화했습니다.",
+          "트윈 연구 시사점: 기술 관료주의를 탈피하여 개인이 플랫폼의 수동적 소비자에 머물지 않고 능동적 데이터 주권과 민주적 기술 통제권을 행사하도록 돕는 제도적 근거가 됩니다."
+        ],
+        "keywords": [
+          "#과학기술학",
+          "#책임있는AI",
+          "#자원추출주의"
+        ]
+      },
+      {
+        "id": "https://doi.org/10.3390/arts15120273",
+        "title_kr": "A Short Historiography of Performance and Trees: When was 생태여성주의(에코페미니즘)",
+        "original_title": "A Short Historiography of Performance and Trees: When Was Ecofeminism?",
+        "source": "Arts",
+        "authors": "Jane Chin Davidson",
+        "published": "2026-11-23",
+        "url": "https://doi.org/10.3390/arts15120273",
+        "category": "농생태·식량주권",
+        "relevance_score": 9.4,
+        "summary_points": [
+          "연구 배경 및 문제의식: 학술지 'Arts'에 게재된 본 연구는, 서구적 개발주의와 산업 농업이 토착민의 오랜 생태 지혜와 자연과의 유기적 연결성을 해체해 온 환경 부정의을(를) 정면으로 비판하며 새로운 이론적·실천적 해법을 모색합니다.",
+          "핵심 분석 및 이론적 발견: 생태예술 실천과 지역 공동체의 자치적 실험을 분석하여, 에너지를 단순한 자원이 아닌 공동체의 다종 공생과 자율성을 촉진하는 문화적 커먼즈로 재개념화했습니다.",
+          "트윈 연구 시사점: 자연 기반 치유와 대지 윤리를 결합하여, 거대 산업 농업에 의존하지 않고 지역 생태계와 공생하는 지속가능한 순환 삶의 방식을 구체화하는 나침반이 됩니다."
+        ],
+        "keywords": [
+          "#농생태",
+          "#책임있는AI",
+          "#대지윤리"
+        ]
+      },
+      {
+        "id": "https://doi.org/10.4324/9781003653363-2",
+        "title_kr": "Theoretical Foundations에 관한 비판적 고찰",
+        "original_title": "Theoretical Foundations",
+        "source": "Routledge eBooks",
+        "authors": "Azadeh Fatehrad",
+        "published": "2026-11-22",
+        "url": "https://doi.org/10.4324/9781003653363-2",
+        "category": "농생태·식량주권",
+        "relevance_score": 9.4,
+        "summary_points": [
+          "연구 배경 및 문제의식: 학술지 'Routledge eBooks'에 게재된 본 연구는, 도구적 과학주의가 간과해 온 자연과의 미적·관계론적 교감과 생태학적 앎의 심층적 연결성을(를) 정면으로 비판하며 새로운 이론적·실천적 해법을 모색합니다.",
+          "핵심 분석 및 이론적 발견: 현장 실증 데이터와 이론적 모델링을 결합하여 대안적 거버넌스의 구체적 경로를 제시했습니다.",
+          "트윈 연구 시사점: 자연 기반 치유와 대지 윤리를 결합하여, 거대 산업 농업에 의존하지 않고 지역 생태계와 공생하는 지속가능한 순환 삶의 방식을 구체화하는 나침반이 됩니다."
+        ],
+        "keywords": [
+          "#농생태",
+          "#동시대학술"
+        ]
+      },
+      {
+        "id": "https://doi.org/10.1007/978-3-032-40503-6_30",
+        "title_kr": "Relational modularity 시민 참여형 디자인: Ceramic Practices in the Shifting Ground Project",
+        "original_title": "Relational Modularity in Participatory Design: Ceramic Practices in the Shifting Ground Project",
+        "source": "Springer series in design and innovation",
+        "authors": "Paula Reaes Pinto, António Gorgel Pinto",
+        "published": "2027-02-02",
+        "url": "https://doi.org/10.1007/978-3-032-40503-6_30",
+        "category": "시빅HCI·UXR",
+        "relevance_score": 9.4,
+        "summary_points": [
+          "연구 배경 및 문제의식: 학술지 'Springer series in design and innovation'에 게재된 본 연구는, 도구적 과학주의가 간과해 온 자연과의 미적·관계론적 교감과 생태학적 앎의 심층적 연결성을(를) 정면으로 비판하며 새로운 이론적·실천적 해법을 모색합니다.",
+          "핵심 분석 및 이론적 발견: 생태예술 실천과 지역 공동체의 자치적 실험을 분석하여, 에너지를 단순한 자원이 아닌 공동체의 다종 공생과 자율성을 촉진하는 문화적 커먼즈로 재개념화했습니다.",
+          "트윈 연구 시사점: 침해적인 집단주의 규율을 강요하지 않으면서도 위기 발생 시 고립된 개인에게 정확하고 투과성 높은 안전망을 제공하는 유니버설 공공 인터페이스 설계에 직접적 지침이 됩니다."
+        ],
+        "keywords": [
+          "#시빅HCI",
+          "#참여디자인",
+          "#동시대학술"
+        ]
+      },
+      {
+        "id": "http://arxiv.org/abs/2611.30674v1",
+        "title_kr": "The user who is not there: genealogy and critique of simulated users built with generative AI in UX testing",
+        "original_title": "The user who is not there: genealogy and critique of simulated users built with generative AI in UX testing",
+        "source": "arXiv cs.HC / cs.CY",
+        "authors": "José Carlos Arcoverde",
+        "published": "2026-11-23",
+        "url": "http://arxiv.org/abs/2611.30674v1",
+        "category": "시빅HCI·UXR",
+        "relevance_score": 9.4,
+        "summary_points": [
+          "연구 배경 및 문제의식: 학술지 'arXiv cs.HC / cs.CY'에 게재된 본 연구는, 생성형 AI와 알고리즘 추천 기술이 미디어 및 저널리즘 생태계에 급속히 도입되면서 발생하는 공공성 훼손, 편향성 증폭, 그리고 알고리즘 거버넌스의 제도적 공백을(를) 정면으로 비판하며 새로운 이론적·실천적 해법을 모색합니다.",
+          "핵심 분석 및 이론적 발견: 생태예술 실천과 지역 공동체의 자치적 실험을 분석하여, 에너지를 단순한 자원이 아닌 공동체의 다종 공생과 자율성을 촉진하는 문화적 커먼즈로 재개념화했습니다.",
+          "트윈 연구 시사점: 침해적인 집단주의 규율을 강요하지 않으면서도 위기 발생 시 고립된 개인에게 정확하고 투과성 높은 안전망을 제공하는 유니버설 공공 인터페이스 설계에 직접적 지침이 됩니다."
+        ],
+        "keywords": [
+          "#시빅HCI",
+          "#책임있는AI",
+          "#참여디자인"
+        ]
+      },
+      {
+        "id": "https://doi.org/10.1177/20539517261497959",
+        "title_kr": "디지털 권위주의 Generative ai: 비교 Perspectives  datafication, control,  manipulation",
+        "original_title": "Digital authoritarianism and generative AI: Comparative perspectives on datafication, control, and manipulation",
+        "source": "Big Data & Society",
+        "authors": "Hossein Kermani, Jun Liu",
+        "published": "2026-11-23",
+        "url": "https://doi.org/10.1177/20539517261497959",
+        "category": "과학기술학·STS",
+        "relevance_score": 8.9,
+        "summary_points": [
+          "연구 배경 및 문제의식: 학술지 'Big Data & Society'에 게재된 본 연구는, 도구적 과학주의가 간과해 온 자연과의 미적·관계론적 교감과 생태학적 앎의 심층적 연결성을(를) 정면으로 비판하며 새로운 이론적·실천적 해법을 모색합니다.",
+          "핵심 분석 및 이론적 발견: 국가 및 지역별 정책 비교와 제도 분석을 통해, 단일한 기술 규제를 넘어 당사자 참여와 공공적 책임성을 담보하는 비교 제도론적 프레임워크를 도출했습니다.",
+          "트윈 연구 시사점: 기술 관료주의를 탈피하여 개인이 플랫폼의 수동적 소비자에 머물지 않고 능동적 데이터 주권과 민주적 기술 통제권을 행사하도록 돕는 제도적 근거가 됩니다."
+        ],
+        "keywords": [
+          "#과학기술학",
+          "#책임있는AI",
+          "#동시대학술"
+        ]
+      },
+      {
+        "id": "https://doi.org/10.4324/9781003653363-7",
+        "title_kr": "The Role of Natural Environments에 관한 비판적 고찰",
+        "original_title": "The Role of Natural Environments",
+        "source": "Routledge eBooks",
+        "authors": "Azadeh Fatehrad",
+        "published": "2026-11-22",
+        "url": "https://doi.org/10.4324/9781003653363-7",
+        "category": "농생태·식량주권",
+        "relevance_score": 8.9,
+        "summary_points": [
+          "연구 배경 및 문제의식: 학술지 'Routledge eBooks'에 게재된 본 연구는, 도구적 과학주의가 간과해 온 자연과의 미적·관계론적 교감과 생태학적 앎의 심층적 연결성을(를) 정면으로 비판하며 새로운 이론적·실천적 해법을 모색합니다.",
+          "핵심 분석 및 이론적 발견: 생태예술 실천과 지역 공동체의 자치적 실험을 분석하여, 에너지를 단순한 자원이 아닌 공동체의 다종 공생과 자율성을 촉진하는 문화적 커먼즈로 재개념화했습니다.",
+          "트윈 연구 시사점: 자연 기반 치유와 대지 윤리를 결합하여, 거대 산업 농업에 의존하지 않고 지역 생태계와 공생하는 지속가능한 순환 삶의 방식을 구체화하는 나침반이 됩니다."
+        ],
+        "keywords": [
+          "#농생태",
+          "#참여디자인",
+          "#대지윤리"
+        ]
+      },
+      {
+        "id": "https://doi.org/10.17953/a3.43495",
+        "title_kr": "Our Islands Our Stories Our Futures: Building interisland  cross-community 연대 Indigenous data sovereignty",
+        "original_title": "Our Islands, Our Stories, Our Futures: Building Interisland and Cross-Community Solidarity for Indigenous Data Sovereignty",
+        "source": "American Indian Culture and Research Journal",
+        "authors": "Riley I. Taitingfong, Dominique David-Chavez, Migdalia Ma “Tai Pelli” Pellicier",
+        "published": "2026-11-23",
+        "url": "https://doi.org/10.17953/a3.43495",
+        "category": "커먼즈·공유재",
+        "relevance_score": 8.9,
+        "summary_points": [
+          "연구 배경 및 문제의식: 학술지 'American Indian Culture and Research Journal'에 게재된 본 연구는, 식민주의적 개발 논리와 가부장적 자연 지배에 맞서 문학적 상상력이 일깨우는 비판적 생태 의식과 저항 담론을(를) 정면으로 비판하며 새로운 이론적·실천적 해법을 모색합니다.",
+          "핵심 분석 및 이론적 발견: 생태예술 실천과 지역 공동체의 자치적 실험을 분석하여, 에너지를 단순한 자원이 아닌 공동체의 다종 공생과 자율성을 촉진하는 문화적 커먼즈로 재개념화했습니다.",
+          "트윈 연구 시사점: 사유화와 관료제를 넘어 자립적 개인이 사생활을 지키며 비시장적 방식으로 연대할 수 있는 '느슨하고 안전한 P2P 커먼즈 프로토콜' 구축에 필수적 참조점을 제공합니다."
+        ],
+        "keywords": [
+          "#커먼즈",
+          "#책임있는AI",
+          "#돌봄소통"
+        ]
+      }
+    ]
+  },
+  {
     "id": "digest-20261124-morning",
     "date": "2026-11-24",
     "edition": "morning",
