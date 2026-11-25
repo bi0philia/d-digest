@@ -1,47 +1,10 @@
 {
-  "updated_at": "2026-11-25 04:44:01",
+  "updated_at": "2026-11-25 18:53:47",
   "ranking_methodology": "ScholarGPS, AD Scientific Index & Google Scholar (via OpenAlex Global Metrics)",
   "total_legends": 14,
   "total_trending": 25,
   "total_all": 39,
   "all_time_legends": [
-    {
-      "id": "bruno-latour",
-      "name_kr": "브뤼노 라투르",
-      "name_en": "Bruno Latour",
-      "field": "행위자-연결망 이론(ANT)·지구정치학",
-      "category": "과학기술학·STS",
-      "affiliation": "University of Bergen",
-      "tier": "legend",
-      "badge": "🏛️ 현대 STS 및 철학의 최고 거장",
-      "avatar": "🔬",
-      "citations": 212055,
-      "h_index": 151,
-      "works_count": 1083,
-      "core_philosophy": "인간과 자연, 사회와 기술의 근대적 이분법을 기각하고 인간과 비인간 행위자(Actant)들이 서로 얽혀 네트워크를 구성한다는 '행위자-연결망 이론(ANT)'을 정립했다. 기후위기 시대, 우리는 관념적 지구를 넘어 '가이아(Gaia)'라는 실제 대지에 착륙해야 한다.",
-      "key_concepts": [
-        "행위자-연결망 이론(ANT)",
-        "비인간 행위자(Actant)",
-        "우리는 결코 근대인이었던 적이 없다",
-        "지구에 착륙하기",
-        "사물의 의회"
-      ],
-      "representative_work": "『우리는 결코 근대인이었던 적이 없다』 (1991)",
-      "links": [
-        {
-          "title": "Google Scholar",
-          "url": "https://scholar.google.com/scholar?q=Bruno+Latour"
-        },
-        {
-          "title": "OpenAlex 프로필",
-          "url": "https://openalex.org/A5054780327"
-        },
-        {
-          "title": "ScholarGPS 검색",
-          "url": "https://scholargps.com/search?q=Bruno+Latour"
-        }
-      ]
-    },
     {
       "id": "elinor-ostrom",
       "name_kr": "엘리너 오스트롬",
@@ -52,9 +15,9 @@
       "tier": "legend",
       "badge": "🏛️ 노벨 경제학상 수상 · 올타임 레전드",
       "avatar": "🏆",
-      "citations": 201766,
-      "h_index": 149,
-      "works_count": 749,
+      "citations": 183159,
+      "h_index": 133,
+      "works_count": 747,
       "core_philosophy": "'공유재의 비극'은 숙명이 아니다. 국가의 강제나 시장의 사유화 없이도 당사자 공동체가 자율적으로 명확한 경계, 참여적 규칙 개정, 점진적 제재 등 '커먼즈 8대 원칙'을 수립할 때 자원은 수백 년간 지속가능하게 유지된다.",
       "key_concepts": [
         "커먼즈 8대 원칙",
@@ -80,6 +43,43 @@
       ]
     },
     {
+      "id": "bruno-latour",
+      "name_kr": "브뤼노 라투르",
+      "name_en": "Bruno Latour",
+      "field": "행위자-연결망 이론(ANT)·지구정치학",
+      "category": "과학기술학·STS",
+      "affiliation": "University of Bergen",
+      "tier": "legend",
+      "badge": "🏛️ 현대 STS 및 철학의 최고 거장",
+      "avatar": "🔬",
+      "citations": 165694,
+      "h_index": 141,
+      "works_count": 1082,
+      "core_philosophy": "인간과 자연, 사회와 기술의 근대적 이분법을 기각하고 인간과 비인간 행위자(Actant)들이 서로 얽혀 네트워크를 구성한다는 '행위자-연결망 이론(ANT)'을 정립했다. 기후위기 시대, 우리는 관념적 지구를 넘어 '가이아(Gaia)'라는 실제 대지에 착륙해야 한다.",
+      "key_concepts": [
+        "행위자-연결망 이론(ANT)",
+        "비인간 행위자(Actant)",
+        "우리는 결코 근대인이었던 적이 없다",
+        "지구에 착륙하기",
+        "사물의 의회"
+      ],
+      "representative_work": "『우리는 결코 근대인이었던 적이 없다』 (1991)",
+      "links": [
+        {
+          "title": "Google Scholar",
+          "url": "https://scholar.google.com/scholar?q=Bruno+Latour"
+        },
+        {
+          "title": "OpenAlex 프로필",
+          "url": "https://openalex.org/A5054780327"
+        },
+        {
+          "title": "ScholarGPS 검색",
+          "url": "https://scholargps.com/search?q=Bruno+Latour"
+        }
+      ]
+    },
+    {
       "id": "donna-haraway",
       "name_kr": "도나 해러웨이",
       "name_en": "Donna Haraway",
@@ -89,9 +89,9 @@
       "tier": "legend",
       "badge": "🏛️ 다종공생·포스트휴머니즘 최고 거장",
       "avatar": "🐙",
-      "citations": 109701,
-      "h_index": 69,
-      "works_count": 204,
+      "citations": 80864,
+      "h_index": 64,
+      "works_count": 205,
       "core_philosophy": "인간 중심주의를 버리고 생명과 비생명, 유기체와 기계가 얽히는 '반려종(Companion Species)'의 관계론을 수용해야 한다. 지구적 파국 앞에서 우리는 도피하는 대신 '트러블과 함께 머물며' 다종 간의 친족을 만들어야 한다.",
       "key_concepts": [
         "사이보그 선언",
@@ -126,8 +126,8 @@
       "tier": "legend",
       "badge": "🏛️ 마르크스주의 지리학 최고 거장",
       "avatar": "🏙️",
-      "citations": 80006,
-      "h_index": 84,
+      "citations": 49887,
+      "h_index": 77,
       "works_count": 453,
       "core_philosophy": "자본주의는 주기적 위기를 회피하기 위해 도시 공간을 금융화하고 부동산 투기로 잉여 자본을 흡수하는 '공간적 조정(Spatial Fix)'을 감행한다. 시민은 도시 공간을 재전유하고 집단적으로 창조할 '도시권(Right to the City)'을 요구해야 한다.",
       "key_concepts": [
@@ -154,43 +154,6 @@
       ]
     },
     {
-      "id": "henri-lefebvre",
-      "name_kr": "앙리 르페브르",
-      "name_en": "Henri Lefebvre",
-      "field": "공간사회학·도시권·일상생활 비판",
-      "category": "공간사회·도시커먼즈",
-      "affiliation": "Centre National de la Recherche Scientifique",
-      "tier": "legend",
-      "badge": "🏛️ 도시공간 철학의 원류",
-      "avatar": "🗺️",
-      "citations": 31841,
-      "h_index": 56,
-      "works_count": 227,
-      "core_philosophy": "공간은 고정된 물리적 용기가 아니라 사회적 관계가 투영되고 재창조되는 '사회적 생산물'이다. 자본에 의해 교환가치로 환원된 도시 공간을 일상생활의 '사용가치'로 탈환해야 한다.",
-      "key_concepts": [
-        "공간의 생산(The Production of Space)",
-        "도시권(Le droit à la ville)",
-        "공간적 삼원성",
-        "일상생활 비판",
-        "리듬분석"
-      ],
-      "representative_work": "『공간의 생산(The Production of Space)』 (1974)",
-      "links": [
-        {
-          "title": "Google Scholar",
-          "url": "https://scholar.google.com/scholar?q=Henri+Lefebvre"
-        },
-        {
-          "title": "OpenAlex 프로필",
-          "url": "https://openalex.org/A5101671593"
-        },
-        {
-          "title": "ScholarGPS 검색",
-          "url": "https://scholargps.com/search?q=Henri+Lefebvre"
-        }
-      ]
-    },
-    {
       "id": "doreen-massey",
       "name_kr": "도린 매시",
       "name_en": "Doreen Massey",
@@ -200,8 +163,8 @@
       "tier": "legend",
       "badge": "🏛️ 페미니스트 지리학 선구자",
       "avatar": "🧭",
-      "citations": 27911,
-      "h_index": 62,
+      "citations": 19542,
+      "h_index": 56,
       "works_count": 219,
       "core_philosophy": "장소는 고정된 경계나 닫힌 정체성이 아니라 끊임없이 유입되는 사회적 관계와 궤적들이 교차하는 '개방적인 사건'이다. 세계화 속에서 진보적인 장소감각(Progressive Sense of Place)을 옹호한다.",
       "key_concepts": [
@@ -228,6 +191,43 @@
       ]
     },
     {
+      "id": "henri-lefebvre",
+      "name_kr": "앙리 르페브르",
+      "name_en": "Henri Lefebvre",
+      "field": "공간사회학·도시권·일상생활 비판",
+      "category": "공간사회·도시커먼즈",
+      "affiliation": "Centre National de la Recherche Scientifique",
+      "tier": "legend",
+      "badge": "🏛️ 도시공간 철학의 원류",
+      "avatar": "🗺️",
+      "citations": 18854,
+      "h_index": 52,
+      "works_count": 227,
+      "core_philosophy": "공간은 고정된 물리적 용기가 아니라 사회적 관계가 투영되고 재창조되는 '사회적 생산물'이다. 자본에 의해 교환가치로 환원된 도시 공간을 일상생활의 '사용가치'로 탈환해야 한다.",
+      "key_concepts": [
+        "공간의 생산(The Production of Space)",
+        "도시권(Le droit à la ville)",
+        "공간적 삼원성",
+        "일상생활 비판",
+        "리듬분석"
+      ],
+      "representative_work": "『공간의 생산(The Production of Space)』 (1974)",
+      "links": [
+        {
+          "title": "Google Scholar",
+          "url": "https://scholar.google.com/scholar?q=Henri+Lefebvre"
+        },
+        {
+          "title": "OpenAlex 프로필",
+          "url": "https://openalex.org/A5101671593"
+        },
+        {
+          "title": "ScholarGPS 검색",
+          "url": "https://scholargps.com/search?q=Henri+Lefebvre"
+        }
+      ]
+    },
+    {
       "id": "karl-polanyi",
       "name_kr": "칼 폴라니",
       "name_en": "Karl Polanyi",
@@ -237,8 +237,8 @@
       "tier": "legend",
       "badge": "🏛️ 정치경제학의 거장",
       "avatar": "🔄",
-      "citations": 25158,
-      "h_index": 31,
+      "citations": 14058,
+      "h_index": 26,
       "works_count": 109,
       "core_philosophy": "토지, 노동, 화폐는 시장에서 판매하기 위해 만들어진 상품이 아닌 '허구적 상품(Fictitious Commodities)'이다. 시장이 사회로부터 분리되어 자연과 인간을 파괴할 때 사회는 스스로를 방어하는 '이중 운동'을 시작하며, 진정한 회복은 탈상품화와 커먼즈 회생을 통해 이뤄진다.",
       "key_concepts": [
@@ -274,8 +274,8 @@
       "tier": "legend",
       "badge": "🏛️ 글로벌 종자주권·생태철학 거장",
       "avatar": "🌾",
-      "citations": 17178,
-      "h_index": 50,
+      "citations": 14016,
+      "h_index": 45,
       "works_count": 291,
       "core_philosophy": "글로벌 농업 기업의 종자 특허와 유전자 조작은 소농의 주권을 빼앗고 대지를 죽이는 '생명해적질(Biopiracy)'이다. 종자는 수천 년간 인류가 가꾸어온 신성한 커먼즈이며, 대지 민주주의(Earth Democracy)의 토대이다.",
       "key_concepts": [
@@ -311,8 +311,8 @@
       "tier": "legend",
       "badge": "🏛️ 녹색사회복지(Green Social Work) 창시자",
       "avatar": "🛡️",
-      "citations": 12109,
-      "h_index": 50,
+      "citations": 10889,
+      "h_index": 49,
       "works_count": 442,
       "core_philosophy": "기후위기와 재난은 사회적 약자에게 가장 먼저, 가장 가혹하게 전가된다. 환경 정의와 사회적 돌봄을 결합하여 최소 개입형이자 상호부조적인 커뮤니티 회복력 인프라를 구축하는 '녹색사회복지'를 실천해야 한다.",
       "key_concepts": [
@@ -339,38 +339,39 @@
       ]
     },
     {
-      "id": "langdon-winner",
-      "name_kr": "랭던 위너",
-      "name_en": "Langdon Winner",
-      "field": "기술정치학·기술철학",
-      "category": "과학기술학·STS",
-      "affiliation": "Rensselaer Polytechnic Institute",
+      "id": "silvia-federici",
+      "name_kr": "실비아 페데리치",
+      "name_en": "Silvia Federici",
+      "field": "페미니즘 커먼즈·재생산 노동·공통화",
+      "category": "커먼즈·공유재",
+      "affiliation": "University of Milan",
       "tier": "legend",
-      "badge": "🏛️ 기술정치학 개척자",
-      "avatar": "🏛️",
-      "citations": 11664,
+      "badge": "🏛️ 페미니즘 커먼즈 선구자",
+      "avatar": "🌿",
+      "citations": 9210,
       "h_index": 28,
-      "works_count": 119,
-      "core_philosophy": "기술은 결코 가치중립적 도구가 아니다. 뉴욕의 고가도로 육교 높이가 버스(대중교통을 타는 가난한 흑인)의 진입을 막도록 설계되었듯, 인공물 그 자체가 특정한 권력과 불평등을 체현하는 정치적 입법이다.",
+      "works_count": 126,
+      "core_philosophy": "자본주의는 임금 노동 착취뿐 아니라 여성의 무임금 돌봄·가사 노동을 체계적으로 수탈하는 원초적 축적으로 지탱된다. 식량 자급, 공동 조리, 공동 양육 등 '재생산의 공통화(Commoning Reproductive Labor)'야말로 자본주의를 넘어서는 저항의 심장이다.",
       "key_concepts": [
-        "인공물의 정치성('Do Artifacts Have Politics?')",
-        "자율적 기술",
-        "기술적 몽유병",
-        "체화된 권력"
+        "재생산 노동의 공통화",
+        "원초적 축적과 마녀사냥",
+        "가사노동 수탈 비판",
+        "신체와 커먼즈",
+        "돌봄의 탈상품화"
       ],
-      "representative_work": "『The Whale and the Reactor』 (1986)",
+      "representative_work": "『캘리번과 마녀(Caliban and the Witch)』 (2004)",
       "links": [
         {
           "title": "Google Scholar",
-          "url": "https://scholar.google.com/scholar?q=Langdon+Winner"
+          "url": "https://scholar.google.com/scholar?q=Silvia+Federici"
         },
         {
           "title": "OpenAlex 프로필",
-          "url": "https://openalex.org/A5055787637"
+          "url": "https://openalex.org/A5017311400"
         },
         {
           "title": "ScholarGPS 검색",
-          "url": "https://scholargps.com/search?q=Langdon+Winner"
+          "url": "https://scholargps.com/search?q=Silvia+Federici"
         }
       ]
     },
@@ -384,7 +385,7 @@
       "tier": "legend",
       "badge": "🏛️ 북유럽 참여적 디자인(PD) 선구자",
       "avatar": "🤝",
-      "citations": 10801,
+      "citations": 8500,
       "h_index": 29,
       "works_count": 98,
       "core_philosophy": "기술은 전문가가 밀실에서 만들어 하달하는 것이 아니라 노동자와 시민이 직접 목소리를 내어 함께 도구를 만들어가는 참여의 장(Democratic Inquiry)이어야 한다.",
@@ -411,39 +412,38 @@
       ]
     },
     {
-      "id": "silvia-federici",
-      "name_kr": "실비아 페데리치",
-      "name_en": "Silvia Federici",
-      "field": "페미니즘 커먼즈·재생산 노동·공통화",
-      "category": "커먼즈·공유재",
-      "affiliation": "University of Milan",
+      "id": "langdon-winner",
+      "name_kr": "랭던 위너",
+      "name_en": "Langdon Winner",
+      "field": "기술정치학·기술철학",
+      "category": "과학기술학·STS",
+      "affiliation": "Rensselaer Polytechnic Institute",
       "tier": "legend",
-      "badge": "🏛️ 페미니즘 커먼즈 선구자",
-      "avatar": "🌿",
-      "citations": 9823,
-      "h_index": 31,
-      "works_count": 125,
-      "core_philosophy": "자본주의는 임금 노동 착취뿐 아니라 여성의 무임금 돌봄·가사 노동을 체계적으로 수탈하는 원초적 축적으로 지탱된다. 식량 자급, 공동 조리, 공동 양육 등 '재생산의 공통화(Commoning Reproductive Labor)'야말로 자본주의를 넘어서는 저항의 심장이다.",
+      "badge": "🏛️ 기술정치학 개척자",
+      "avatar": "🏛️",
+      "citations": 5637,
+      "h_index": 28,
+      "works_count": 120,
+      "core_philosophy": "기술은 결코 가치중립적 도구가 아니다. 뉴욕의 고가도로 육교 높이가 버스(대중교통을 타는 가난한 흑인)의 진입을 막도록 설계되었듯, 인공물 그 자체가 특정한 권력과 불평등을 체현하는 정치적 입법이다.",
       "key_concepts": [
-        "재생산 노동의 공통화",
-        "원초적 축적과 마녀사냥",
-        "가사노동 수탈 비판",
-        "신체와 커먼즈",
-        "돌봄의 탈상품화"
+        "인공물의 정치성('Do Artifacts Have Politics?')",
+        "자율적 기술",
+        "기술적 몽유병",
+        "체화된 권력"
       ],
-      "representative_work": "『캘리번과 마녀(Caliban and the Witch)』 (2004)",
+      "representative_work": "『The Whale and the Reactor』 (1986)",
       "links": [
         {
           "title": "Google Scholar",
-          "url": "https://scholar.google.com/scholar?q=Silvia+Federici"
+          "url": "https://scholar.google.com/scholar?q=Langdon+Winner"
         },
         {
           "title": "OpenAlex 프로필",
-          "url": "https://openalex.org/A5017311400"
+          "url": "https://openalex.org/A5055787637"
         },
         {
           "title": "ScholarGPS 검색",
-          "url": "https://scholargps.com/search?q=Silvia+Federici"
+          "url": "https://scholargps.com/search?q=Langdon+Winner"
         }
       ]
     },
@@ -457,8 +457,8 @@
       "tier": "legend",
       "badge": "🏛️ 글로벌 P2P 커먼즈 창시자",
       "avatar": "💻",
-      "citations": 3290,
-      "h_index": 21,
+      "citations": 3123,
+      "h_index": 19,
       "works_count": 117,
       "core_philosophy": "디지털 네트워크는 독점적 플랫폼 없이도 수평적 동료들이 가치를 창조하는 P2P 생산을 태동시켰다. 지식과 설계는 전 지구적 디지털 커먼즈로 공유하고 물리적 생산은 지역에서 자급 순환하는 '코스모로컬(Cosmo-local)' 생산 체제로 전환해야 한다.",
       "key_concepts": [
@@ -494,9 +494,9 @@
       "tier": "legend",
       "badge": "🏛️ 동시대 커먼즈 운동 최고 이론가",
       "avatar": "🏛️",
-      "citations": 3208,
-      "h_index": 25,
-      "works_count": 247,
+      "citations": 2970,
+      "h_index": 24,
+      "works_count": 248,
       "core_philosophy": "커먼즈는 단순한 자원이 아니라 사람과 자원, 규범이 얽혀 공진화하는 살아있는 사회적 실천인 '커머닝(Commoning)'이다. 국가와 시장이라는 낡은 이분법을 넘어 자치와 협력에 기반한 새로운 존재론적 전환(Ontoshift)을 제시한다.",
       "key_concepts": [
         "커머닝(Commoning)",
@@ -533,8 +533,8 @@
       "tier": "trending",
       "badge": "🔥 사회적 취약성 지수(SoVI) 개발 · 세계 최고 권위자",
       "avatar": "🌪️",
-      "citations": 48053,
-      "h_index": 81,
+      "citations": 45286,
+      "h_index": 77,
       "works_count": 285,
       "core_philosophy": "자연재해는 누구에게나 똑같이 닥치지 않는다. 빈곤, 인종, 연령, 주거 형태에 따라 위험 노출과 회복력이 현격히 달라지는 '사회적 취약성(Social Vulnerability)'을 정량화하고 취약 지역을 우선 보호하는 정책 인프라를 구축해야 한다.",
       "key_concepts": [
@@ -570,8 +570,8 @@
       "tier": "trending",
       "badge": "🔥 농생태학(Agroecology)의 아버지",
       "avatar": "🌱",
-      "citations": 44232,
-      "h_index": 88,
+      "citations": 41825,
+      "h_index": 89,
       "works_count": 471,
       "core_philosophy": "단작 중심의 화학 집약적 농업을 생태적 다양성과 생물학적 순환에 기반한 '농생태학(Agroecology)'으로 대체해야 한다. 기후변화 위기에서 인류를 구할 열쇠는 소농들의 전통적 농생태 지식(Mētis)에 있다.",
       "key_concepts": [
@@ -607,9 +607,9 @@
       "tier": "trending",
       "badge": "🔥 하버드 STS 디렉터 · 세계 최고 석학",
       "avatar": "🏛️",
-      "citations": 42752,
-      "h_index": 77,
-      "works_count": 281,
+      "citations": 36623,
+      "h_index": 71,
+      "works_count": 280,
       "core_philosophy": "과학기술과 사회 질서는 어느 하나가 다른 하나를 결정하는 것이 아니라 서로를 동시에 형성해가는 '공생산(Co-production)' 관계이다. 사회가 집단적으로 품고 있는 미래에 대한 가치지향인 '사회기술적 상상(Sociotechnical Imaginaries)'을 비판적으로 성찰해야 한다.",
       "key_concepts": [
         "공생산(Co-production)",
@@ -635,43 +635,6 @@
       ]
     },
     {
-      "id": "anna-tsing",
-      "name_kr": "안나 칭",
-      "name_en": "Anna Lowenhaupt Tsing",
-      "field": "다종 인류학·인류세 생태학",
-      "category": "농생태·식량주권",
-      "affiliation": "University of California, Santa Cruz",
-      "tier": "trending",
-      "badge": "🔥 다종 인류학 최고 베스트셀러 석학",
-      "avatar": "🍄",
-      "citations": 39497,
-      "h_index": 55,
-      "works_count": 164,
-      "core_philosophy": "인간이 파괴한 자본주의의 폐허 속에서도 송이버섯과 같은 비인간 존재들은 다종 간의 우발적 만남과 공생으로 생명을 이어간다. 진보의 일직선 신화를 버리고 부서진 세계 속에서 '함께 살아가기 위한 기술'을 민족지학으로 포착한다.",
-      "key_concepts": [
-        "다종 민족지학",
-        "폐허 속의 삶",
-        "우발적 공생(Assemblage)",
-        "오염된 다양성",
-        "송이버섯 인류학"
-      ],
-      "representative_work": "『말라죽지 않는 버섯(The Mushroom at the End of the World)』 (2015)",
-      "links": [
-        {
-          "title": "Google Scholar",
-          "url": "https://scholar.google.com/scholar?q=Anna+Lowenhaupt+Tsing"
-        },
-        {
-          "title": "OpenAlex 프로필",
-          "url": "https://openalex.org/A5087496264"
-        },
-        {
-          "title": "ScholarGPS 검색",
-          "url": "https://scholargps.com/search?q=Anna+Lowenhaupt+Tsing"
-        }
-      ]
-    },
-    {
       "id": "kate-crawford",
       "name_kr": "케이트 크로포드",
       "name_en": "Kate Crawford",
@@ -681,8 +644,8 @@
       "tier": "trending",
       "badge": "🔥 AI 정치경제학 석학",
       "avatar": "🗺️",
-      "citations": 33039,
-      "h_index": 52,
+      "citations": 32664,
+      "h_index": 50,
       "works_count": 146,
       "core_philosophy": "인공지능은 마법 같은 순수 알고리즘이 아니라 리튬 광산 채굴, 데이터 라벨러의 비가시적 저임금 노동, 그리고 막대한 탄소 배출이라는 지구적 착취 인프라 위에 세워진 '물질적 권력 체계'이다.",
       "key_concepts": [
@@ -709,38 +672,39 @@
       ]
     },
     {
-      "id": "edward-soja",
-      "name_kr": "에드워드 소자",
-      "name_en": "Edward W. Soja",
-      "field": "공간적 정의·제3공간·포스트메트로폴리스",
-      "category": "공간사회·도시커먼즈",
-      "affiliation": "University of California, Los Angeles",
+      "id": "anna-tsing",
+      "name_kr": "안나 칭",
+      "name_en": "Anna Lowenhaupt Tsing",
+      "field": "다종 인류학·인류세 생태학",
+      "category": "농생태·식량주권",
+      "affiliation": "University of California, Santa Cruz",
       "tier": "trending",
-      "badge": "🔥 공간정의론 창시 석학",
-      "avatar": "📐",
-      "citations": 30297,
-      "h_index": 39,
-      "works_count": 158,
-      "core_philosophy": "사회적 불평등은 언제나 불균등한 지리적 배치를 통해 구조화된다. 물리적 공간(제1공간)과 정신적 공간(제2공간)을 가로지르는 실천적 '제3공간(Thirdspace)'을 통해 공간적 정의(Spatial Justice)를 투쟁해야 한다.",
+      "badge": "🔥 다종 인류학 최고 베스트셀러 석학",
+      "avatar": "🍄",
+      "citations": 31913,
+      "h_index": 52,
+      "works_count": 166,
+      "core_philosophy": "인간이 파괴한 자본주의의 폐허 속에서도 송이버섯과 같은 비인간 존재들은 다종 간의 우발적 만남과 공생으로 생명을 이어간다. 진보의 일직선 신화를 버리고 부서진 세계 속에서 '함께 살아가기 위한 기술'을 민족지학으로 포착한다.",
       "key_concepts": [
-        "제3공간(Thirdspace)",
-        "공간적 정의(Spatial Justice)",
-        "포스트메트로폴리스",
-        "지리적 불평등 비판"
+        "다종 민족지학",
+        "폐허 속의 삶",
+        "우발적 공생(Assemblage)",
+        "오염된 다양성",
+        "송이버섯 인류학"
       ],
-      "representative_work": "『Seeking Spatial Justice』 (2010)",
+      "representative_work": "『말라죽지 않는 버섯(The Mushroom at the End of the World)』 (2015)",
       "links": [
         {
           "title": "Google Scholar",
-          "url": "https://scholar.google.com/scholar?q=Edward+W.+Soja"
+          "url": "https://scholar.google.com/scholar?q=Anna+Lowenhaupt+Tsing"
         },
         {
           "title": "OpenAlex 프로필",
-          "url": "https://openalex.org/A5033596791"
+          "url": "https://openalex.org/A5087496264"
         },
         {
           "title": "ScholarGPS 검색",
-          "url": "https://scholargps.com/search?q=Edward+W.+Soja"
+          "url": "https://scholargps.com/search?q=Anna+Lowenhaupt+Tsing"
         }
       ]
     },
@@ -754,9 +718,9 @@
       "tier": "trending",
       "badge": "🔥 케임브리지 도시인프라 석좌교수",
       "avatar": "🏛️",
-      "citations": 29519,
-      "h_index": 67,
-      "works_count": 259,
+      "citations": 26711,
+      "h_index": 65,
+      "works_count": 262,
       "core_philosophy": "도시는 건물 이전에 배관, 전선, 대중교통 등 비인간 인프라의 그물망 위에 놓여 있다. 도시의 민주주의와 포용성은 물질적 인프라가 낯선 이방인들에게 얼마나 환대적으로 작동하느냐에 달려 있다.",
       "key_concepts": [
         "도시 공공성(Urban Publics)",
@@ -790,8 +754,8 @@
       "tier": "trending",
       "badge": "🔥 디지털 커먼즈·미디어 최고 피인용 석학",
       "avatar": "🌐",
-      "citations": 27919,
-      "h_index": 79,
+      "citations": 25816,
+      "h_index": 77,
       "works_count": 621,
       "core_philosophy": "빅테크 플랫폼은 사용자의 무급 데이터 생산 활동을 착취하는 '디지털 놀이노동(Playbour)'에 기생한다. 상업적 독점 플랫폼을 민주화하고 데이터와 디지털 인프라를 공공 커먼즈로 탈바환해야 한다.",
       "key_concepts": [
@@ -827,8 +791,8 @@
       "tier": "trending",
       "badge": "🔥 젠트리피케이션 이론 최고 피인용 석학",
       "avatar": "🏗️",
-      "citations": 26229,
-      "h_index": 54,
+      "citations": 22083,
+      "h_index": 51,
       "works_count": 183,
       "core_philosophy": "젠트리피케이션은 개인의 소비 취향이 아니라 자본이 낙후 지역에서 차익을 거두기 위해 인위적으로 벌려놓은 '지대격차(Rent Gap)'에서 비롯된 조직적인 계급 침탈이다.",
       "key_concepts": [
@@ -854,6 +818,42 @@
       ]
     },
     {
+      "id": "joan-tronto",
+      "name_kr": "조안 트론토",
+      "name_en": "Joan Tronto",
+      "field": "돌봄 민주주의·공공 돌봄 인프라",
+      "category": "재난안전·공공인프라",
+      "affiliation": "University of Minnesota",
+      "tier": "trending",
+      "badge": "🔥 돌봄 민주주의(Caring Democracy) 최고 권위자",
+      "avatar": "🤲",
+      "citations": 20128,
+      "h_index": 36,
+      "works_count": 223,
+      "core_philosophy": "인간은 누구나 생애주기 동안 의존적이고 취약한 존재이다. 돌봄을 사적인 영역에 떠넘기지 않고 사회의 가장 중심적인 공공재이자 민주적 인프라로 자리매김하는 '돌봄 민주주의(Caring Democracy)'를 세워야 한다.",
+      "key_concepts": [
+        "민주주의적 돌봄(Caring Democracy)",
+        "돌봄 윤리 4단계",
+        "공공 돌봄 인프라",
+        "취약성의 시민권"
+      ],
+      "representative_work": "『민주주의적 돌봄(Caring Democracy)』 (2013), 『도덕의 경계(Moral Boundaries)』 (1993)",
+      "links": [
+        {
+          "title": "Google Scholar",
+          "url": "https://scholar.google.com/scholar?q=Joan+Tronto"
+        },
+        {
+          "title": "OpenAlex 프로필",
+          "url": "https://openalex.org/A5040069901"
+        },
+        {
+          "title": "ScholarGPS 검색",
+          "url": "https://scholargps.com/search?q=Joan+Tronto"
+        }
+      ]
+    },
+    {
       "id": "yochai-benkler",
       "name_kr": "요하이 벤클러",
       "name_en": "Yochai Benkler",
@@ -863,8 +863,8 @@
       "tier": "trending",
       "badge": "🔥 하버드 네트워크 커먼즈 최고 권위자",
       "avatar": "⚖️",
-      "citations": 25567,
-      "h_index": 46,
+      "citations": 20059,
+      "h_index": 43,
       "works_count": 290,
       "core_philosophy": "위키피디아와 오픈소스처럼 시장 가격 메커니즘이나 기업 관리 체계 없이도 대규모 협력으로 가치를 창출하는 '커먼즈 기반 동료 생산(Commons-based Peer Production)'이 지식 정보 경제의 주류 패러다임으로 부상했다.",
       "key_concepts": [
@@ -891,6 +891,42 @@
       ]
     },
     {
+      "id": "edward-soja",
+      "name_kr": "에드워드 소자",
+      "name_en": "Edward W. Soja",
+      "field": "공간적 정의·제3공간·포스트메트로폴리스",
+      "category": "공간사회·도시커먼즈",
+      "affiliation": "University of California, Los Angeles",
+      "tier": "trending",
+      "badge": "🔥 공간정의론 창시 석학",
+      "avatar": "📐",
+      "citations": 19517,
+      "h_index": 36,
+      "works_count": 158,
+      "core_philosophy": "사회적 불평등은 언제나 불균등한 지리적 배치를 통해 구조화된다. 물리적 공간(제1공간)과 정신적 공간(제2공간)을 가로지르는 실천적 '제3공간(Thirdspace)'을 통해 공간적 정의(Spatial Justice)를 투쟁해야 한다.",
+      "key_concepts": [
+        "제3공간(Thirdspace)",
+        "공간적 정의(Spatial Justice)",
+        "포스트메트로폴리스",
+        "지리적 불평등 비판"
+      ],
+      "representative_work": "『Seeking Spatial Justice』 (2010)",
+      "links": [
+        {
+          "title": "Google Scholar",
+          "url": "https://scholar.google.com/scholar?q=Edward+W.+Soja"
+        },
+        {
+          "title": "OpenAlex 프로필",
+          "url": "https://openalex.org/A5033596791"
+        },
+        {
+          "title": "ScholarGPS 검색",
+          "url": "https://scholargps.com/search?q=Edward+W.+Soja"
+        }
+      ]
+    },
+    {
       "id": "rosi-braidotti",
       "name_kr": "로시 브라이도티",
       "name_en": "Rosi Braidotti",
@@ -900,9 +936,9 @@
       "tier": "trending",
       "badge": "🔥 포스트휴먼 페미니즘 세계적 석학",
       "avatar": "🧬",
-      "citations": 23023,
-      "h_index": 60,
-      "works_count": 507,
+      "citations": 18984,
+      "h_index": 57,
+      "works_count": 511,
       "core_philosophy": "서구 백인 남성 중심의 휴머니즘을 해체하고 인간과 동식물, 기술이 평등하게 연대하는 '포스트휴먼 주체성'을 제안한다. 종차별과 환경 파괴를 극복하는 긍정적이고 유목적인 생명정치(Zoe)의 윤리학을 주창한다.",
       "key_concepts": [
         "포스트휴먼(The Posthuman)",
@@ -928,38 +964,38 @@
       ]
     },
     {
-      "id": "joan-tronto",
-      "name_kr": "조안 트론토",
-      "name_en": "Joan Tronto",
-      "field": "돌봄 민주주의·공공 돌봄 인프라",
-      "category": "재난안전·공공인프라",
-      "affiliation": "University of Minnesota",
+      "id": "batya-friedman",
+      "name_kr": "바티아 프리드먼",
+      "name_en": "Batya Friedman",
+      "field": "가치민감디자인(VSD)·인간존엄 HCI",
+      "category": "시빅HCI·UXR",
+      "affiliation": "University of Washington",
       "tier": "trending",
-      "badge": "🔥 돌봄 민주주의(Caring Democracy) 최고 권위자",
-      "avatar": "🤲",
-      "citations": 22648,
-      "h_index": 39,
-      "works_count": 223,
-      "core_philosophy": "인간은 누구나 생애주기 동안 의존적이고 취약한 존재이다. 돌봄을 사적인 영역에 떠넘기지 않고 사회의 가장 중심적인 공공재이자 민주적 인프라로 자리매김하는 '돌봄 민주주의(Caring Democracy)'를 세워야 한다.",
+      "badge": "🔥 가치민감디자인(VSD) 세계적 창시자",
+      "avatar": "💎",
+      "citations": 18340,
+      "h_index": 54,
+      "works_count": 212,
+      "core_philosophy": "기술 시스템을 구축할 때 효율성뿐만 아니라 인간의 존엄성, 프라이버시, 환경 정의, 다세대적 책임과 같은 핵심 도덕 가치를 시스템 아키텍처의 초기 설계 단계부터 체계적으로 통합하는 '가치민감디자인(VSD)'을 정립했다.",
       "key_concepts": [
-        "민주주의적 돌봄(Caring Democracy)",
-        "돌봄 윤리 4단계",
-        "공공 돌봄 인프라",
-        "취약성의 시민권"
+        "가치민감디자인(VSD)",
+        "도덕적 상상력",
+        "직·간접 이해관계자 분석",
+        "다세대 인터페이스"
       ],
-      "representative_work": "『민주주의적 돌봄(Caring Democracy)』 (2013), 『도덕의 경계(Moral Boundaries)』 (1993)",
+      "representative_work": "『Value Sensitive Design: Shaping Technology with Moral Imagination』 (2019)",
       "links": [
         {
           "title": "Google Scholar",
-          "url": "https://scholar.google.com/scholar?q=Joan+Tronto"
+          "url": "https://scholar.google.com/scholar?q=Batya+Friedman"
         },
         {
           "title": "OpenAlex 프로필",
-          "url": "https://openalex.org/A5040069901"
+          "url": "https://openalex.org/A5002491750"
         },
         {
           "title": "ScholarGPS 검색",
-          "url": "https://scholargps.com/search?q=Joan+Tronto"
+          "url": "https://scholargps.com/search?q=Batya+Friedman"
         }
       ]
     },
@@ -973,9 +1009,9 @@
       "tier": "trending",
       "badge": "🔥 식량체계론(Food Regimes) 세계 최고 석학",
       "avatar": "🌽",
-      "citations": 21987,
-      "h_index": 59,
-      "works_count": 203,
+      "citations": 17766,
+      "h_index": 54,
+      "works_count": 206,
       "core_philosophy": "자본주의 역사 속에서 식량은 제국주의와 다국적 농기업의 축적 도구인 '식량체계(Food Regime)'로 재편되어 왔다. 이에 맞서는 전 세계 소농과 민중의 '식량주권(Food Sovereignty)' 투쟁이야말로 대안 문명의 출구이다.",
       "key_concepts": [
         "식량체계론(Food Regimes)",
@@ -1010,7 +1046,7 @@
       "tier": "trending",
       "badge": "🔥 감시자본주의 분석 최고 권위자",
       "avatar": "👁️",
-      "citations": 19784,
+      "citations": 15623,
       "h_index": 20,
       "works_count": 54,
       "core_philosophy": "구글, 메타 등 빅테크는 인간의 사적 경험을 일방적으로 원자재로 탈취하여 미래 행동을 예측하고 수정하는 '행동 잉여(Behavioral Surplus)' 시장을 만들었다. 감시 자본주의는 인간의 자율성과 민주주의를 근본적으로 침해한다.",
@@ -1038,42 +1074,6 @@
       ]
     },
     {
-      "id": "batya-friedman",
-      "name_kr": "바티아 프리드먼",
-      "name_en": "Batya Friedman",
-      "field": "가치민감디자인(VSD)·인간존엄 HCI",
-      "category": "시빅HCI·UXR",
-      "affiliation": "University of Washington",
-      "tier": "trending",
-      "badge": "🔥 가치민감디자인(VSD) 세계적 창시자",
-      "avatar": "💎",
-      "citations": 19738,
-      "h_index": 55,
-      "works_count": 212,
-      "core_philosophy": "기술 시스템을 구축할 때 효율성뿐만 아니라 인간의 존엄성, 프라이버시, 환경 정의, 다세대적 책임과 같은 핵심 도덕 가치를 시스템 아키텍처의 초기 설계 단계부터 체계적으로 통합하는 '가치민감디자인(VSD)'을 정립했다.",
-      "key_concepts": [
-        "가치민감디자인(VSD)",
-        "도덕적 상상력",
-        "직·간접 이해관계자 분석",
-        "다세대 인터페이스"
-      ],
-      "representative_work": "『Value Sensitive Design: Shaping Technology with Moral Imagination』 (2019)",
-      "links": [
-        {
-          "title": "Google Scholar",
-          "url": "https://scholar.google.com/scholar?q=Batya+Friedman"
-        },
-        {
-          "title": "OpenAlex 프로필",
-          "url": "https://openalex.org/A5002491750"
-        },
-        {
-          "title": "ScholarGPS 검색",
-          "url": "https://scholargps.com/search?q=Batya+Friedman"
-        }
-      ]
-    },
-    {
       "id": "setha-low",
       "name_kr": "세사 로우",
       "name_en": "Setha Low",
@@ -1083,8 +1083,8 @@
       "tier": "trending",
       "badge": "🔥 공공공간 인류학·안전 인프라 최고 권위자",
       "avatar": "⛲",
-      "citations": 16679,
-      "h_index": 45,
+      "citations": 14962,
+      "h_index": 43,
       "works_count": 244,
       "core_philosophy": "공공 광장과 공원은 물리적 설계를 넘어 시민들이 사회적 불안과 두려움을 해소하고 평등한 권리를 확인하는 장소이다. 폐쇄형 커뮤니티와 감시형 설계를 거부하고 누구나 안전하게 숨 쉴 수 있는 열린 공공 인프라를 지켜내야 한다.",
       "key_concepts": [
@@ -1119,8 +1119,8 @@
       "tier": "trending",
       "badge": "🔥 시빅 컴퓨팅·대항적 디자인 최고 권위자",
       "avatar": "⚡",
-      "citations": 10536,
-      "h_index": 47,
+      "citations": 10150,
+      "h_index": 45,
       "works_count": 236,
       "core_philosophy": "디자인은 매끄러운 소비자 만족을 제공하는 데 그치지 않고 사회적 갈등과 숨겨진 권력 관계를 가시화하여 논쟁을 촉발하는 '대항적 디자인(Adversarial Design)'이어야 한다.",
       "key_concepts": [
@@ -1155,8 +1155,8 @@
       "tier": "trending",
       "badge": "🔥 사회적 인프라·폭염 부검 세계적 베스트셀러 석학",
       "avatar": "🏛️",
-      "citations": 6679,
-      "h_index": 24,
+      "citations": 6515,
+      "h_index": 23,
       "works_count": 108,
       "core_philosophy": "1995년 시카고 폭염 참사에서 독거노인의 생사를 가른 것은 소득이 아니라 도서관, 공원, 골목 상점 같은 '사회적 인프라(Social Infrastructure)'였다. 견고한 공공 공간이 있을 때 사람들은 재난 속에서도 상호부조로 살아남는다.",
       "key_concepts": [
@@ -1191,8 +1191,8 @@
       "tier": "trending",
       "badge": "🔥 디자인 정의(Design Justice) 창시자",
       "avatar": "📐",
-      "citations": 5155,
-      "h_index": 18,
+      "citations": 5132,
+      "h_index": 17,
       "works_count": 50,
       "core_philosophy": "기존의 기술 인터페이스는 비장애인·백인·남성을 기본값으로 설계되어 취약계층을 구조적으로 배제한다. '디자인 정의(Design Justice)'는 시스템에 의해 가장 큰 불이익을 받는 당사자 공동체가 설계의 주도권을 갖도록 인터페이스 권력 관계를 전복하는 실천이다.",
       "key_concepts": [
@@ -1219,43 +1219,6 @@
       ]
     },
     {
-      "id": "carol-adams",
-      "name_kr": "캐럴 J. 아담스",
-      "name_en": "Carol J. Adams",
-      "field": "비건 에코페미니즘·동물권",
-      "category": "농생태·식량주권",
-      "affiliation": "Yale University",
-      "tier": "trending",
-      "badge": "🔥 비건 에코페미니즘 창시자",
-      "avatar": "🐄",
-      "citations": 4727,
-      "h_index": 22,
-      "works_count": 98,
-      "core_philosophy": "여성에 대한 대상화와 비인간 동물에 대한 도살은 동일한 가부장적 폭력의 메커니즘을 공유한다. 식탁 위의 고기는 살아있던 존재의 고통을 지워버린 '부재하는 지시체(Absent Referent)'이며, 진정한 페미니즘은 육식 문화 비판과 교차해야 한다.",
-      "key_concepts": [
-        "부재하는 지시체(Absent Referent)",
-        "육식의 성정치",
-        "교차적 억압",
-        "비건 에코페미니즘",
-        "돌봄의 윤리"
-      ],
-      "representative_work": "『육식의 성정치(The Sexual Politics of Meat)』 (1990)",
-      "links": [
-        {
-          "title": "Google Scholar",
-          "url": "https://scholar.google.com/scholar?q=Carol+J.+Adams"
-        },
-        {
-          "title": "OpenAlex 프로필",
-          "url": "https://openalex.org/A5113977741"
-        },
-        {
-          "title": "ScholarGPS 검색",
-          "url": "https://scholargps.com/search?q=Carol+J.+Adams"
-        }
-      ]
-    },
-    {
       "id": "christopher-le-dantec",
       "name_kr": "크리스토퍼 르 단텍",
       "name_en": "Christopher A. Le Dantec",
@@ -1265,7 +1228,7 @@
       "tier": "trending",
       "badge": "🔥 시빅 인터랙션 디자인 선도 연구자",
       "avatar": "🏘️",
-      "citations": 4616,
+      "citations": 4562,
       "h_index": 32,
       "works_count": 75,
       "core_philosophy": "도시의 홈리스나 빈곤 공동체와 함께 풀뿌리 데이터를 수집하고 시빅 인터페이스를 구축함으로써 소외된 시민들이 공적 의사결정에 개입할 수 있는 '공중(Publics)의 형성'을 지원한다.",
@@ -1292,6 +1255,43 @@
       ]
     },
     {
+      "id": "carol-adams",
+      "name_kr": "캐럴 J. 아담스",
+      "name_en": "Carol J. Adams",
+      "field": "비건 에코페미니즘·동물권",
+      "category": "농생태·식량주권",
+      "affiliation": "Yale University",
+      "tier": "trending",
+      "badge": "🔥 비건 에코페미니즘 창시자",
+      "avatar": "🐄",
+      "citations": 4169,
+      "h_index": 24,
+      "works_count": 102,
+      "core_philosophy": "여성에 대한 대상화와 비인간 동물에 대한 도살은 동일한 가부장적 폭력의 메커니즘을 공유한다. 식탁 위의 고기는 살아있던 존재의 고통을 지워버린 '부재하는 지시체(Absent Referent)'이며, 진정한 페미니즘은 육식 문화 비판과 교차해야 한다.",
+      "key_concepts": [
+        "부재하는 지시체(Absent Referent)",
+        "육식의 성정치",
+        "교차적 억압",
+        "비건 에코페미니즘",
+        "돌봄의 윤리"
+      ],
+      "representative_work": "『육식의 성정치(The Sexual Politics of Meat)』 (1990)",
+      "links": [
+        {
+          "title": "Google Scholar",
+          "url": "https://scholar.google.com/scholar?q=Carol+J.+Adams"
+        },
+        {
+          "title": "OpenAlex 프로필",
+          "url": "https://openalex.org/A5113977741"
+        },
+        {
+          "title": "ScholarGPS 검색",
+          "url": "https://scholargps.com/search?q=Carol+J.+Adams"
+        }
+      ]
+    },
+    {
       "id": "massimo-de-angelis",
       "name_kr": "마시모 데 안젤리스",
       "name_en": "Massimo De Angelis",
@@ -1301,7 +1301,7 @@
       "tier": "trending",
       "badge": "🔥 동시대 커먼즈 정치경제학 권위자",
       "avatar": "✊",
-      "citations": 3360,
+      "citations": 2886,
       "h_index": 18,
       "works_count": 78,
       "core_philosophy": "커먼즈는 자본주의의 외부가 아니라 끊임없이 인클로저(울타리치기)에 저항하며 확장하는 '공통화 투쟁'이다. 생산과 재생산의 경계를 허물고 사회적 에너지를 회수하는 탈자본주의적 생태계를 설계해야 한다.",
@@ -1337,8 +1337,8 @@
       "tier": "trending",
       "badge": "🔥 코스모테크닉스 창시 석학",
       "avatar": "⚙️",
-      "citations": 2266,
-      "h_index": 19,
+      "citations": 2100,
+      "h_index": 18,
       "works_count": 80,
       "core_philosophy": "서구 중심의 단일한 보편 기술관을 탈피하고 각 문화권의 철학적 우주론과 도덕에 뿌리내린 다원적 기술인 '코스모테크닉스(Cosmotechnics)'를 복원해야 한다. 디지털 객체와 알고리즘의 존재론을 동양 사상과의 대화 속에서 재정립한다.",
       "key_concepts": [
@@ -1374,7 +1374,7 @@
       "tier": "trending",
       "badge": "🇰🇷 한국 기술생태학·커먼즈 대표 학자",
       "avatar": "🇰🇷",
-      "citations": 1738,
+      "citations": 1715,
       "h_index": 22,
       "works_count": 234,
       "core_philosophy": "플랫폼 자본주의의 데이터 추출과 기술봉건주의를 비판하고, 디지털 기술을 인간과 자연의 상호 순환을 돕는 '기술생태(Techno-ecology)'와 시민 자치적 '피드백 커먼즈'로 탈환해야 한다.",
@@ -1411,7 +1411,7 @@
       "tier": "trending",
       "badge": "🔥 유럽 도시 커먼즈 공간론 권위자",
       "avatar": "🚪",
-      "citations": 1384,
+      "citations": 1381,
       "h_index": 12,
       "works_count": 56,
       "core_philosophy": "도시 커먼즈는 닫힌 엔클레이브가 아니라 내부와 외부, 타자와 이웃이 끊임없이 마주치며 관계를 맺는 '문턱 공간(Threshold Space)'에서 피어난다. 비배타적 공간 창출이 핵심이다.",
@@ -1440,43 +1440,6 @@
   ],
   "all_scholars": [
     {
-      "id": "bruno-latour",
-      "name_kr": "브뤼노 라투르",
-      "name_en": "Bruno Latour",
-      "field": "행위자-연결망 이론(ANT)·지구정치학",
-      "category": "과학기술학·STS",
-      "affiliation": "University of Bergen",
-      "tier": "legend",
-      "badge": "🏛️ 현대 STS 및 철학의 최고 거장",
-      "avatar": "🔬",
-      "citations": 212055,
-      "h_index": 151,
-      "works_count": 1083,
-      "core_philosophy": "인간과 자연, 사회와 기술의 근대적 이분법을 기각하고 인간과 비인간 행위자(Actant)들이 서로 얽혀 네트워크를 구성한다는 '행위자-연결망 이론(ANT)'을 정립했다. 기후위기 시대, 우리는 관념적 지구를 넘어 '가이아(Gaia)'라는 실제 대지에 착륙해야 한다.",
-      "key_concepts": [
-        "행위자-연결망 이론(ANT)",
-        "비인간 행위자(Actant)",
-        "우리는 결코 근대인이었던 적이 없다",
-        "지구에 착륙하기",
-        "사물의 의회"
-      ],
-      "representative_work": "『우리는 결코 근대인이었던 적이 없다』 (1991)",
-      "links": [
-        {
-          "title": "Google Scholar",
-          "url": "https://scholar.google.com/scholar?q=Bruno+Latour"
-        },
-        {
-          "title": "OpenAlex 프로필",
-          "url": "https://openalex.org/A5054780327"
-        },
-        {
-          "title": "ScholarGPS 검색",
-          "url": "https://scholargps.com/search?q=Bruno+Latour"
-        }
-      ]
-    },
-    {
       "id": "elinor-ostrom",
       "name_kr": "엘리너 오스트롬",
       "name_en": "Elinor Ostrom",
@@ -1486,9 +1449,9 @@
       "tier": "legend",
       "badge": "🏛️ 노벨 경제학상 수상 · 올타임 레전드",
       "avatar": "🏆",
-      "citations": 201766,
-      "h_index": 149,
-      "works_count": 749,
+      "citations": 183159,
+      "h_index": 133,
+      "works_count": 747,
       "core_philosophy": "'공유재의 비극'은 숙명이 아니다. 국가의 강제나 시장의 사유화 없이도 당사자 공동체가 자율적으로 명확한 경계, 참여적 규칙 개정, 점진적 제재 등 '커먼즈 8대 원칙'을 수립할 때 자원은 수백 년간 지속가능하게 유지된다.",
       "key_concepts": [
         "커먼즈 8대 원칙",
@@ -1514,6 +1477,43 @@
       ]
     },
     {
+      "id": "bruno-latour",
+      "name_kr": "브뤼노 라투르",
+      "name_en": "Bruno Latour",
+      "field": "행위자-연결망 이론(ANT)·지구정치학",
+      "category": "과학기술학·STS",
+      "affiliation": "University of Bergen",
+      "tier": "legend",
+      "badge": "🏛️ 현대 STS 및 철학의 최고 거장",
+      "avatar": "🔬",
+      "citations": 165694,
+      "h_index": 141,
+      "works_count": 1082,
+      "core_philosophy": "인간과 자연, 사회와 기술의 근대적 이분법을 기각하고 인간과 비인간 행위자(Actant)들이 서로 얽혀 네트워크를 구성한다는 '행위자-연결망 이론(ANT)'을 정립했다. 기후위기 시대, 우리는 관념적 지구를 넘어 '가이아(Gaia)'라는 실제 대지에 착륙해야 한다.",
+      "key_concepts": [
+        "행위자-연결망 이론(ANT)",
+        "비인간 행위자(Actant)",
+        "우리는 결코 근대인이었던 적이 없다",
+        "지구에 착륙하기",
+        "사물의 의회"
+      ],
+      "representative_work": "『우리는 결코 근대인이었던 적이 없다』 (1991)",
+      "links": [
+        {
+          "title": "Google Scholar",
+          "url": "https://scholar.google.com/scholar?q=Bruno+Latour"
+        },
+        {
+          "title": "OpenAlex 프로필",
+          "url": "https://openalex.org/A5054780327"
+        },
+        {
+          "title": "ScholarGPS 검색",
+          "url": "https://scholargps.com/search?q=Bruno+Latour"
+        }
+      ]
+    },
+    {
       "id": "donna-haraway",
       "name_kr": "도나 해러웨이",
       "name_en": "Donna Haraway",
@@ -1523,9 +1523,9 @@
       "tier": "legend",
       "badge": "🏛️ 다종공생·포스트휴머니즘 최고 거장",
       "avatar": "🐙",
-      "citations": 109701,
-      "h_index": 69,
-      "works_count": 204,
+      "citations": 80864,
+      "h_index": 64,
+      "works_count": 205,
       "core_philosophy": "인간 중심주의를 버리고 생명과 비생명, 유기체와 기계가 얽히는 '반려종(Companion Species)'의 관계론을 수용해야 한다. 지구적 파국 앞에서 우리는 도피하는 대신 '트러블과 함께 머물며' 다종 간의 친족을 만들어야 한다.",
       "key_concepts": [
         "사이보그 선언",
@@ -1560,8 +1560,8 @@
       "tier": "legend",
       "badge": "🏛️ 마르크스주의 지리학 최고 거장",
       "avatar": "🏙️",
-      "citations": 80006,
-      "h_index": 84,
+      "citations": 49887,
+      "h_index": 77,
       "works_count": 453,
       "core_philosophy": "자본주의는 주기적 위기를 회피하기 위해 도시 공간을 금융화하고 부동산 투기로 잉여 자본을 흡수하는 '공간적 조정(Spatial Fix)'을 감행한다. 시민은 도시 공간을 재전유하고 집단적으로 창조할 '도시권(Right to the City)'을 요구해야 한다.",
       "key_concepts": [
@@ -1588,43 +1588,6 @@
       ]
     },
     {
-      "id": "henri-lefebvre",
-      "name_kr": "앙리 르페브르",
-      "name_en": "Henri Lefebvre",
-      "field": "공간사회학·도시권·일상생활 비판",
-      "category": "공간사회·도시커먼즈",
-      "affiliation": "Centre National de la Recherche Scientifique",
-      "tier": "legend",
-      "badge": "🏛️ 도시공간 철학의 원류",
-      "avatar": "🗺️",
-      "citations": 31841,
-      "h_index": 56,
-      "works_count": 227,
-      "core_philosophy": "공간은 고정된 물리적 용기가 아니라 사회적 관계가 투영되고 재창조되는 '사회적 생산물'이다. 자본에 의해 교환가치로 환원된 도시 공간을 일상생활의 '사용가치'로 탈환해야 한다.",
-      "key_concepts": [
-        "공간의 생산(The Production of Space)",
-        "도시권(Le droit à la ville)",
-        "공간적 삼원성",
-        "일상생활 비판",
-        "리듬분석"
-      ],
-      "representative_work": "『공간의 생산(The Production of Space)』 (1974)",
-      "links": [
-        {
-          "title": "Google Scholar",
-          "url": "https://scholar.google.com/scholar?q=Henri+Lefebvre"
-        },
-        {
-          "title": "OpenAlex 프로필",
-          "url": "https://openalex.org/A5101671593"
-        },
-        {
-          "title": "ScholarGPS 검색",
-          "url": "https://scholargps.com/search?q=Henri+Lefebvre"
-        }
-      ]
-    },
-    {
       "id": "doreen-massey",
       "name_kr": "도린 매시",
       "name_en": "Doreen Massey",
@@ -1634,8 +1597,8 @@
       "tier": "legend",
       "badge": "🏛️ 페미니스트 지리학 선구자",
       "avatar": "🧭",
-      "citations": 27911,
-      "h_index": 62,
+      "citations": 19542,
+      "h_index": 56,
       "works_count": 219,
       "core_philosophy": "장소는 고정된 경계나 닫힌 정체성이 아니라 끊임없이 유입되는 사회적 관계와 궤적들이 교차하는 '개방적인 사건'이다. 세계화 속에서 진보적인 장소감각(Progressive Sense of Place)을 옹호한다.",
       "key_concepts": [
@@ -1662,6 +1625,43 @@
       ]
     },
     {
+      "id": "henri-lefebvre",
+      "name_kr": "앙리 르페브르",
+      "name_en": "Henri Lefebvre",
+      "field": "공간사회학·도시권·일상생활 비판",
+      "category": "공간사회·도시커먼즈",
+      "affiliation": "Centre National de la Recherche Scientifique",
+      "tier": "legend",
+      "badge": "🏛️ 도시공간 철학의 원류",
+      "avatar": "🗺️",
+      "citations": 18854,
+      "h_index": 52,
+      "works_count": 227,
+      "core_philosophy": "공간은 고정된 물리적 용기가 아니라 사회적 관계가 투영되고 재창조되는 '사회적 생산물'이다. 자본에 의해 교환가치로 환원된 도시 공간을 일상생활의 '사용가치'로 탈환해야 한다.",
+      "key_concepts": [
+        "공간의 생산(The Production of Space)",
+        "도시권(Le droit à la ville)",
+        "공간적 삼원성",
+        "일상생활 비판",
+        "리듬분석"
+      ],
+      "representative_work": "『공간의 생산(The Production of Space)』 (1974)",
+      "links": [
+        {
+          "title": "Google Scholar",
+          "url": "https://scholar.google.com/scholar?q=Henri+Lefebvre"
+        },
+        {
+          "title": "OpenAlex 프로필",
+          "url": "https://openalex.org/A5101671593"
+        },
+        {
+          "title": "ScholarGPS 검색",
+          "url": "https://scholargps.com/search?q=Henri+Lefebvre"
+        }
+      ]
+    },
+    {
       "id": "karl-polanyi",
       "name_kr": "칼 폴라니",
       "name_en": "Karl Polanyi",
@@ -1671,8 +1671,8 @@
       "tier": "legend",
       "badge": "🏛️ 정치경제학의 거장",
       "avatar": "🔄",
-      "citations": 25158,
-      "h_index": 31,
+      "citations": 14058,
+      "h_index": 26,
       "works_count": 109,
       "core_philosophy": "토지, 노동, 화폐는 시장에서 판매하기 위해 만들어진 상품이 아닌 '허구적 상품(Fictitious Commodities)'이다. 시장이 사회로부터 분리되어 자연과 인간을 파괴할 때 사회는 스스로를 방어하는 '이중 운동'을 시작하며, 진정한 회복은 탈상품화와 커먼즈 회생을 통해 이뤄진다.",
       "key_concepts": [
@@ -1708,8 +1708,8 @@
       "tier": "legend",
       "badge": "🏛️ 글로벌 종자주권·생태철학 거장",
       "avatar": "🌾",
-      "citations": 17178,
-      "h_index": 50,
+      "citations": 14016,
+      "h_index": 45,
       "works_count": 291,
       "core_philosophy": "글로벌 농업 기업의 종자 특허와 유전자 조작은 소농의 주권을 빼앗고 대지를 죽이는 '생명해적질(Biopiracy)'이다. 종자는 수천 년간 인류가 가꾸어온 신성한 커먼즈이며, 대지 민주주의(Earth Democracy)의 토대이다.",
       "key_concepts": [
@@ -1745,8 +1745,8 @@
       "tier": "legend",
       "badge": "🏛️ 녹색사회복지(Green Social Work) 창시자",
       "avatar": "🛡️",
-      "citations": 12109,
-      "h_index": 50,
+      "citations": 10889,
+      "h_index": 49,
       "works_count": 442,
       "core_philosophy": "기후위기와 재난은 사회적 약자에게 가장 먼저, 가장 가혹하게 전가된다. 환경 정의와 사회적 돌봄을 결합하여 최소 개입형이자 상호부조적인 커뮤니티 회복력 인프라를 구축하는 '녹색사회복지'를 실천해야 한다.",
       "key_concepts": [
@@ -1773,38 +1773,39 @@
       ]
     },
     {
-      "id": "langdon-winner",
-      "name_kr": "랭던 위너",
-      "name_en": "Langdon Winner",
-      "field": "기술정치학·기술철학",
-      "category": "과학기술학·STS",
-      "affiliation": "Rensselaer Polytechnic Institute",
+      "id": "silvia-federici",
+      "name_kr": "실비아 페데리치",
+      "name_en": "Silvia Federici",
+      "field": "페미니즘 커먼즈·재생산 노동·공통화",
+      "category": "커먼즈·공유재",
+      "affiliation": "University of Milan",
       "tier": "legend",
-      "badge": "🏛️ 기술정치학 개척자",
-      "avatar": "🏛️",
-      "citations": 11664,
+      "badge": "🏛️ 페미니즘 커먼즈 선구자",
+      "avatar": "🌿",
+      "citations": 9210,
       "h_index": 28,
-      "works_count": 119,
-      "core_philosophy": "기술은 결코 가치중립적 도구가 아니다. 뉴욕의 고가도로 육교 높이가 버스(대중교통을 타는 가난한 흑인)의 진입을 막도록 설계되었듯, 인공물 그 자체가 특정한 권력과 불평등을 체현하는 정치적 입법이다.",
+      "works_count": 126,
+      "core_philosophy": "자본주의는 임금 노동 착취뿐 아니라 여성의 무임금 돌봄·가사 노동을 체계적으로 수탈하는 원초적 축적으로 지탱된다. 식량 자급, 공동 조리, 공동 양육 등 '재생산의 공통화(Commoning Reproductive Labor)'야말로 자본주의를 넘어서는 저항의 심장이다.",
       "key_concepts": [
-        "인공물의 정치성('Do Artifacts Have Politics?')",
-        "자율적 기술",
-        "기술적 몽유병",
-        "체화된 권력"
+        "재생산 노동의 공통화",
+        "원초적 축적과 마녀사냥",
+        "가사노동 수탈 비판",
+        "신체와 커먼즈",
+        "돌봄의 탈상품화"
       ],
-      "representative_work": "『The Whale and the Reactor』 (1986)",
+      "representative_work": "『캘리번과 마녀(Caliban and the Witch)』 (2004)",
       "links": [
         {
           "title": "Google Scholar",
-          "url": "https://scholar.google.com/scholar?q=Langdon+Winner"
+          "url": "https://scholar.google.com/scholar?q=Silvia+Federici"
         },
         {
           "title": "OpenAlex 프로필",
-          "url": "https://openalex.org/A5055787637"
+          "url": "https://openalex.org/A5017311400"
         },
         {
           "title": "ScholarGPS 검색",
-          "url": "https://scholargps.com/search?q=Langdon+Winner"
+          "url": "https://scholargps.com/search?q=Silvia+Federici"
         }
       ]
     },
@@ -1818,7 +1819,7 @@
       "tier": "legend",
       "badge": "🏛️ 북유럽 참여적 디자인(PD) 선구자",
       "avatar": "🤝",
-      "citations": 10801,
+      "citations": 8500,
       "h_index": 29,
       "works_count": 98,
       "core_philosophy": "기술은 전문가가 밀실에서 만들어 하달하는 것이 아니라 노동자와 시민이 직접 목소리를 내어 함께 도구를 만들어가는 참여의 장(Democratic Inquiry)이어야 한다.",
@@ -1845,39 +1846,38 @@
       ]
     },
     {
-      "id": "silvia-federici",
-      "name_kr": "실비아 페데리치",
-      "name_en": "Silvia Federici",
-      "field": "페미니즘 커먼즈·재생산 노동·공통화",
-      "category": "커먼즈·공유재",
-      "affiliation": "University of Milan",
+      "id": "langdon-winner",
+      "name_kr": "랭던 위너",
+      "name_en": "Langdon Winner",
+      "field": "기술정치학·기술철학",
+      "category": "과학기술학·STS",
+      "affiliation": "Rensselaer Polytechnic Institute",
       "tier": "legend",
-      "badge": "🏛️ 페미니즘 커먼즈 선구자",
-      "avatar": "🌿",
-      "citations": 9823,
-      "h_index": 31,
-      "works_count": 125,
-      "core_philosophy": "자본주의는 임금 노동 착취뿐 아니라 여성의 무임금 돌봄·가사 노동을 체계적으로 수탈하는 원초적 축적으로 지탱된다. 식량 자급, 공동 조리, 공동 양육 등 '재생산의 공통화(Commoning Reproductive Labor)'야말로 자본주의를 넘어서는 저항의 심장이다.",
+      "badge": "🏛️ 기술정치학 개척자",
+      "avatar": "🏛️",
+      "citations": 5637,
+      "h_index": 28,
+      "works_count": 120,
+      "core_philosophy": "기술은 결코 가치중립적 도구가 아니다. 뉴욕의 고가도로 육교 높이가 버스(대중교통을 타는 가난한 흑인)의 진입을 막도록 설계되었듯, 인공물 그 자체가 특정한 권력과 불평등을 체현하는 정치적 입법이다.",
       "key_concepts": [
-        "재생산 노동의 공통화",
-        "원초적 축적과 마녀사냥",
-        "가사노동 수탈 비판",
-        "신체와 커먼즈",
-        "돌봄의 탈상품화"
+        "인공물의 정치성('Do Artifacts Have Politics?')",
+        "자율적 기술",
+        "기술적 몽유병",
+        "체화된 권력"
       ],
-      "representative_work": "『캘리번과 마녀(Caliban and the Witch)』 (2004)",
+      "representative_work": "『The Whale and the Reactor』 (1986)",
       "links": [
         {
           "title": "Google Scholar",
-          "url": "https://scholar.google.com/scholar?q=Silvia+Federici"
+          "url": "https://scholar.google.com/scholar?q=Langdon+Winner"
         },
         {
           "title": "OpenAlex 프로필",
-          "url": "https://openalex.org/A5017311400"
+          "url": "https://openalex.org/A5055787637"
         },
         {
           "title": "ScholarGPS 검색",
-          "url": "https://scholargps.com/search?q=Silvia+Federici"
+          "url": "https://scholargps.com/search?q=Langdon+Winner"
         }
       ]
     },
@@ -1891,8 +1891,8 @@
       "tier": "legend",
       "badge": "🏛️ 글로벌 P2P 커먼즈 창시자",
       "avatar": "💻",
-      "citations": 3290,
-      "h_index": 21,
+      "citations": 3123,
+      "h_index": 19,
       "works_count": 117,
       "core_philosophy": "디지털 네트워크는 독점적 플랫폼 없이도 수평적 동료들이 가치를 창조하는 P2P 생산을 태동시켰다. 지식과 설계는 전 지구적 디지털 커먼즈로 공유하고 물리적 생산은 지역에서 자급 순환하는 '코스모로컬(Cosmo-local)' 생산 체제로 전환해야 한다.",
       "key_concepts": [
@@ -1928,9 +1928,9 @@
       "tier": "legend",
       "badge": "🏛️ 동시대 커먼즈 운동 최고 이론가",
       "avatar": "🏛️",
-      "citations": 3208,
-      "h_index": 25,
-      "works_count": 247,
+      "citations": 2970,
+      "h_index": 24,
+      "works_count": 248,
       "core_philosophy": "커먼즈는 단순한 자원이 아니라 사람과 자원, 규범이 얽혀 공진화하는 살아있는 사회적 실천인 '커머닝(Commoning)'이다. 국가와 시장이라는 낡은 이분법을 넘어 자치와 협력에 기반한 새로운 존재론적 전환(Ontoshift)을 제시한다.",
       "key_concepts": [
         "커머닝(Commoning)",
@@ -1965,8 +1965,8 @@
       "tier": "trending",
       "badge": "🔥 사회적 취약성 지수(SoVI) 개발 · 세계 최고 권위자",
       "avatar": "🌪️",
-      "citations": 48053,
-      "h_index": 81,
+      "citations": 45286,
+      "h_index": 77,
       "works_count": 285,
       "core_philosophy": "자연재해는 누구에게나 똑같이 닥치지 않는다. 빈곤, 인종, 연령, 주거 형태에 따라 위험 노출과 회복력이 현격히 달라지는 '사회적 취약성(Social Vulnerability)'을 정량화하고 취약 지역을 우선 보호하는 정책 인프라를 구축해야 한다.",
       "key_concepts": [
@@ -2002,8 +2002,8 @@
       "tier": "trending",
       "badge": "🔥 농생태학(Agroecology)의 아버지",
       "avatar": "🌱",
-      "citations": 44232,
-      "h_index": 88,
+      "citations": 41825,
+      "h_index": 89,
       "works_count": 471,
       "core_philosophy": "단작 중심의 화학 집약적 농업을 생태적 다양성과 생물학적 순환에 기반한 '농생태학(Agroecology)'으로 대체해야 한다. 기후변화 위기에서 인류를 구할 열쇠는 소농들의 전통적 농생태 지식(Mētis)에 있다.",
       "key_concepts": [
@@ -2039,9 +2039,9 @@
       "tier": "trending",
       "badge": "🔥 하버드 STS 디렉터 · 세계 최고 석학",
       "avatar": "🏛️",
-      "citations": 42752,
-      "h_index": 77,
-      "works_count": 281,
+      "citations": 36623,
+      "h_index": 71,
+      "works_count": 280,
       "core_philosophy": "과학기술과 사회 질서는 어느 하나가 다른 하나를 결정하는 것이 아니라 서로를 동시에 형성해가는 '공생산(Co-production)' 관계이다. 사회가 집단적으로 품고 있는 미래에 대한 가치지향인 '사회기술적 상상(Sociotechnical Imaginaries)'을 비판적으로 성찰해야 한다.",
       "key_concepts": [
         "공생산(Co-production)",
@@ -2067,43 +2067,6 @@
       ]
     },
     {
-      "id": "anna-tsing",
-      "name_kr": "안나 칭",
-      "name_en": "Anna Lowenhaupt Tsing",
-      "field": "다종 인류학·인류세 생태학",
-      "category": "농생태·식량주권",
-      "affiliation": "University of California, Santa Cruz",
-      "tier": "trending",
-      "badge": "🔥 다종 인류학 최고 베스트셀러 석학",
-      "avatar": "🍄",
-      "citations": 39497,
-      "h_index": 55,
-      "works_count": 164,
-      "core_philosophy": "인간이 파괴한 자본주의의 폐허 속에서도 송이버섯과 같은 비인간 존재들은 다종 간의 우발적 만남과 공생으로 생명을 이어간다. 진보의 일직선 신화를 버리고 부서진 세계 속에서 '함께 살아가기 위한 기술'을 민족지학으로 포착한다.",
-      "key_concepts": [
-        "다종 민족지학",
-        "폐허 속의 삶",
-        "우발적 공생(Assemblage)",
-        "오염된 다양성",
-        "송이버섯 인류학"
-      ],
-      "representative_work": "『말라죽지 않는 버섯(The Mushroom at the End of the World)』 (2015)",
-      "links": [
-        {
-          "title": "Google Scholar",
-          "url": "https://scholar.google.com/scholar?q=Anna+Lowenhaupt+Tsing"
-        },
-        {
-          "title": "OpenAlex 프로필",
-          "url": "https://openalex.org/A5087496264"
-        },
-        {
-          "title": "ScholarGPS 검색",
-          "url": "https://scholargps.com/search?q=Anna+Lowenhaupt+Tsing"
-        }
-      ]
-    },
-    {
       "id": "kate-crawford",
       "name_kr": "케이트 크로포드",
       "name_en": "Kate Crawford",
@@ -2113,8 +2076,8 @@
       "tier": "trending",
       "badge": "🔥 AI 정치경제학 석학",
       "avatar": "🗺️",
-      "citations": 33039,
-      "h_index": 52,
+      "citations": 32664,
+      "h_index": 50,
       "works_count": 146,
       "core_philosophy": "인공지능은 마법 같은 순수 알고리즘이 아니라 리튬 광산 채굴, 데이터 라벨러의 비가시적 저임금 노동, 그리고 막대한 탄소 배출이라는 지구적 착취 인프라 위에 세워진 '물질적 권력 체계'이다.",
       "key_concepts": [
@@ -2141,38 +2104,39 @@
       ]
     },
     {
-      "id": "edward-soja",
-      "name_kr": "에드워드 소자",
-      "name_en": "Edward W. Soja",
-      "field": "공간적 정의·제3공간·포스트메트로폴리스",
-      "category": "공간사회·도시커먼즈",
-      "affiliation": "University of California, Los Angeles",
+      "id": "anna-tsing",
+      "name_kr": "안나 칭",
+      "name_en": "Anna Lowenhaupt Tsing",
+      "field": "다종 인류학·인류세 생태학",
+      "category": "농생태·식량주권",
+      "affiliation": "University of California, Santa Cruz",
       "tier": "trending",
-      "badge": "🔥 공간정의론 창시 석학",
-      "avatar": "📐",
-      "citations": 30297,
-      "h_index": 39,
-      "works_count": 158,
-      "core_philosophy": "사회적 불평등은 언제나 불균등한 지리적 배치를 통해 구조화된다. 물리적 공간(제1공간)과 정신적 공간(제2공간)을 가로지르는 실천적 '제3공간(Thirdspace)'을 통해 공간적 정의(Spatial Justice)를 투쟁해야 한다.",
+      "badge": "🔥 다종 인류학 최고 베스트셀러 석학",
+      "avatar": "🍄",
+      "citations": 31913,
+      "h_index": 52,
+      "works_count": 166,
+      "core_philosophy": "인간이 파괴한 자본주의의 폐허 속에서도 송이버섯과 같은 비인간 존재들은 다종 간의 우발적 만남과 공생으로 생명을 이어간다. 진보의 일직선 신화를 버리고 부서진 세계 속에서 '함께 살아가기 위한 기술'을 민족지학으로 포착한다.",
       "key_concepts": [
-        "제3공간(Thirdspace)",
-        "공간적 정의(Spatial Justice)",
-        "포스트메트로폴리스",
-        "지리적 불평등 비판"
+        "다종 민족지학",
+        "폐허 속의 삶",
+        "우발적 공생(Assemblage)",
+        "오염된 다양성",
+        "송이버섯 인류학"
       ],
-      "representative_work": "『Seeking Spatial Justice』 (2010)",
+      "representative_work": "『말라죽지 않는 버섯(The Mushroom at the End of the World)』 (2015)",
       "links": [
         {
           "title": "Google Scholar",
-          "url": "https://scholar.google.com/scholar?q=Edward+W.+Soja"
+          "url": "https://scholar.google.com/scholar?q=Anna+Lowenhaupt+Tsing"
         },
         {
           "title": "OpenAlex 프로필",
-          "url": "https://openalex.org/A5033596791"
+          "url": "https://openalex.org/A5087496264"
         },
         {
           "title": "ScholarGPS 검색",
-          "url": "https://scholargps.com/search?q=Edward+W.+Soja"
+          "url": "https://scholargps.com/search?q=Anna+Lowenhaupt+Tsing"
         }
       ]
     },
@@ -2186,9 +2150,9 @@
       "tier": "trending",
       "badge": "🔥 케임브리지 도시인프라 석좌교수",
       "avatar": "🏛️",
-      "citations": 29519,
-      "h_index": 67,
-      "works_count": 259,
+      "citations": 26711,
+      "h_index": 65,
+      "works_count": 262,
       "core_philosophy": "도시는 건물 이전에 배관, 전선, 대중교통 등 비인간 인프라의 그물망 위에 놓여 있다. 도시의 민주주의와 포용성은 물질적 인프라가 낯선 이방인들에게 얼마나 환대적으로 작동하느냐에 달려 있다.",
       "key_concepts": [
         "도시 공공성(Urban Publics)",
@@ -2222,8 +2186,8 @@
       "tier": "trending",
       "badge": "🔥 디지털 커먼즈·미디어 최고 피인용 석학",
       "avatar": "🌐",
-      "citations": 27919,
-      "h_index": 79,
+      "citations": 25816,
+      "h_index": 77,
       "works_count": 621,
       "core_philosophy": "빅테크 플랫폼은 사용자의 무급 데이터 생산 활동을 착취하는 '디지털 놀이노동(Playbour)'에 기생한다. 상업적 독점 플랫폼을 민주화하고 데이터와 디지털 인프라를 공공 커먼즈로 탈바환해야 한다.",
       "key_concepts": [
@@ -2259,8 +2223,8 @@
       "tier": "trending",
       "badge": "🔥 젠트리피케이션 이론 최고 피인용 석학",
       "avatar": "🏗️",
-      "citations": 26229,
-      "h_index": 54,
+      "citations": 22083,
+      "h_index": 51,
       "works_count": 183,
       "core_philosophy": "젠트리피케이션은 개인의 소비 취향이 아니라 자본이 낙후 지역에서 차익을 거두기 위해 인위적으로 벌려놓은 '지대격차(Rent Gap)'에서 비롯된 조직적인 계급 침탈이다.",
       "key_concepts": [
@@ -2286,6 +2250,42 @@
       ]
     },
     {
+      "id": "joan-tronto",
+      "name_kr": "조안 트론토",
+      "name_en": "Joan Tronto",
+      "field": "돌봄 민주주의·공공 돌봄 인프라",
+      "category": "재난안전·공공인프라",
+      "affiliation": "University of Minnesota",
+      "tier": "trending",
+      "badge": "🔥 돌봄 민주주의(Caring Democracy) 최고 권위자",
+      "avatar": "🤲",
+      "citations": 20128,
+      "h_index": 36,
+      "works_count": 223,
+      "core_philosophy": "인간은 누구나 생애주기 동안 의존적이고 취약한 존재이다. 돌봄을 사적인 영역에 떠넘기지 않고 사회의 가장 중심적인 공공재이자 민주적 인프라로 자리매김하는 '돌봄 민주주의(Caring Democracy)'를 세워야 한다.",
+      "key_concepts": [
+        "민주주의적 돌봄(Caring Democracy)",
+        "돌봄 윤리 4단계",
+        "공공 돌봄 인프라",
+        "취약성의 시민권"
+      ],
+      "representative_work": "『민주주의적 돌봄(Caring Democracy)』 (2013), 『도덕의 경계(Moral Boundaries)』 (1993)",
+      "links": [
+        {
+          "title": "Google Scholar",
+          "url": "https://scholar.google.com/scholar?q=Joan+Tronto"
+        },
+        {
+          "title": "OpenAlex 프로필",
+          "url": "https://openalex.org/A5040069901"
+        },
+        {
+          "title": "ScholarGPS 검색",
+          "url": "https://scholargps.com/search?q=Joan+Tronto"
+        }
+      ]
+    },
+    {
       "id": "yochai-benkler",
       "name_kr": "요하이 벤클러",
       "name_en": "Yochai Benkler",
@@ -2295,8 +2295,8 @@
       "tier": "trending",
       "badge": "🔥 하버드 네트워크 커먼즈 최고 권위자",
       "avatar": "⚖️",
-      "citations": 25567,
-      "h_index": 46,
+      "citations": 20059,
+      "h_index": 43,
       "works_count": 290,
       "core_philosophy": "위키피디아와 오픈소스처럼 시장 가격 메커니즘이나 기업 관리 체계 없이도 대규모 협력으로 가치를 창출하는 '커먼즈 기반 동료 생산(Commons-based Peer Production)'이 지식 정보 경제의 주류 패러다임으로 부상했다.",
       "key_concepts": [
@@ -2323,6 +2323,42 @@
       ]
     },
     {
+      "id": "edward-soja",
+      "name_kr": "에드워드 소자",
+      "name_en": "Edward W. Soja",
+      "field": "공간적 정의·제3공간·포스트메트로폴리스",
+      "category": "공간사회·도시커먼즈",
+      "affiliation": "University of California, Los Angeles",
+      "tier": "trending",
+      "badge": "🔥 공간정의론 창시 석학",
+      "avatar": "📐",
+      "citations": 19517,
+      "h_index": 36,
+      "works_count": 158,
+      "core_philosophy": "사회적 불평등은 언제나 불균등한 지리적 배치를 통해 구조화된다. 물리적 공간(제1공간)과 정신적 공간(제2공간)을 가로지르는 실천적 '제3공간(Thirdspace)'을 통해 공간적 정의(Spatial Justice)를 투쟁해야 한다.",
+      "key_concepts": [
+        "제3공간(Thirdspace)",
+        "공간적 정의(Spatial Justice)",
+        "포스트메트로폴리스",
+        "지리적 불평등 비판"
+      ],
+      "representative_work": "『Seeking Spatial Justice』 (2010)",
+      "links": [
+        {
+          "title": "Google Scholar",
+          "url": "https://scholar.google.com/scholar?q=Edward+W.+Soja"
+        },
+        {
+          "title": "OpenAlex 프로필",
+          "url": "https://openalex.org/A5033596791"
+        },
+        {
+          "title": "ScholarGPS 검색",
+          "url": "https://scholargps.com/search?q=Edward+W.+Soja"
+        }
+      ]
+    },
+    {
       "id": "rosi-braidotti",
       "name_kr": "로시 브라이도티",
       "name_en": "Rosi Braidotti",
@@ -2332,9 +2368,9 @@
       "tier": "trending",
       "badge": "🔥 포스트휴먼 페미니즘 세계적 석학",
       "avatar": "🧬",
-      "citations": 23023,
-      "h_index": 60,
-      "works_count": 507,
+      "citations": 18984,
+      "h_index": 57,
+      "works_count": 511,
       "core_philosophy": "서구 백인 남성 중심의 휴머니즘을 해체하고 인간과 동식물, 기술이 평등하게 연대하는 '포스트휴먼 주체성'을 제안한다. 종차별과 환경 파괴를 극복하는 긍정적이고 유목적인 생명정치(Zoe)의 윤리학을 주창한다.",
       "key_concepts": [
         "포스트휴먼(The Posthuman)",
@@ -2360,38 +2396,38 @@
       ]
     },
     {
-      "id": "joan-tronto",
-      "name_kr": "조안 트론토",
-      "name_en": "Joan Tronto",
-      "field": "돌봄 민주주의·공공 돌봄 인프라",
-      "category": "재난안전·공공인프라",
-      "affiliation": "University of Minnesota",
+      "id": "batya-friedman",
+      "name_kr": "바티아 프리드먼",
+      "name_en": "Batya Friedman",
+      "field": "가치민감디자인(VSD)·인간존엄 HCI",
+      "category": "시빅HCI·UXR",
+      "affiliation": "University of Washington",
       "tier": "trending",
-      "badge": "🔥 돌봄 민주주의(Caring Democracy) 최고 권위자",
-      "avatar": "🤲",
-      "citations": 22648,
-      "h_index": 39,
-      "works_count": 223,
-      "core_philosophy": "인간은 누구나 생애주기 동안 의존적이고 취약한 존재이다. 돌봄을 사적인 영역에 떠넘기지 않고 사회의 가장 중심적인 공공재이자 민주적 인프라로 자리매김하는 '돌봄 민주주의(Caring Democracy)'를 세워야 한다.",
+      "badge": "🔥 가치민감디자인(VSD) 세계적 창시자",
+      "avatar": "💎",
+      "citations": 18340,
+      "h_index": 54,
+      "works_count": 212,
+      "core_philosophy": "기술 시스템을 구축할 때 효율성뿐만 아니라 인간의 존엄성, 프라이버시, 환경 정의, 다세대적 책임과 같은 핵심 도덕 가치를 시스템 아키텍처의 초기 설계 단계부터 체계적으로 통합하는 '가치민감디자인(VSD)'을 정립했다.",
       "key_concepts": [
-        "민주주의적 돌봄(Caring Democracy)",
-        "돌봄 윤리 4단계",
-        "공공 돌봄 인프라",
-        "취약성의 시민권"
+        "가치민감디자인(VSD)",
+        "도덕적 상상력",
+        "직·간접 이해관계자 분석",
+        "다세대 인터페이스"
       ],
-      "representative_work": "『민주주의적 돌봄(Caring Democracy)』 (2013), 『도덕의 경계(Moral Boundaries)』 (1993)",
+      "representative_work": "『Value Sensitive Design: Shaping Technology with Moral Imagination』 (2019)",
       "links": [
         {
           "title": "Google Scholar",
-          "url": "https://scholar.google.com/scholar?q=Joan+Tronto"
+          "url": "https://scholar.google.com/scholar?q=Batya+Friedman"
         },
         {
           "title": "OpenAlex 프로필",
-          "url": "https://openalex.org/A5040069901"
+          "url": "https://openalex.org/A5002491750"
         },
         {
           "title": "ScholarGPS 검색",
-          "url": "https://scholargps.com/search?q=Joan+Tronto"
+          "url": "https://scholargps.com/search?q=Batya+Friedman"
         }
       ]
     },
@@ -2405,9 +2441,9 @@
       "tier": "trending",
       "badge": "🔥 식량체계론(Food Regimes) 세계 최고 석학",
       "avatar": "🌽",
-      "citations": 21987,
-      "h_index": 59,
-      "works_count": 203,
+      "citations": 17766,
+      "h_index": 54,
+      "works_count": 206,
       "core_philosophy": "자본주의 역사 속에서 식량은 제국주의와 다국적 농기업의 축적 도구인 '식량체계(Food Regime)'로 재편되어 왔다. 이에 맞서는 전 세계 소농과 민중의 '식량주권(Food Sovereignty)' 투쟁이야말로 대안 문명의 출구이다.",
       "key_concepts": [
         "식량체계론(Food Regimes)",
@@ -2442,7 +2478,7 @@
       "tier": "trending",
       "badge": "🔥 감시자본주의 분석 최고 권위자",
       "avatar": "👁️",
-      "citations": 19784,
+      "citations": 15623,
       "h_index": 20,
       "works_count": 54,
       "core_philosophy": "구글, 메타 등 빅테크는 인간의 사적 경험을 일방적으로 원자재로 탈취하여 미래 행동을 예측하고 수정하는 '행동 잉여(Behavioral Surplus)' 시장을 만들었다. 감시 자본주의는 인간의 자율성과 민주주의를 근본적으로 침해한다.",
@@ -2470,42 +2506,6 @@
       ]
     },
     {
-      "id": "batya-friedman",
-      "name_kr": "바티아 프리드먼",
-      "name_en": "Batya Friedman",
-      "field": "가치민감디자인(VSD)·인간존엄 HCI",
-      "category": "시빅HCI·UXR",
-      "affiliation": "University of Washington",
-      "tier": "trending",
-      "badge": "🔥 가치민감디자인(VSD) 세계적 창시자",
-      "avatar": "💎",
-      "citations": 19738,
-      "h_index": 55,
-      "works_count": 212,
-      "core_philosophy": "기술 시스템을 구축할 때 효율성뿐만 아니라 인간의 존엄성, 프라이버시, 환경 정의, 다세대적 책임과 같은 핵심 도덕 가치를 시스템 아키텍처의 초기 설계 단계부터 체계적으로 통합하는 '가치민감디자인(VSD)'을 정립했다.",
-      "key_concepts": [
-        "가치민감디자인(VSD)",
-        "도덕적 상상력",
-        "직·간접 이해관계자 분석",
-        "다세대 인터페이스"
-      ],
-      "representative_work": "『Value Sensitive Design: Shaping Technology with Moral Imagination』 (2019)",
-      "links": [
-        {
-          "title": "Google Scholar",
-          "url": "https://scholar.google.com/scholar?q=Batya+Friedman"
-        },
-        {
-          "title": "OpenAlex 프로필",
-          "url": "https://openalex.org/A5002491750"
-        },
-        {
-          "title": "ScholarGPS 검색",
-          "url": "https://scholargps.com/search?q=Batya+Friedman"
-        }
-      ]
-    },
-    {
       "id": "setha-low",
       "name_kr": "세사 로우",
       "name_en": "Setha Low",
@@ -2515,8 +2515,8 @@
       "tier": "trending",
       "badge": "🔥 공공공간 인류학·안전 인프라 최고 권위자",
       "avatar": "⛲",
-      "citations": 16679,
-      "h_index": 45,
+      "citations": 14962,
+      "h_index": 43,
       "works_count": 244,
       "core_philosophy": "공공 광장과 공원은 물리적 설계를 넘어 시민들이 사회적 불안과 두려움을 해소하고 평등한 권리를 확인하는 장소이다. 폐쇄형 커뮤니티와 감시형 설계를 거부하고 누구나 안전하게 숨 쉴 수 있는 열린 공공 인프라를 지켜내야 한다.",
       "key_concepts": [
@@ -2551,8 +2551,8 @@
       "tier": "trending",
       "badge": "🔥 시빅 컴퓨팅·대항적 디자인 최고 권위자",
       "avatar": "⚡",
-      "citations": 10536,
-      "h_index": 47,
+      "citations": 10150,
+      "h_index": 45,
       "works_count": 236,
       "core_philosophy": "디자인은 매끄러운 소비자 만족을 제공하는 데 그치지 않고 사회적 갈등과 숨겨진 권력 관계를 가시화하여 논쟁을 촉발하는 '대항적 디자인(Adversarial Design)'이어야 한다.",
       "key_concepts": [
@@ -2587,8 +2587,8 @@
       "tier": "trending",
       "badge": "🔥 사회적 인프라·폭염 부검 세계적 베스트셀러 석학",
       "avatar": "🏛️",
-      "citations": 6679,
-      "h_index": 24,
+      "citations": 6515,
+      "h_index": 23,
       "works_count": 108,
       "core_philosophy": "1995년 시카고 폭염 참사에서 독거노인의 생사를 가른 것은 소득이 아니라 도서관, 공원, 골목 상점 같은 '사회적 인프라(Social Infrastructure)'였다. 견고한 공공 공간이 있을 때 사람들은 재난 속에서도 상호부조로 살아남는다.",
       "key_concepts": [
@@ -2623,8 +2623,8 @@
       "tier": "trending",
       "badge": "🔥 디자인 정의(Design Justice) 창시자",
       "avatar": "📐",
-      "citations": 5155,
-      "h_index": 18,
+      "citations": 5132,
+      "h_index": 17,
       "works_count": 50,
       "core_philosophy": "기존의 기술 인터페이스는 비장애인·백인·남성을 기본값으로 설계되어 취약계층을 구조적으로 배제한다. '디자인 정의(Design Justice)'는 시스템에 의해 가장 큰 불이익을 받는 당사자 공동체가 설계의 주도권을 갖도록 인터페이스 권력 관계를 전복하는 실천이다.",
       "key_concepts": [
@@ -2651,43 +2651,6 @@
       ]
     },
     {
-      "id": "carol-adams",
-      "name_kr": "캐럴 J. 아담스",
-      "name_en": "Carol J. Adams",
-      "field": "비건 에코페미니즘·동물권",
-      "category": "농생태·식량주권",
-      "affiliation": "Yale University",
-      "tier": "trending",
-      "badge": "🔥 비건 에코페미니즘 창시자",
-      "avatar": "🐄",
-      "citations": 4727,
-      "h_index": 22,
-      "works_count": 98,
-      "core_philosophy": "여성에 대한 대상화와 비인간 동물에 대한 도살은 동일한 가부장적 폭력의 메커니즘을 공유한다. 식탁 위의 고기는 살아있던 존재의 고통을 지워버린 '부재하는 지시체(Absent Referent)'이며, 진정한 페미니즘은 육식 문화 비판과 교차해야 한다.",
-      "key_concepts": [
-        "부재하는 지시체(Absent Referent)",
-        "육식의 성정치",
-        "교차적 억압",
-        "비건 에코페미니즘",
-        "돌봄의 윤리"
-      ],
-      "representative_work": "『육식의 성정치(The Sexual Politics of Meat)』 (1990)",
-      "links": [
-        {
-          "title": "Google Scholar",
-          "url": "https://scholar.google.com/scholar?q=Carol+J.+Adams"
-        },
-        {
-          "title": "OpenAlex 프로필",
-          "url": "https://openalex.org/A5113977741"
-        },
-        {
-          "title": "ScholarGPS 검색",
-          "url": "https://scholargps.com/search?q=Carol+J.+Adams"
-        }
-      ]
-    },
-    {
       "id": "christopher-le-dantec",
       "name_kr": "크리스토퍼 르 단텍",
       "name_en": "Christopher A. Le Dantec",
@@ -2697,7 +2660,7 @@
       "tier": "trending",
       "badge": "🔥 시빅 인터랙션 디자인 선도 연구자",
       "avatar": "🏘️",
-      "citations": 4616,
+      "citations": 4562,
       "h_index": 32,
       "works_count": 75,
       "core_philosophy": "도시의 홈리스나 빈곤 공동체와 함께 풀뿌리 데이터를 수집하고 시빅 인터페이스를 구축함으로써 소외된 시민들이 공적 의사결정에 개입할 수 있는 '공중(Publics)의 형성'을 지원한다.",
@@ -2724,6 +2687,43 @@
       ]
     },
     {
+      "id": "carol-adams",
+      "name_kr": "캐럴 J. 아담스",
+      "name_en": "Carol J. Adams",
+      "field": "비건 에코페미니즘·동물권",
+      "category": "농생태·식량주권",
+      "affiliation": "Yale University",
+      "tier": "trending",
+      "badge": "🔥 비건 에코페미니즘 창시자",
+      "avatar": "🐄",
+      "citations": 4169,
+      "h_index": 24,
+      "works_count": 102,
+      "core_philosophy": "여성에 대한 대상화와 비인간 동물에 대한 도살은 동일한 가부장적 폭력의 메커니즘을 공유한다. 식탁 위의 고기는 살아있던 존재의 고통을 지워버린 '부재하는 지시체(Absent Referent)'이며, 진정한 페미니즘은 육식 문화 비판과 교차해야 한다.",
+      "key_concepts": [
+        "부재하는 지시체(Absent Referent)",
+        "육식의 성정치",
+        "교차적 억압",
+        "비건 에코페미니즘",
+        "돌봄의 윤리"
+      ],
+      "representative_work": "『육식의 성정치(The Sexual Politics of Meat)』 (1990)",
+      "links": [
+        {
+          "title": "Google Scholar",
+          "url": "https://scholar.google.com/scholar?q=Carol+J.+Adams"
+        },
+        {
+          "title": "OpenAlex 프로필",
+          "url": "https://openalex.org/A5113977741"
+        },
+        {
+          "title": "ScholarGPS 검색",
+          "url": "https://scholargps.com/search?q=Carol+J.+Adams"
+        }
+      ]
+    },
+    {
       "id": "massimo-de-angelis",
       "name_kr": "마시모 데 안젤리스",
       "name_en": "Massimo De Angelis",
@@ -2733,7 +2733,7 @@
       "tier": "trending",
       "badge": "🔥 동시대 커먼즈 정치경제학 권위자",
       "avatar": "✊",
-      "citations": 3360,
+      "citations": 2886,
       "h_index": 18,
       "works_count": 78,
       "core_philosophy": "커먼즈는 자본주의의 외부가 아니라 끊임없이 인클로저(울타리치기)에 저항하며 확장하는 '공통화 투쟁'이다. 생산과 재생산의 경계를 허물고 사회적 에너지를 회수하는 탈자본주의적 생태계를 설계해야 한다.",
@@ -2769,8 +2769,8 @@
       "tier": "trending",
       "badge": "🔥 코스모테크닉스 창시 석학",
       "avatar": "⚙️",
-      "citations": 2266,
-      "h_index": 19,
+      "citations": 2100,
+      "h_index": 18,
       "works_count": 80,
       "core_philosophy": "서구 중심의 단일한 보편 기술관을 탈피하고 각 문화권의 철학적 우주론과 도덕에 뿌리내린 다원적 기술인 '코스모테크닉스(Cosmotechnics)'를 복원해야 한다. 디지털 객체와 알고리즘의 존재론을 동양 사상과의 대화 속에서 재정립한다.",
       "key_concepts": [
@@ -2806,7 +2806,7 @@
       "tier": "trending",
       "badge": "🇰🇷 한국 기술생태학·커먼즈 대표 학자",
       "avatar": "🇰🇷",
-      "citations": 1738,
+      "citations": 1715,
       "h_index": 22,
       "works_count": 234,
       "core_philosophy": "플랫폼 자본주의의 데이터 추출과 기술봉건주의를 비판하고, 디지털 기술을 인간과 자연의 상호 순환을 돕는 '기술생태(Techno-ecology)'와 시민 자치적 '피드백 커먼즈'로 탈환해야 한다.",
@@ -2843,7 +2843,7 @@
       "tier": "trending",
       "badge": "🔥 유럽 도시 커먼즈 공간론 권위자",
       "avatar": "🚪",
-      "citations": 1384,
+      "citations": 1381,
       "h_index": 12,
       "works_count": 56,
       "core_philosophy": "도시 커먼즈는 닫힌 엔클레이브가 아니라 내부와 외부, 타자와 이웃이 끊임없이 마주치며 관계를 맺는 '문턱 공간(Threshold Space)'에서 피어난다. 비배타적 공간 창출이 핵심이다.",

@@ -1,9 +1,9 @@
 {
-  "id": "digest-20261125-morning",
+  "id": "digest-20261125-afternoon",
   "date": "2026-11-25",
-  "edition": "morning",
-  "edition_label": "오전",
-  "timestamp": "2026-11-25 04:43",
+  "edition": "afternoon",
+  "edition_label": "오후",
+  "timestamp": "2026-11-25 18:53",
   "daily_summary": {
     "theme": "복합 위기 시대의 대항 헤게모니와 자율적 커먼즈 인프라",
     "overview": "오늘 수집된 연구들은 자본과 국가의 이분법을 넘어, 자립적인 1인 가구와 개인이 고립되지 않고 공동의 자원을 호혜적으로 관리하는 커머닝(Commoning) 실천에 주목합니다.",
@@ -80,46 +80,24 @@
       ]
     },
     {
-      "id": "https://doi.org/10.1080/03066150.2026.2753132",
-      "title_kr": "Can agroecology transcend class contradictions? A case study from Malawi",
-      "original_title": "Can agroecology transcend class contradictions? A case study from Malawi",
-      "source": "The Journal of Peasant Studies",
-      "authors": "Sidney Madsen, Esther Lupafya, David Banda",
-      "published": "2026-11-13",
-      "url": "https://doi.org/10.1080/03066150.2026.2753132",
-      "category": "농생태·식량주권",
-      "relevance_score": 9.8,
-      "summary_points": [
-        "연구 배경 및 문제의식: 'The Journal of Peasant Studies'에 실린 Sidney Madsen, Esther Lupafya, David Banda의 본 연구는 화학 투입과 거대 자본 중심의 산업 농업이 초래한 토양 황폐화와 소농 종속 문제를 극복하고, 지역 순환형 농생태·식량주권 체계를 구축해야 할 과제를 핵심 문제로 제기하며 이론적·실천적 대안을 탐구합니다.",
-        "핵심 분석 및 이론적 발견: 문헌 검토와 실증·사례 분석을 결합하여 기존 틀의 맹점을 짚고 대안적 거버넌스와 실천 경로를 체계화했습니다.",
-        "트윈 연구 시사점: 흙·나무·생태계를 추출 대상이 아닌 공생의 주체로 바라보는 농생태학적 관점을 심화시키며, 이론과 현장 실천(유기순환·생태복원)을 잇는 사유의 나침반이 됩니다."
-      ],
-      "keywords": [
-        "#농생태",
-        "#소농협동",
-        "#동시대학술"
-      ]
-    },
-    {
-      "id": "http://arxiv.org/abs/2611.32377v1",
-      "title_kr": "Found in Translation: Five Entry Points to Translate AI Literacy Frameworks in the Design of Educational Materials",
-      "original_title": "Found in Translation: Five Entry Points to Translate AI Literacy Frameworks in the Design of Educational Materials",
-      "source": "arXiv cs.HC / cs.CY",
-      "authors": "Luis Morales-Navarro, Karl-Emil K. Bilstrup, Mille Skovhus Lunding",
+      "id": "https://doi.org/10.1177/20539517261509268",
+      "title_kr": "Artificial intelligence training labour and the training economy: How generative models reconfigure value extraction in the digital economy",
+      "original_title": "Artificial intelligence training labour and the training economy: How generative models reconfigure value extraction in the digital economy",
+      "source": "Big Data & Society",
+      "authors": "Jack Ng-Soon-Chye",
       "published": "2026-11-24",
-      "url": "http://arxiv.org/abs/2611.32377v1",
-      "category": "시빅HCI·UXR",
+      "url": "https://doi.org/10.1177/20539517261509268",
+      "category": "과학기술학·STS",
       "relevance_score": 9.4,
       "summary_points": [
-        "연구 배경 및 문제의식: 'arXiv cs.HC / cs.CY'에 실린 Luis Morales-Navarro, Karl-Emil K. Bilstrup, Mille Skovhus Lunding의 본 연구는 참여형 디자인(Participatory Design)이 단순한 의견 수렴 절차를 넘어, 흙·도자 같은 물질적 실천과 관계적 모듈성을 통해 공동체적 감각을 재구성할 수 있는 가능성을 핵심 문제로 제기하며 이론적·실천적 대안을 탐구합니다.",
-        "핵심 분석 및 이론적 발견: 'Shifting Ground' 도자 공동 제작 프로젝트를 사례로, 흙을 빚고 조합하는 관계적 모듈성(relational modularity)이 참여자 간의 위계를 허물고 장소 기반의 공동체적 기억을 형성하는 과정을 실증했습니다.",
-        "트윈 연구 시사점: AI 자동화·합성 데이터가 실제 취약계층과 현장 당사자의 목소리를 대체하지 않도록 경계하고, 물질성·참여·신뢰에 기반한 공공 인터페이스와 리서치 방법론을 다듬는 데 기여합니다."
+        "연구 배경 및 문제의식: 'Big Data & Society'에 실린 Jack Ng-Soon-Chye의 본 연구는 거대 중앙집중형 디지털 플랫폼이 데이터와 규칙을 독점하는 구조 속에서, 분산·협력형 데이터 공간(data spaces)이 규제 복잡성과 공공 책임을 조율할 수 있는 조건을 핵심 문제로 제기하며 이론적·실천적 대안을 탐구합니다.",
+        "핵심 분석 및 이론적 발견: 문헌 검토와 실증·사례 분석을 결합하여 기존 틀의 맹점을 짚고 대안적 거버넌스와 실천 경로를 체계화했습니다.",
+        "트윈 연구 시사점: 기술을 중립적 도구가 아닌 권력과 가치가 각인된 사회기술 체계로 읽어내며, 감시·알고리즘 통제 속에서 시민의 데이터 주권과 인간 번영을 지키는 비판적 준거가 됩니다."
       ],
       "keywords": [
-        "#시빅HCI",
+        "#과학기술학",
         "#책임있는AI",
-        "#참여디자인",
-        "#대지윤리"
+        "#동시대학술"
       ]
     },
     {
@@ -166,22 +144,43 @@
       ]
     },
     {
-      "id": "https://doi.org/10.25907/01142",
-      "title_kr": "New Methodologies in Measuring Carbon Flux and Wetland Resilience to Climate Change – Implications for Blue Carbon Sequestration in Restoring Wetlands and the Impact of Sea Level Rise",
-      "original_title": "New Methodologies in Measuring Carbon Flux and Wetland Resilience to Climate Change – Implications for Blue Carbon Sequestration in Restoring Wetlands and the Impact of Sea Level Rise",
-      "source": "University of the Sunshine Coast",
-      "authors": "Pestheruwe Liyanaralalage Iroshaka Gregory Marcelus Cooray",
-      "published": "2027-11-23",
-      "url": "https://doi.org/10.25907/01142",
+      "id": "https://doi.org/10.51865/jlsl.2026.07",
+      "title_kr": "Posthuman Motherhood and Uneven Futurity in S.B. Divya’s Machinehood",
+      "original_title": "Posthuman Motherhood and Uneven Futurity in S.B. Divya’s Machinehood",
+      "source": "Word and Text - A Journal of Literary Studies and Linguistics",
+      "authors": "Najla Kaikulangara Abdul Salam, Vrinda Varma",
+      "published": "2026-12-31",
+      "url": "https://doi.org/10.51865/jlsl.2026.07",
       "category": "농생태·식량주권",
       "relevance_score": 8.9,
       "summary_points": [
-        "연구 배경 및 문제의식: 'University of the Sunshine Coast'에 실린 Pestheruwe Liyanaralalage Iroshaka Gregory Marcelus Cooray의 본 연구는 화학 투입과 거대 자본 중심의 산업 농업이 초래한 토양 황폐화와 소농 종속 문제를 극복하고, 지역 순환형 농생태·식량주권 체계를 구축해야 할 과제를 핵심 문제로 제기하며 이론적·실천적 대안을 탐구합니다.",
-        "핵심 분석 및 이론적 발견: 문헌 검토와 실증·사례 분석을 결합하여 기존 틀의 맹점을 짚고 대안적 거버넌스와 실천 경로를 체계화했습니다.",
+        "연구 배경 및 문제의식: 'Word and Text - A Journal of Literary Studies and Linguistics'에 실린 Najla Kaikulangara Abdul Salam, Vrinda Varma의 본 연구는 종교적·제도적 감시에서 디지털 데이터 감시로 이어지는 '가시성(visibility)'의 역사와, 상시적 감시 체계가 인간의 번영(human flourishing)과 자율성에 미치는 윤리적 긴장을 핵심 문제로 제기하며 이론적·실천적 대안을 탐구합니다.",
+        "핵심 분석 및 이론적 발견: 신적 시선에서 디지털 알고리즘 감시로 이어지는 가시성의 역사적 변천을 추적하며, 감시를 단순한 프라이버시 침해가 아니라 인간의 존엄·신뢰·번영 조건을 재편하는 사회문화적 구조로 규명했습니다.",
         "트윈 연구 시사점: 흙·나무·생태계를 추출 대상이 아닌 공생의 주체로 바라보는 농생태학적 관점을 심화시키며, 이론과 현장 실천(유기순환·생태복원)을 잇는 사유의 나침반이 됩니다."
       ],
       "keywords": [
         "#농생태",
+        "#알고리즘정의",
+        "#책임있는AI"
+      ]
+    },
+    {
+      "id": "https://doi.org/10.5829/ije.2027.40.06c.01",
+      "title_kr": "Hybrid Deep Learning Framework for Climate-Resilient Electricity Forecasting: A Multi-Sectoral Analysis Under Representative Concentration Pathway Scenarios",
+      "original_title": "Hybrid Deep Learning Framework for Climate-Resilient Electricity Forecasting: A Multi-Sectoral Analysis Under Representative Concentration Pathway Scenarios",
+      "source": "International Journal of Engineering",
+      "authors": "F. Karimidehkordi, R. Samizadeh",
+      "published": "2027-01-01",
+      "url": "https://doi.org/10.5829/ije.2027.40.06c.01",
+      "category": "재난안전·공공인프라",
+      "relevance_score": 8.9,
+      "summary_points": [
+        "연구 배경 및 문제의식: 'International Journal of Engineering'에 실린 F. Karimidehkordi, R. Samizadeh의 본 연구는 기존 학술·제도적 패러다임이 드러내는 구조적 한계와 비판적 전환의 필요성을 핵심 문제로 제기하며 이론적·실천적 대안을 탐구합니다.",
+        "핵심 분석 및 이론적 발견: 문헌 검토와 실증·사례 분석을 결합하여 기존 틀의 맹점을 짚고 대안적 거버넌스와 실천 경로를 체계화했습니다.",
+        "트윈 연구 시사점: 재난·기후 위기 대응 기술이 현장의 취약계층과 사생활 보호 원칙을 해치지 않으면서 실질적 안전망으로 작동하기 위한 공공 인프라 설계 기준을 제시합니다."
+      ],
+      "keywords": [
+        "#재난안전",
         "#책임있는AI",
         "#동시대학술"
       ]
