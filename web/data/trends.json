@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-25 18:53",
+  "updated_at": "2026-11-25 22:44",
   "total_digests": 54,
   "total_papers_analyzed": 433,
   "total_gurus": 39,
@@ -16,11 +16,11 @@
     },
     {
       "category": "재난안전·공공인프라",
-      "count": 76
+      "count": 75
     },
     {
       "category": "과학기술학·STS",
-      "count": 60
+      "count": 59
     },
     {
       "category": "커먼즈·공유재",
@@ -28,7 +28,7 @@
     },
     {
       "category": "시빅HCI·UXR",
-      "count": 34
+      "count": 36
     },
     {
       "category": "돌봄·상호부조",
@@ -38,11 +38,11 @@
   "top_keywords": [
     {
       "keyword": "#동시대학술",
-      "count": 206
+      "count": 207
     },
     {
       "keyword": "#책임있는AI",
-      "count": 123
+      "count": 122
     },
     {
       "keyword": "#농생태",
@@ -58,7 +58,7 @@
     },
     {
       "keyword": "#재난안전",
-      "count": 76
+      "count": 75
     },
     {
       "keyword": "#커머닝",
@@ -66,7 +66,7 @@
     },
     {
       "keyword": "#과학기술학",
-      "count": 60
+      "count": 59
     },
     {
       "keyword": "#커먼즈",
@@ -78,18 +78,18 @@
     },
     {
       "keyword": "#시빅HCI",
-      "count": 34
+      "count": 36
     },
     {
       "keyword": "#다종공생",
       "count": 23
     },
     {
-      "keyword": "#돌봄소통",
-      "count": 14
+      "keyword": "#소농협동",
+      "count": 15
     },
     {
-      "keyword": "#소농협동",
+      "keyword": "#돌봄소통",
       "count": 14
     },
     {
@@ -110,7 +110,7 @@
     },
     {
       "keyword": "#알고리즘정의",
-      "count": 6
+      "count": 5
     },
     {
       "keyword": "#자원추출주의",
