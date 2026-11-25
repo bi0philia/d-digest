@@ -1,14 +1,14 @@
 {
-  "updated_at": "2026-11-25 04:43",
-  "total_digests": 53,
-  "total_papers_analyzed": 425,
+  "updated_at": "2026-11-25 18:53",
+  "total_digests": 54,
+  "total_papers_analyzed": 433,
   "total_gurus": 39,
   "total_periodicals": 50,
   "total_tracked_keywords": 20,
   "category_distribution": [
     {
       "category": "농생태·식량주권",
-      "count": 116
+      "count": 117
     },
     {
       "category": "공간사회·도시커먼즈",
@@ -16,15 +16,15 @@
     },
     {
       "category": "재난안전·공공인프라",
-      "count": 75
+      "count": 76
     },
     {
       "category": "과학기술학·STS",
-      "count": 59
+      "count": 60
     },
     {
       "category": "커먼즈·공유재",
-      "count": 46
+      "count": 51
     },
     {
       "category": "시빅HCI·UXR",
@@ -38,15 +38,15 @@
   "top_keywords": [
     {
       "keyword": "#동시대학술",
-      "count": 203
+      "count": 206
     },
     {
       "keyword": "#책임있는AI",
-      "count": 118
+      "count": 123
     },
     {
       "keyword": "#농생태",
-      "count": 116
+      "count": 117
     },
     {
       "keyword": "#공간사회",
@@ -54,27 +54,27 @@
     },
     {
       "keyword": "#도시공간",
-      "count": 79
+      "count": 81
     },
     {
       "keyword": "#재난안전",
-      "count": 75
+      "count": 76
     },
     {
       "keyword": "#커머닝",
-      "count": 60
+      "count": 65
     },
     {
       "keyword": "#과학기술학",
-      "count": 59
+      "count": 60
     },
     {
       "keyword": "#커먼즈",
-      "count": 46
+      "count": 51
     },
     {
       "keyword": "#대지윤리",
-      "count": 34
+      "count": 36
     },
     {
       "keyword": "#시빅HCI",
@@ -85,12 +85,12 @@
       "count": 23
     },
     {
-      "keyword": "#소농협동",
+      "keyword": "#돌봄소통",
       "count": 14
     },
     {
-      "keyword": "#돌봄소통",
-      "count": 13
+      "keyword": "#소농협동",
+      "count": 14
     },
     {
       "keyword": "#참여디자인",
@@ -110,7 +110,7 @@
     },
     {
       "keyword": "#알고리즘정의",
-      "count": 5
+      "count": 6
     },
     {
       "keyword": "#자원추출주의",
