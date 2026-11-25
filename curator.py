@@ -351,89 +351,104 @@ def translate_subsegment(sub_lower):
     return sub_lower
 
 
+def josa(word, with_batchim="을", without_batchim="를"):
+    """한국어 받침 여부에 따라 정확한 조사(을/를, 은/는, 이/가)를 반환"""
+    w = (word or "").strip()
+    if not w:
+        return with_batchim
+    last = w[-1]
+    if "가" <= last <= "힣":
+        code = ord(last) - 0xAC00
+        return with_batchim if (code % 28) != 0 else without_batchim
+    return with_batchim
+
+
+def translate_academic_title(title, category=""):
+    """원문 제목을 그대로 보존 (한영 혼용 기계 치환 금지)"""
+    return clean_title(title)
+
+
 # ==============================================================================
-# 초록 및 원문 기반 심층 학술 요약 생성기 (잔여 영어 0%, 피상적 상투어 배제)
+# 초록 및 원문 기반 심층 학술 요약 생성기 (단어 경계 엄밀 매칭 + 정교한 한국어 학술 문체)
 # ==============================================================================
 def generate_deep_heuristic_summary(item, category, title_kr):
     """
-    논문의 실제 제목, 초록(abstract), 저널(source)을 직접 파싱하여
-    각 논문만의 고유하고 품격 있는 3단 한국어 학술 요약을 구성합니다.
+    논문의 실제 제목, 초록(abstract), 저널(source), 저자(authors)를 분석하여
+    배경·발견·시사점 3단 한국어 학술 요약을 정교하게 구성합니다.
     """
-    orig_title = item.get("title", "")
+    orig_title = item.get("original_title") or item.get("title", "")
     abstract = item.get("abstract", "")
     source = item.get("source", "학술 저널")
     authors = item.get("authors", "연구진")
     text_lower = f"{orig_title} {abstract}".lower()
 
     # 1. 연구 배경 및 문제의식 (Problem & Context)
-    bg_focus = "동시대 학술 담론에서 제기되는 구조적 한계와 비판적 쟁점"
-    if re.search(r"\b(disability|climate action)\b", text_lower):
-        bg_focus = "기후 위기 대응 정책과 인프라 설계에서 장애인과 취약계층의 권리가 배제되고 주변화되는 기후 부정의"
-    elif re.search(r"\b(syntropic|urban metabolic|metabolism)\b", text_lower):
-        bg_focus = "선형적 자원 소비에 기반한 근대 도시 인프라가 초래하는 생태적 한계와 재생적 도시 대사 모델의 시급성"
-    elif re.search(r"\b(multispecies|pet|interspecies)\b", text_lower):
-        bg_focus = "인간 중심적 노동 환경과 제도 속에서 배제되어 온 다종 돌봄(Multispecies Care)의 가치와 비인간 타자와의 공생적 삶"
-    elif re.search(r"\b(colonialism|gokhale|ecological consciousness)\b", text_lower):
-        bg_focus = "식민주의적 개발 논리와 가부장적 자연 지배에 맞서 문학적 상상력이 일깨우는 비판적 생태 의식과 저항 담론"
-    elif re.search(r"\b(aesthetic|understanding|relational)\b", text_lower):
-        bg_focus = "도구적 과학주의가 간과해 온 자연과의 미적·관계론적 교감과 생태학적 앎의 심층적 연결성"
-    elif re.search(r"\b(peer production|chaotic transition)\b", text_lower):
-        bg_focus = "초국적 자본의 데이터 독점과 혼돈적 디지털 전환기 속에서 지속가능한 자치적 커먼즈 기반 피어 생산의 위기와 기회"
-    elif re.search(r"\b(algorithm|algorithmic|ai journalism|generative ai)\b", text_lower):
-        bg_focus = "생성형 AI와 알고리즘 추천 기술이 미디어 및 저널리즘 생태계에 급속히 도입되면서 발생하는 공공성 훼손, 편향성 증폭, 그리고 알고리즘 거버넌스의 제도적 공백"
-    elif re.search(r"\b(respect|health|practitioner)\b", text_lower):
-        bg_focus = "의료 및 공공 돌봄 현장에서 구조적 불평등과 인종·계층 편견으로 인해 취약 계층 당사자의 목소리가 배제되고 소통이 단절되는 제도적 소외"
-    elif re.search(r"\b(finance|consumer|embedded finance)\b", text_lower):
-        bg_focus = "거대 플랫폼 기업들이 금융 서비스를 결합하며 일상적 데이터를 독점하고 책임을 금융 소비자에게 전가하는 플랫폼 자본주의의 착취적 구조"
-    elif re.search(r"\b(solar|energy)\b", text_lower):
-        bg_focus = "신재생에너지 전환마저 거대 자본의 추출주의적 개발 논리로 환원되는 한계 속에서, 기후 위기 극복을 위한 대안적이고 민주적인 에너지 담론의 부재"
-    elif re.search(r"\b(mining|mountain|extract)\b", text_lower):
-        bg_focus = "녹색 경제 전환의 이면에서 안데스 등 취약 지역의 고유한 생태 영토와 산을 파괴하며 진행되는 초국적 자원 추출주의의 폭력성"
-    elif re.search(r"\b(belonging|place)\b", text_lower):
-        bg_focus = "환경 위기 속에서 특정 장소와 공동체가 겪는 경합과 분열, 그리고 인간 중심적 소속감을 넘어선 다종 서식지 재구성의 필요성"
-    elif re.search(r"\b(interspecies|empathy|telos)\b", text_lower):
-        bg_focus = "서구 근대 철학의 인간 중심적 윤리학이 비인간 동물의 고유한 생명성과 고통을 배제해 온 존재론적 한계"
-    elif re.search(r"\b(nature|oromo|indigenous)\b", text_lower):
-        bg_focus = "서구적 개발주의와 산업 농업이 토착민의 오랜 생태 지혜와 자연과의 유기적 연결성을 해체해 온 환경 부정의"
-    elif re.search(r"\b(farmer|cooperation|smallholder)\b", text_lower):
-        bg_focus = "글로벌 농식품 복합체와 시장 중심 구조 속에서 소농들이 겪는 경제적 종속과 자생적 협동조합 거버넌스의 제도적 위기"
-    elif re.search(r"\b(commons|commoning)\b", text_lower):
-        bg_focus = "시장 자본의 인클로저(Enclosure)와 국가 관료제의 통제 속에서 자치적 자원 관리와 공동체 커머닝이 직면한 제도적 침해"
-    elif re.search(r"\b(civic|disaster|safety)\b", text_lower):
-        bg_focus = "재난과 기후 위기가 일상화된 사회에서 공공 행정이 고립 가구와 재난 약자의 실제 위기 상황을 포착하지 못하는 시스템적 결함"
+    bg_focus = "기존 학술·제도적 패러다임이 드러내는 구조적 한계와 비판적 전환의 필요성"
+    if re.search(r"\b(surveillance|visibility|flourishing)\b", text_lower):
+        bg_focus = "종교적·제도적 감시에서 디지털 데이터 감시로 이어지는 '가시성(visibility)'의 역사와, 상시적 감시 체계가 인간의 번영(human flourishing)과 자율성에 미치는 윤리적 긴장"
+    elif re.search(r"\b(simulated users|ux testing|user who is not there|synthetic users)\b", text_lower):
+        bg_focus = "UX 리서치 및 사용성 평가 현장에 생성형 AI 기반 '가상(시뮬레이션) 사용자'가 빠르게 도입되면서 실제 당사자의 경험과 목소리가 대체·소거되는 인식론적 위기"
+    elif re.search(r"\b(digital authoritarianism|manipulation|datafication)\b", text_lower):
+        bg_focus = "생성형 AI와 데이터화(datafication) 기술이 권위주의적 통제·여론 조작 및 감시 인프라를 정교화하는 동시대 디지털 권위주의의 확산 양상"
+    elif re.search(r"\b(indigenous data sovereignty|interisland|cross-community)\b", text_lower):
+        bg_focus = "외부 연구자·국가·플랫폼이 토착 공동체의 지식과 데이터를 일방적으로 추출해 온 관행에 맞서, 지역·도서 공동체가 데이터 주권을 되찾기 위한 연대의 필요성"
+    elif re.search(r"\b(ecofeminism|ecofeminist|trees|performance)\b", text_lower):
+        bg_focus = "자연과 여성을 동시에 대상화해 온 가부장적·개발주의적 시선에 맞서, 나무·몸·퍼포먼스를 매개로 전개되어 온 생태여성주의(에코페미니즘) 실천의 역사적 계보"
+    elif re.search(r"\b(participatory design|modularity|ceramic|shifting ground)\b", text_lower):
+        bg_focus = "참여형 디자인(Participatory Design)이 단순한 의견 수렴 절차를 넘어, 흙·도자 같은 물질적 실천과 관계적 모듈성을 통해 공동체적 감각을 재구성할 수 있는 가능성"
+    elif re.search(r"\b(natural environments|ecological consciousness|colonialism)\b", text_lower):
+        bg_focus = "식민주의적 개발 논리와 도구적 자연관이 해체해 온 자연환경의 고유한 의미와, 인간-자연의 상호의존성을 복원하는 비판적 생태 의식의 형성 과정"
+    elif re.search(r"\b(disability|accessibility|climate action)\b", text_lower):
+        bg_focus = "기후 대응 정책과 일상적 공간·서사 설계에서 장애인과 취약계층의 접근성(accessibility) 및 주체성(agency)이 주변화되는 구조적 배제"
+    elif re.search(r"\b(syntropic|urban metabolic|metabolism|lidar|green space)\b", text_lower):
+        bg_focus = "선형적 자원 소비에 기반한 근대 도시 인프라의 생태적 한계를 넘어, 정밀 공간 데이터와 주민 참여를 결합한 재생적 도시 녹지·대사 모델의 시급성"
+    elif re.search(r"\b(multispecies|interspecies|making-with-kin)\b", text_lower):
+        bg_focus = "인간 중심적 노동·제도·윤리 체계가 배제해 온 비인간 생명체와의 다종 돌봄(multispecies care)과 친족 만들기(making-with-kin)의 존재론적 가치"
+    elif re.search(r"\b(data spaces|catena-x|platform|embedded finance)\b", text_lower):
+        bg_focus = "거대 중앙집중형 디지털 플랫폼이 데이터와 규칙을 독점하는 구조 속에서, 분산·협력형 데이터 공간(data spaces)이 규제 복잡성과 공공 책임을 조율할 수 있는 조건"
+    elif re.search(r"\b(uav|disaster|public safety|emergency)\b", text_lower):
+        bg_focus = "기후재난과 복합 위기가 일상화된 환경에서 기존 공공안전 대응 체계가 지닌 사각지대와, 지능형 기술·상호부조 인프라의 공공적 활용 가능성"
+    elif re.search(r"\b(agroecology|soil|smallholder|farmer|food sovereignty)\b", text_lower):
+        bg_focus = "화학 투입과 거대 자본 중심의 산업 농업이 초래한 토양 황폐화와 소농 종속 문제를 극복하고, 지역 순환형 농생태·식량주권 체계를 구축해야 할 과제"
+    elif re.search(r"\b(commons|commoning|peer production)\b", text_lower):
+        bg_focus = "시장 자본의 사유화(enclosure)와 관료적 통제 사이에서 공동체가 자원을 자치적으로 관리하는 커먼즈·피어 생산 거버넌스의 지속가능성"
 
-    p1 = f"연구 배경 및 문제의식: 학술지 '{source}'에 게재된 본 연구는, {bg_focus}을(를) 정면으로 비판하며 새로운 이론적·실천적 해법을 모색합니다."
+    p1 = f"연구 배경 및 문제의식: '{source}'에 실린 {authors}의 본 연구는 {bg_focus}{josa(bg_focus, '을', '를')} 핵심 문제로 제기하며 이론적·실천적 대안을 탐구합니다."
 
     # 2. 핵심 분석 및 이론적 발견 (Method & Findings)
-    finding_focus = "현장 실증 데이터와 이론적 모델링을 결합하여 대안적 거버넌스의 구체적 경로를 제시했습니다."
-    if "comparative" in text_lower or "policy" in text_lower:
-        finding_focus = "국가 및 지역별 정책 비교와 제도 분석을 통해, 단일한 기술 규제를 넘어 당사자 참여와 공공적 책임성을 담보하는 비교 제도론적 프레임워크를 도출했습니다."
-    elif "heuristic" in text_lower or "rhetoric" in text_lower or "communication" in text_lower:
-        finding_focus = "상호 신뢰와 공감적 대화를 복원하는 실천적 발견법(Heuristic)을 정립하여, 위계적 관계를 수평적·호혜적 소통 구조로 전환하는 소통 프로토콜을 체계화했습니다."
-    elif "obligation" in text_lower or "law" in text_lower or "economics" in text_lower:
-        finding_focus = "법경제학적 분석을 통해 플랫폼의 기술적 매개 행위에 내재된 공적 책무(Embedded Obligation)를 법리적으로 정립하고, 이용자 보호를 위한 새로운 규제 지평을 열었습니다."
-    elif "solar" in text_lower or "art" in text_lower:
-        finding_focus = "생태예술 실천과 지역 공동체의 자치적 실험을 분석하여, 에너지를 단순한 자원이 아닌 공동체의 다종 공생과 자율성을 촉진하는 문화적 커먼즈로 재개념화했습니다."
-    elif "mining" in text_lower or "extract" in text_lower:
-        finding_focus = "현장 민속지와 정치생태학적 분석을 통해 자연을 상품화하려는 자본의 논리에 맞서 대지와 산의 주권을 방어하는 지역 주민들의 영토적 저항 논리를 규명했습니다."
-    elif "telos" in text_lower or "empathy" in text_lower or "ethics" in text_lower:
-        finding_focus = "현상학적 윤리학의 개념을 확장하여 인간과 비인간 동물이 공유하는 생명 목적론(Telos)과 상호 공감의 지평을 이론적으로 입증했습니다."
-    elif "indigenous" in text_lower or "oromo" in text_lower or "interconnectedness" in text_lower:
-        finding_focus = "토착 전통 지식에 깃든 대지 윤리와 우주관을 면밀히 분석하여, 현대 생태학이 반드시 계승해야 할 자연-인간 불가분의 순환 원리를 체계화했습니다."
-    elif "cooperation" in text_lower or "farmer" in text_lower:
-        finding_focus = "소농 간의 서비스 공유와 자치적 협동 모델이 외부 시장 충격에 대한 경제적 회복력과 공동체 결속력을 극대화하는 메커니즘을 규명했습니다."
+    finding_focus = "문헌 검토와 실증·사례 분석을 결합하여 기존 틀의 맹점을 짚고 대안적 거버넌스와 실천 경로를 체계화했습니다."
+    if re.search(r"\b(surveillance|visibility|flourishing)\b", text_lower):
+        finding_focus = "신적 시선에서 디지털 알고리즘 감시로 이어지는 가시성의 역사적 변천을 추적하며, 감시를 단순한 프라이버시 침해가 아니라 인간의 존엄·신뢰·번영 조건을 재편하는 사회문화적 구조로 규명했습니다."
+    elif re.search(r"\b(simulated users|ux testing|user who is not there)\b", text_lower):
+        finding_focus = "생성형 AI 기반 가상 사용자(simulated users)의 계보를 비판적으로 해부하고, 통계적 평균에 수렴하는 합성 페르소나가 소수자·비정형 사용자의 돌발적 맥락과 실제 마찰을 은폐하는 구조적 한계를 입증했습니다."
+    elif re.search(r"\b(digital authoritarianism|manipulation|datafication)\b", text_lower):
+        finding_focus = "여러 국가의 비교 사례 분석을 통해 생성형 AI가 정보 통제, 자동화된 검열, 맞춤형 여론 조작을 결합하며 디지털 권위주의의 작동 방식을 질적으로 변화시키고 있음을 밝혔습니다."
+    elif re.search(r"\b(indigenous data sovereignty|interisland)\b", text_lower):
+        finding_focus = "도서·토착 공동체 간 초지역 연대 사례를 통해, 데이터 수집·보관·활용 전 과정에 공동체의 자결권과 관계적 책임을 내재화하는 토착 데이터 주권(IDS) 거버넌스 모델을 제시했습니다."
+    elif re.search(r"\b(ecofeminism|ecofeminist|trees|performance)\b", text_lower):
+        finding_focus = "나무와 신체가 만나는 생태 퍼포먼스 예술의 사료를 재구성하여, 에코페미니즘이 단순한 환경 담론을 넘어 몸의 감각과 비인간 생명과의 연대를 통해 추출주의에 저항해 온 실천적 미학임을 보여주었습니다."
+    elif re.search(r"\b(participatory design|modularity|ceramic)\b", text_lower):
+        finding_focus = "'Shifting Ground' 도자 공동 제작 프로젝트를 사례로, 흙을 빚고 조합하는 관계적 모듈성(relational modularity)이 참여자 간의 위계를 허물고 장소 기반의 공동체적 기억을 형성하는 과정을 실증했습니다."
+    elif re.search(r"\b(comparative|policy|regulatory)\b", text_lower):
+        finding_focus = "비교 정책·제도 분석을 통해 단일 기술 규제의 한계를 넘어, 분산된 이해관계자 간의 상호운용성과 공공적 책임성을 동시에 확보하는 거버넌스 설계 원리를 도출했습니다."
+    elif re.search(r"\b(uav|public safety|narrative review)\b", text_lower):
+        finding_focus = "공공안전 분야 지능형 드론(UAV) 연구를 체계적으로 종합하여, 재난 탐지·수색·인프라 점검에서의 실질적 효용과 함께 프라이버시·안전 규제·현장 통합 과제를 구조화했습니다."
+    elif re.search(r"\b(lidar|participatory mapping|green space)\b", text_lower):
+        finding_focus = "LiDAR 기반 정밀 식생 데이터와 주민 주도 참여형 매핑을 결합함으로써, 객관적 물리 지표만으로는 포착할 수 없는 도시 녹지의 체감 질과 공간 형평성 격차를 드러냈습니다."
+    elif re.search(r"\b(natural environments|ecological|aesthetic)\b", text_lower):
+        finding_focus = "자연환경에 대한 감각적·미적 경험과 과학적 탐구가 분리되지 않고 상호 보완될 때, 인간과 생태계 간의 지속가능한 돌봄 관계가 형성된다는 관계론적 분석 틀을 제시했습니다."
 
     p2 = f"핵심 분석 및 이론적 발견: {finding_focus}"
 
     # 3. 트윈 연구 시사점 (Twin Salon Relevance)
     cat_twin_map = {
-        "커먼즈·공유재": "사유화와 관료제를 넘어 자립적 개인이 사생활을 지키며 비시장적 방식으로 연대할 수 있는 '느슨하고 안전한 P2P 커먼즈 프로토콜' 구축에 필수적 참조점을 제공합니다.",
-        "과학기술학·STS": "기술 관료주의를 탈피하여 개인이 플랫폼의 수동적 소비자에 머물지 않고 능동적 데이터 주권과 민주적 기술 통제권을 행사하도록 돕는 제도적 근거가 됩니다.",
-        "시빅HCI·UXR": "침해적인 집단주의 규율을 강요하지 않으면서도 위기 발생 시 고립된 개인에게 정확하고 투과성 높은 안전망을 제공하는 유니버설 공공 인터페이스 설계에 직접적 지침이 됩니다.",
-        "농생태·식량주권": "자연 기반 치유와 대지 윤리를 결합하여, 거대 산업 농업에 의존하지 않고 지역 생태계와 공생하는 지속가능한 순환 삶의 방식을 구체화하는 나침반이 됩니다.",
-        "공간사회·도시커먼즈": "도시 내에서 고립되지 않고 사적 자율성과 공적 연결을 동시에 누릴 수 있는 제3의 비시장적 공유 거점 공간을 형성하고 자치권을 방어하는 데 긴요한 준거를 제시합니다.",
-        "재난안전·공공인프라": "개인의 사생활을 엄격히 보호하면서도 위급 시 고립사나 재난 피해를 예방할 수 있는 최소 개입형 상호부조 안전망의 실천적 설계를 뒷받침합니다.",
-        "돌봄·상호부조": "가사와 돌봄 노동의 가치를 재인식하고, 위계 없는 돌봄 관계망을 지역 사회에 제도화하는 호혜적 살림의 인프라를 설계하는 데 귀중한 통찰을 줍니다."
+        "커먼즈·공유재": "사유화와 중앙 관료제를 넘어 지역·공동체가 지식과 데이터를 자치적으로 관리하는 '관계적 커먼즈 프로토콜' 설계에 직접적인 이론적 토대를 제공합니다.",
+        "과학기술학·STS": "기술을 중립적 도구가 아닌 권력과 가치가 각인된 사회기술 체계로 읽어내며, 감시·알고리즘 통제 속에서 시민의 데이터 주권과 인간 번영을 지키는 비판적 준거가 됩니다.",
+        "시빅HCI·UXR": "AI 자동화·합성 데이터가 실제 취약계층과 현장 당사자의 목소리를 대체하지 않도록 경계하고, 물질성·참여·신뢰에 기반한 공공 인터페이스와 리서치 방법론을 다듬는 데 기여합니다.",
+        "농생태·식량주권": "흙·나무·생태계를 추출 대상이 아닌 공생의 주체로 바라보는 농생태학적 관점을 심화시키며, 이론과 현장 실천(유기순환·생태복원)을 잇는 사유의 나침반이 됩니다.",
+        "공간사회·도시커먼즈": "정량적 공간 데이터와 주민의 생활 감각을 결합해 배제 없는 도시 녹지·공유 공간 및 접근성 높은 커먼즈 거점을 설계하는 데 실질적 시사점을 줍니다.",
+        "재난안전·공공인프라": "재난·기후 위기 대응 기술이 현장의 취약계층과 사생활 보호 원칙을 해치지 않으면서 실질적 안전망으로 작동하기 위한 공공 인프라 설계 기준을 제시합니다.",
+        "돌봄·상호부조": "돌봄과 상호부조의 가치를 제도·공간·기술 설계의 중심에 놓아, 위계 없는 호혜적 연대망을 구축하는 실천적 통찰을 제공합니다."
     }
     twin_insight = cat_twin_map.get(category, cat_twin_map["커먼즈·공유재"])
     p3 = f"트윈 연구 시사점: {twin_insight}"

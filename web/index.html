@@ -670,7 +670,7 @@
                 ${idx + 1}
               </span>
               <span class="truncate font-medium text-[11px] text-sand-900 group-hover:text-sand-950">
-                ${it.title_kr}
+                ${it.original_title || it.title_kr}
               </span>
             </div>
             <div class="text-[10px] text-sand-400 pl-5.5 truncate">
@@ -826,12 +826,13 @@
             <div class="space-y-1">
               <h3 class="text-base sm:text-lg font-bold serif-title text-sand-900 hover:text-sand-700 transition leading-snug">
                 <a href="${item.url}" target="_blank" rel="noopener noreferrer" class="hover:underline">
-                  ${item.title_kr}
+                  ${item.original_title || item.title_kr}
                 </a>
               </h3>
-              <p class="text-xs text-sand-700 font-mono italic">
-                ${item.original_title}
-              </p>
+              ${item.title_kr && item.original_title && item.title_kr !== item.original_title && /[가-힣]/.test(item.title_kr) && !/[a-zA-Z]{4,}/.test(item.title_kr) ? `
+              <p class="text-xs text-sand-700 font-medium">
+                ${item.title_kr}
+              </p>` : ''}
             </div>
 
             <!-- Authors & Date -->
