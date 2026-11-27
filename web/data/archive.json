@@ -1,5 +1,192 @@
 [
   {
+    "id": "digest-20261127-afternoon",
+    "date": "2026-11-27",
+    "edition": "afternoon",
+    "edition_label": "오후",
+    "timestamp": "2026-11-27 22:45",
+    "daily_summary": {
+      "theme": "복합 위기 시대의 대항 헤게모니와 자율적 커먼즈 인프라",
+      "overview": "오늘 수집된 연구들은 자본과 국가의 이분법을 넘어, 자립적인 1인 가구와 개인이 고립되지 않고 공동의 자원을 호혜적으로 관리하는 커머닝(Commoning) 실천에 주목합니다.",
+      "key_takeaways": [
+        "사유화(Enclosure)의 극복: 자원과 공간을 소유의 대상이 아닌 공동의 돌봄 대상으로 전환하는 커머닝 규약이 긴요합니다.",
+        "독립적 개인의 자치 연대: 지나친 집단주의적 강요 없이도 상호 신뢰와 규칙을 지켜낼 수 있는 자율 거버넌스 프로토콜이 요청됩니다.",
+        "비시장적 대안 인프라의 필요성: 시장에 종속되지 않고 최소한의 생활 안전을 영위할 수 있는 공통재(Commons)의 확충이 핵심 과제입니다."
+      ]
+    },
+    "items": [
+      {
+        "id": "https://doi.org/10.5334/ijc.1673",
+        "title_kr": "Between Rights and Reality: Gendered Access and Cooperative Governance in the Gayo Coffee Commons, Indonesia",
+        "original_title": "Between Rights and Reality: Gendered Access and Cooperative Governance in the Gayo Coffee Commons, Indonesia",
+        "source": "International Journal of the Commons (IJC)",
+        "authors": "Vellayati Hajad, Ikhsan Ikhsan, Nabila Hilmy Zhafira",
+        "published": "2026-11-26",
+        "url": "https://doi.org/10.5334/ijc.1673",
+        "category": "커먼즈·공유재",
+        "relevance_score": 9.8,
+        "summary_points": [
+          "연구 배경 및 문제의식: 'International Journal of the Commons (IJC)'에 실린 Vellayati Hajad, Ikhsan Ikhsan, Nabila Hilmy Zhafira의 본 연구는 시장 자본의 사유화(enclosure)와 관료적 통제 사이에서 공동체가 자원을 자치적으로 관리하는 커먼즈·피어 생산 거버넌스의 지속가능성을 핵심 문제로 제기하며 이론적·실천적 대안을 탐구합니다.",
+          "핵심 분석 및 이론적 발견: 비교 정책·제도 분석을 통해 단일 기술 규제의 한계를 넘어, 분산된 이해관계자 간의 상호운용성과 공공적 책임성을 동시에 확보하는 거버넌스 설계 원리를 도출했습니다.",
+          "트윈 연구 시사점: 사유화와 중앙 관료제를 넘어 지역·공동체가 지식과 데이터를 자치적으로 관리하는 '관계적 커먼즈 프로토콜' 설계에 직접적인 이론적 토대를 제공합니다."
+        ],
+        "keywords": [
+          "#커먼즈",
+          "#커머닝",
+          "#소농협동"
+        ]
+      },
+      {
+        "id": "https://doi.org/10.5334/ijc.1771",
+        "title_kr": "Reconceptualising the Global Ecological Commons: Global Access, Scarcity, Earth System Functioning, and Global Justice",
+        "original_title": "Reconceptualising the Global Ecological Commons: Global Access, Scarcity, Earth System Functioning, and Global Justice",
+        "source": "International Journal of the Commons (IJC)",
+        "authors": "R. DeBono",
+        "published": "2026-11-26",
+        "url": "https://doi.org/10.5334/ijc.1771",
+        "category": "커먼즈·공유재",
+        "relevance_score": 9.8,
+        "summary_points": [
+          "연구 배경 및 문제의식: 'International Journal of the Commons (IJC)'에 실린 R. DeBono의 본 연구는 시장 자본의 사유화(enclosure)와 관료적 통제 사이에서 공동체가 자원을 자치적으로 관리하는 커먼즈·피어 생산 거버넌스의 지속가능성을 핵심 문제로 제기하며 이론적·실천적 대안을 탐구합니다.",
+          "핵심 분석 및 이론적 발견: 자연환경에 대한 감각적·미적 경험과 과학적 탐구가 분리되지 않고 상호 보완될 때, 인간과 생태계 간의 지속가능한 돌봄 관계가 형성된다는 관계론적 분석 틀을 제시했습니다.",
+          "트윈 연구 시사점: 사유화와 중앙 관료제를 넘어 지역·공동체가 지식과 데이터를 자치적으로 관리하는 '관계적 커먼즈 프로토콜' 설계에 직접적인 이론적 토대를 제공합니다."
+        ],
+        "keywords": [
+          "#커먼즈",
+          "#커머닝",
+          "#책임있는AI"
+        ]
+      },
+      {
+        "id": "https://doi.org/10.5334/ijc.1599",
+        "title_kr": "Commons Archives, Political Subjectivity and Participation in Urban Networks",
+        "original_title": "Commons Archives, Political Subjectivity and Participation in Urban Networks",
+        "source": "International Journal of the Commons (IJC)",
+        "authors": "Dimitris Pettas, Mina Dragouni, Martha Michailidou",
+        "published": "2026-11-26",
+        "url": "https://doi.org/10.5334/ijc.1599",
+        "category": "커먼즈·공유재",
+        "relevance_score": 9.4,
+        "summary_points": [
+          "연구 배경 및 문제의식: 'International Journal of the Commons (IJC)'에 실린 Dimitris Pettas, Mina Dragouni, Martha Michailidou의 본 연구는 시장 자본의 사유화(enclosure)와 관료적 통제 사이에서 공동체가 자원을 자치적으로 관리하는 커먼즈·피어 생산 거버넌스의 지속가능성을 핵심 문제로 제기하며 이론적·실천적 대안을 탐구합니다.",
+          "핵심 분석 및 이론적 발견: 문헌 검토와 실증·사례 분석을 결합하여 기존 틀의 맹점을 짚고 대안적 거버넌스와 실천 경로를 체계화했습니다.",
+          "트윈 연구 시사점: 사유화와 중앙 관료제를 넘어 지역·공동체가 지식과 데이터를 자치적으로 관리하는 '관계적 커먼즈 프로토콜' 설계에 직접적인 이론적 토대를 제공합니다."
+        ],
+        "keywords": [
+          "#커먼즈",
+          "#커머닝",
+          "#책임있는AI",
+          "#도시공간"
+        ]
+      },
+      {
+        "id": "https://doi.org/10.5334/ijc.1725",
+        "title_kr": "Gender Struggles in Commons Governance: Access, Control, and Participation in Informal Charcoal Trade in Malawi",
+        "original_title": "Gender Struggles in Commons Governance: Access, Control, and Participation in Informal Charcoal Trade in Malawi",
+        "source": "International Journal of the Commons (IJC)",
+        "authors": "Lenia Chifuniro Kanyerere, Jessica Jemima Kampanje-Phiri, Loveness Msofi Mgalamadzi",
+        "published": "2026-11-26",
+        "url": "https://doi.org/10.5334/ijc.1725",
+        "category": "커먼즈·공유재",
+        "relevance_score": 9.4,
+        "summary_points": [
+          "연구 배경 및 문제의식: 'International Journal of the Commons (IJC)'에 실린 Lenia Chifuniro Kanyerere, Jessica Jemima Kampanje-Phiri, Loveness Msofi Mgalamadzi의 본 연구는 시장 자본의 사유화(enclosure)와 관료적 통제 사이에서 공동체가 자원을 자치적으로 관리하는 커먼즈·피어 생산 거버넌스의 지속가능성을 핵심 문제로 제기하며 이론적·실천적 대안을 탐구합니다.",
+          "핵심 분석 및 이론적 발견: 비교 정책·제도 분석을 통해 단일 기술 규제의 한계를 넘어, 분산된 이해관계자 간의 상호운용성과 공공적 책임성을 동시에 확보하는 거버넌스 설계 원리를 도출했습니다.",
+          "트윈 연구 시사점: 사유화와 중앙 관료제를 넘어 지역·공동체가 지식과 데이터를 자치적으로 관리하는 '관계적 커먼즈 프로토콜' 설계에 직접적인 이론적 토대를 제공합니다."
+        ],
+        "keywords": [
+          "#커먼즈",
+          "#커머닝",
+          "#책임있는AI"
+        ]
+      },
+      {
+        "id": "https://doi.org/10.5334/ijc.1728",
+        "title_kr": "Governing Mass Harm in the Space Commons: the Role of Collective Redress",
+        "original_title": "Governing Mass Harm in the Space Commons: the Role of Collective Redress",
+        "source": "International Journal of the Commons (IJC)",
+        "authors": "Wenkai Liu, Yidi Ma",
+        "published": "2026-11-26",
+        "url": "https://doi.org/10.5334/ijc.1728",
+        "category": "커먼즈·공유재",
+        "relevance_score": 9.4,
+        "summary_points": [
+          "연구 배경 및 문제의식: 'International Journal of the Commons (IJC)'에 실린 Wenkai Liu, Yidi Ma의 본 연구는 시장 자본의 사유화(enclosure)와 관료적 통제 사이에서 공동체가 자원을 자치적으로 관리하는 커먼즈·피어 생산 거버넌스의 지속가능성을 핵심 문제로 제기하며 이론적·실천적 대안을 탐구합니다.",
+          "핵심 분석 및 이론적 발견: 문헌 검토와 실증·사례 분석을 결합하여 기존 틀의 맹점을 짚고 대안적 거버넌스와 실천 경로를 체계화했습니다.",
+          "트윈 연구 시사점: 사유화와 중앙 관료제를 넘어 지역·공동체가 지식과 데이터를 자치적으로 관리하는 '관계적 커먼즈 프로토콜' 설계에 직접적인 이론적 토대를 제공합니다."
+        ],
+        "keywords": [
+          "#커먼즈",
+          "#커머닝",
+          "#책임있는AI"
+        ]
+      },
+      {
+        "id": "https://doi.org/10.1111/anti.70250",
+        "title_kr": "Return to the Mariaquã: Nusoken and the Reinvigoration of Indigenous Social Reproduction in Amazonia",
+        "original_title": "Return to the Mariaquã: Nusoken and the Reinvigoration of Indigenous Social Reproduction in Amazonia",
+        "source": "Antipode: A Radical Journal of Geography",
+        "authors": "James A. Fraser, Christian Sateré‐Mawé, Maurício Torres",
+        "published": "2026-11-25",
+        "url": "https://doi.org/10.1111/anti.70250",
+        "category": "공간사회·도시커먼즈",
+        "relevance_score": 8.9,
+        "summary_points": [
+          "연구 배경 및 문제의식: 'Antipode: A Radical Journal of Geography'에 실린 James A. Fraser, Christian Sateré‐Mawé, Maurício Torres의 본 연구는 식민주의적 개발 논리와 도구적 자연관이 해체해 온 자연환경의 고유한 의미와, 인간-자연의 상호의존성을 복원하는 비판적 생태 의식의 형성 과정을 핵심 문제로 제기하며 이론적·실천적 대안을 탐구합니다.",
+          "핵심 분석 및 이론적 발견: 문헌 검토와 실증·사례 분석을 결합하여 기존 틀의 맹점을 짚고 대안적 거버넌스와 실천 경로를 체계화했습니다.",
+          "트윈 연구 시사점: 정량적 공간 데이터와 주민의 생활 감각을 결합해 배제 없는 도시 녹지·공유 공간 및 접근성 높은 커먼즈 거점을 설계하는 데 실질적 시사점을 줍니다."
+        ],
+        "keywords": [
+          "#공간사회",
+          "#영토커먼즈",
+          "#대지윤리"
+        ]
+      },
+      {
+        "id": "https://doi.org/10.61838/jhrlp.352",
+        "title_kr": "Environmental Justice Influenced by the Performance of International Non-State Actors",
+        "original_title": "Environmental Justice Influenced by the Performance of International Non-State Actors",
+        "source": "Journal of Historical Research Law and Policy",
+        "authors": "Akram Gharaei, Alireaza Jahangiri, Ali Pourghassab Amiri",
+        "published": "2027-01-01",
+        "url": "https://doi.org/10.61838/jhrlp.352",
+        "category": "재난안전·공공인프라",
+        "relevance_score": 8.9,
+        "summary_points": [
+          "연구 배경 및 문제의식: 'Journal of Historical Research Law and Policy'에 실린 Akram Gharaei, Alireaza Jahangiri, Ali Pourghassab Amiri의 본 연구는 자연과 여성을 동시에 대상화해 온 가부장적·개발주의적 시선에 맞서, 나무·몸·퍼포먼스를 매개로 전개되어 온 생태여성주의(에코페미니즘) 실천의 역사적 계보를 핵심 문제로 제기하며 이론적·실천적 대안을 탐구합니다.",
+          "핵심 분석 및 이론적 발견: 나무와 신체가 만나는 생태 퍼포먼스 예술의 사료를 재구성하여, 에코페미니즘이 단순한 환경 담론을 넘어 몸의 감각과 비인간 생명과의 연대를 통해 추출주의에 저항해 온 실천적 미학임을 보여주었습니다.",
+          "트윈 연구 시사점: 재난·기후 위기 대응 기술이 현장의 취약계층과 사생활 보호 원칙을 해치지 않으면서 실질적 안전망으로 작동하기 위한 공공 인프라 설계 기준을 제시합니다."
+        ],
+        "keywords": [
+          "#재난안전",
+          "#책임있는AI",
+          "#동시대학술"
+        ]
+      },
+      {
+        "id": "https://doi.org/10.5829/ije.2027.40.06c.01",
+        "title_kr": "Hybrid Deep Learning Framework for Climate-Resilient Electricity Forecasting: A Multi-Sectoral Analysis Under Representative Concentration Pathway Scenarios",
+        "original_title": "Hybrid Deep Learning Framework for Climate-Resilient Electricity Forecasting: A Multi-Sectoral Analysis Under Representative Concentration Pathway Scenarios",
+        "source": "International Journal of Engineering",
+        "authors": "F. Karimidehkordi, Reza Samizadeh",
+        "published": "2027-01-01",
+        "url": "https://doi.org/10.5829/ije.2027.40.06c.01",
+        "category": "재난안전·공공인프라",
+        "relevance_score": 8.9,
+        "summary_points": [
+          "연구 배경 및 문제의식: 'International Journal of Engineering'에 실린 F. Karimidehkordi, Reza Samizadeh의 본 연구는 기존 학술·제도적 패러다임이 드러내는 구조적 한계와 비판적 전환의 필요성을 핵심 문제로 제기하며 이론적·실천적 대안을 탐구합니다.",
+          "핵심 분석 및 이론적 발견: 문헌 검토와 실증·사례 분석을 결합하여 기존 틀의 맹점을 짚고 대안적 거버넌스와 실천 경로를 체계화했습니다.",
+          "트윈 연구 시사점: 재난·기후 위기 대응 기술이 현장의 취약계층과 사생활 보호 원칙을 해치지 않으면서 실질적 안전망으로 작동하기 위한 공공 인프라 설계 기준을 제시합니다."
+        ],
+        "keywords": [
+          "#재난안전",
+          "#책임있는AI",
+          "#동시대학술"
+        ]
+      }
+    ]
+  },
+  {
     "id": "digest-20261127-morning",
     "date": "2026-11-27",
     "edition": "morning",
