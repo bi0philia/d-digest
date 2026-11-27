@@ -1,5 +1,193 @@
 [
   {
+    "id": "digest-20261127-morning",
+    "date": "2026-11-27",
+    "edition": "morning",
+    "edition_label": "오전",
+    "timestamp": "2026-11-27 09:52",
+    "daily_summary": {
+      "theme": "복합 위기 시대의 대항 헤게모니와 자율적 커먼즈 인프라",
+      "overview": "오늘 수집된 연구들은 자본과 국가의 이분법을 넘어, 자립적인 1인 가구와 개인이 고립되지 않고 공동의 자원을 호혜적으로 관리하는 커머닝(Commoning) 실천에 주목합니다.",
+      "key_takeaways": [
+        "사유화(Enclosure)의 극복: 자원과 공간을 소유의 대상이 아닌 공동의 돌봄 대상으로 전환하는 커머닝 규약이 긴요합니다.",
+        "독립적 개인의 자치 연대: 지나친 집단주의적 강요 없이도 상호 신뢰와 규칙을 지켜낼 수 있는 자율 거버넌스 프로토콜이 요청됩니다.",
+        "비시장적 대안 인프라의 필요성: 시장에 종속되지 않고 최소한의 생활 안전을 영위할 수 있는 공통재(Commons)의 확충이 핵심 과제입니다."
+      ]
+    },
+    "items": [
+      {
+        "id": "https://doi.org/10.5334/ijc.1727",
+        "title_kr": "Sustaining Open Source as a Digital Commons: Evidence from the Apache Software Foundation (ASF) Incubator Program",
+        "original_title": "Sustaining Open Source as a Digital Commons: Evidence from the Apache Software Foundation (ASF) Incubator Program",
+        "source": "International Journal of the Commons (IJC)",
+        "authors": "Lin Zhou, Charles M. Schweik, Curtis J. Atkisson",
+        "published": "2026-11-18",
+        "url": "https://doi.org/10.5334/ijc.1727",
+        "category": "커먼즈·공유재",
+        "relevance_score": 9.8,
+        "summary_points": [
+          "연구 배경 및 문제의식: 'International Journal of the Commons (IJC)'에 실린 Lin Zhou, Charles M. Schweik, Curtis J. Atkisson의 본 연구는 시장 자본의 사유화(enclosure)와 관료적 통제 사이에서 공동체가 자원을 자치적으로 관리하는 커먼즈·피어 생산 거버넌스의 지속가능성을 핵심 문제로 제기하며 이론적·실천적 대안을 탐구합니다.",
+          "핵심 분석 및 이론적 발견: 문헌 검토와 실증·사례 분석을 결합하여 기존 틀의 맹점을 짚고 대안적 거버넌스와 실천 경로를 체계화했습니다.",
+          "트윈 연구 시사점: 사유화와 중앙 관료제를 넘어 지역·공동체가 지식과 데이터를 자치적으로 관리하는 '관계적 커먼즈 프로토콜' 설계에 직접적인 이론적 토대를 제공합니다."
+        ],
+        "keywords": [
+          "#커먼즈",
+          "#커머닝",
+          "#책임있는AI"
+        ]
+      },
+      {
+        "id": "https://doi.org/10.5334/ijc.1598",
+        "title_kr": "Contested Urban Commons: Lived Realities From Cape Town, South Africa",
+        "original_title": "Contested Urban Commons: Lived Realities From Cape Town, South Africa",
+        "source": "International Journal of the Commons (IJC)",
+        "authors": "Mafaniso Hara, Frank Matose, Zina Jacobs",
+        "published": "2026-10-23",
+        "url": "https://doi.org/10.5334/ijc.1598",
+        "category": "커먼즈·공유재",
+        "relevance_score": 9.8,
+        "summary_points": [
+          "연구 배경 및 문제의식: 'International Journal of the Commons (IJC)'에 실린 Mafaniso Hara, Frank Matose, Zina Jacobs의 본 연구는 시장 자본의 사유화(enclosure)와 관료적 통제 사이에서 공동체가 자원을 자치적으로 관리하는 커먼즈·피어 생산 거버넌스의 지속가능성을 핵심 문제로 제기하며 이론적·실천적 대안을 탐구합니다.",
+          "핵심 분석 및 이론적 발견: 문헌 검토와 실증·사례 분석을 결합하여 기존 틀의 맹점을 짚고 대안적 거버넌스와 실천 경로를 체계화했습니다.",
+          "트윈 연구 시사점: 사유화와 중앙 관료제를 넘어 지역·공동체가 지식과 데이터를 자치적으로 관리하는 '관계적 커먼즈 프로토콜' 설계에 직접적인 이론적 토대를 제공합니다."
+        ],
+        "keywords": [
+          "#커먼즈",
+          "#커머닝",
+          "#대지윤리",
+          "#도시공간"
+        ]
+      },
+      {
+        "id": "https://doi.org/10.5334/ijc.1723",
+        "title_kr": "The Urban Commons as a Shared Space of One’s Own: Appropriation, Commoning and the Welfare State",
+        "original_title": "The Urban Commons as a Shared Space of One’s Own: Appropriation, Commoning and the Welfare State",
+        "source": "International Journal of the Commons (IJC)",
+        "authors": "Karin Grundström",
+        "published": "2026-10-09",
+        "url": "https://doi.org/10.5334/ijc.1723",
+        "category": "커먼즈·공유재",
+        "relevance_score": 9.8,
+        "summary_points": [
+          "연구 배경 및 문제의식: 'International Journal of the Commons (IJC)'에 실린 Karin Grundström의 본 연구는 선형적 자원 소비에 기반한 근대 도시 인프라의 생태적 한계를 넘어, 정밀 공간 데이터와 주민 참여를 결합한 재생적 도시 녹지·대사 모델의 시급성을 핵심 문제로 제기하며 이론적·실천적 대안을 탐구합니다.",
+          "핵심 분석 및 이론적 발견: LiDAR 기반 정밀 식생 데이터와 주민 주도 참여형 매핑을 결합함으로써, 객관적 물리 지표만으로는 포착할 수 없는 도시 녹지의 체감 질과 공간 형평성 격차를 드러냈습니다.",
+          "트윈 연구 시사점: 사유화와 중앙 관료제를 넘어 지역·공동체가 지식과 데이터를 자치적으로 관리하는 '관계적 커먼즈 프로토콜' 설계에 직접적인 이론적 토대를 제공합니다."
+        ],
+        "keywords": [
+          "#커먼즈",
+          "#커머닝",
+          "#돌봄소통",
+          "#도시공간"
+        ]
+      },
+      {
+        "id": "https://doi.org/10.1080/03066150.2026.2753132",
+        "title_kr": "Can agroecology transcend class contradictions? A case study from Malawi",
+        "original_title": "Can agroecology transcend class contradictions? A case study from Malawi",
+        "source": "The Journal of Peasant Studies",
+        "authors": "Sidney Madsen, Esther Lupafya, David Banda",
+        "published": "2026-11-13",
+        "url": "https://doi.org/10.1080/03066150.2026.2753132",
+        "category": "농생태·식량주권",
+        "relevance_score": 9.8,
+        "summary_points": [
+          "연구 배경 및 문제의식: 'The Journal of Peasant Studies'에 실린 Sidney Madsen, Esther Lupafya, David Banda의 본 연구는 화학 투입과 거대 자본 중심의 산업 농업이 초래한 토양 황폐화와 소농 종속 문제를 극복하고, 지역 순환형 농생태·식량주권 체계를 구축해야 할 과제를 핵심 문제로 제기하며 이론적·실천적 대안을 탐구합니다.",
+          "핵심 분석 및 이론적 발견: 문헌 검토와 실증·사례 분석을 결합하여 기존 틀의 맹점을 짚고 대안적 거버넌스와 실천 경로를 체계화했습니다.",
+          "트윈 연구 시사점: 흙·나무·생태계를 추출 대상이 아닌 공생의 주체로 바라보는 농생태학적 관점을 심화시키며, 이론과 현장 실천(유기순환·생태복원)을 잇는 사유의 나침반이 됩니다."
+        ],
+        "keywords": [
+          "#농생태",
+          "#소농협동",
+          "#동시대학술"
+        ]
+      },
+      {
+        "id": "https://doi.org/10.5334/ijc.1674",
+        "title_kr": "The Norwegian Energy Commons: Re-Thinking Dynamics Between the State, the Market and Civil Society",
+        "original_title": "The Norwegian Energy Commons: Re-Thinking Dynamics Between the State, the Market and Civil Society",
+        "source": "International Journal of the Commons (IJC)",
+        "authors": "Vegard Solhjem Knutsen",
+        "published": "2026-10-01",
+        "url": "https://doi.org/10.5334/ijc.1674",
+        "category": "커먼즈·공유재",
+        "relevance_score": 9.4,
+        "summary_points": [
+          "연구 배경 및 문제의식: 'International Journal of the Commons (IJC)'에 실린 Vegard Solhjem Knutsen의 본 연구는 시장 자본의 사유화(enclosure)와 관료적 통제 사이에서 공동체가 자원을 자치적으로 관리하는 커먼즈·피어 생산 거버넌스의 지속가능성을 핵심 문제로 제기하며 이론적·실천적 대안을 탐구합니다.",
+          "핵심 분석 및 이론적 발견: 비교 정책·제도 분석을 통해 단일 기술 규제의 한계를 넘어, 분산된 이해관계자 간의 상호운용성과 공공적 책임성을 동시에 확보하는 거버넌스 설계 원리를 도출했습니다.",
+          "트윈 연구 시사점: 사유화와 중앙 관료제를 넘어 지역·공동체가 지식과 데이터를 자치적으로 관리하는 '관계적 커먼즈 프로토콜' 설계에 직접적인 이론적 토대를 제공합니다."
+        ],
+        "keywords": [
+          "#커먼즈",
+          "#커머닝",
+          "#동시대학술"
+        ]
+      },
+      {
+        "id": "https://doi.org/10.5334/ijc.1575",
+        "title_kr": "Interlinking Biodiversity Prioritization and Commons Recognition: Insights from a New Institutional Political Ecology Perspective (NIPE)",
+        "original_title": "Interlinking Biodiversity Prioritization and Commons Recognition: Insights from a New Institutional Political Ecology Perspective (NIPE)",
+        "source": "International Journal of the Commons (IJC)",
+        "authors": "Tobias Haller",
+        "published": "2026-09-11",
+        "url": "https://doi.org/10.5334/ijc.1575",
+        "category": "커먼즈·공유재",
+        "relevance_score": 9.4,
+        "summary_points": [
+          "연구 배경 및 문제의식: 'International Journal of the Commons (IJC)'에 실린 Tobias Haller의 본 연구는 시장 자본의 사유화(enclosure)와 관료적 통제 사이에서 공동체가 자원을 자치적으로 관리하는 커먼즈·피어 생산 거버넌스의 지속가능성을 핵심 문제로 제기하며 이론적·실천적 대안을 탐구합니다.",
+          "핵심 분석 및 이론적 발견: 자연환경에 대한 감각적·미적 경험과 과학적 탐구가 분리되지 않고 상호 보완될 때, 인간과 생태계 간의 지속가능한 돌봄 관계가 형성된다는 관계론적 분석 틀을 제시했습니다.",
+          "트윈 연구 시사점: 사유화와 중앙 관료제를 넘어 지역·공동체가 지식과 데이터를 자치적으로 관리하는 '관계적 커먼즈 프로토콜' 설계에 직접적인 이론적 토대를 제공합니다."
+        ],
+        "keywords": [
+          "#커먼즈",
+          "#커머닝",
+          "#책임있는AI",
+          "#대지윤리"
+        ]
+      },
+      {
+        "id": "https://doi.org/10.5566/ias.4043",
+        "title_kr": "Assessment of Elderly-Oriented Spatial Visual Quality in Pocket Parks: A New Method Based on Panoramic Semantic Segmentation",
+        "original_title": "Assessment of Elderly-Oriented Spatial Visual Quality in Pocket Parks: A New Method Based on Panoramic Semantic Segmentation",
+        "source": "Image Analysis & Stereology",
+        "authors": "Shengzhen Wu, Jingru Chen, Junjie Song",
+        "published": "2026-11-25",
+        "url": "https://doi.org/10.5566/ias.4043",
+        "category": "농생태·식량주권",
+        "relevance_score": 8.9,
+        "summary_points": [
+          "연구 배경 및 문제의식: 'Image Analysis & Stereology'에 실린 Shengzhen Wu, Jingru Chen, Junjie Song의 본 연구는 종교적·제도적 감시에서 디지털 데이터 감시로 이어지는 '가시성(visibility)'의 역사와, 상시적 감시 체계가 인간의 번영(human flourishing)과 자율성에 미치는 윤리적 긴장을 핵심 문제로 제기하며 이론적·실천적 대안을 탐구합니다.",
+          "핵심 분석 및 이론적 발견: 신적 시선에서 디지털 알고리즘 감시로 이어지는 가시성의 역사적 변천을 추적하며, 감시를 단순한 프라이버시 침해가 아니라 인간의 존엄·신뢰·번영 조건을 재편하는 사회문화적 구조로 규명했습니다.",
+          "트윈 연구 시사점: 흙·나무·생태계를 추출 대상이 아닌 공생의 주체로 바라보는 농생태학적 관점을 심화시키며, 이론과 현장 실천(유기순환·생태복원)을 잇는 사유의 나침반이 됩니다."
+        ],
+        "keywords": [
+          "#농생태",
+          "#책임있는AI",
+          "#도시공간"
+        ]
+      },
+      {
+        "id": "https://doi.org/10.1038/s43247-026-04246-9",
+        "title_kr": "Chronobiology reveals the hidden temporal organization of European beech forest phenology",
+        "original_title": "Chronobiology reveals the hidden temporal organization of European beech forest phenology",
+        "source": "Communications Earth & Environment",
+        "authors": "Sofia Bajocco, Carlo Ricotta, Simone Bregaglio",
+        "published": "2026-11-25",
+        "url": "https://doi.org/10.1038/s43247-026-04246-9",
+        "category": "커먼즈·공유재",
+        "relevance_score": 8.9,
+        "summary_points": [
+          "연구 배경 및 문제의식: 'Communications Earth & Environment'에 실린 Sofia Bajocco, Carlo Ricotta, Simone Bregaglio의 본 연구는 기존 학술·제도적 패러다임이 드러내는 구조적 한계와 비판적 전환의 필요성을 핵심 문제로 제기하며 이론적·실천적 대안을 탐구합니다.",
+          "핵심 분석 및 이론적 발견: 문헌 검토와 실증·사례 분석을 결합하여 기존 틀의 맹점을 짚고 대안적 거버넌스와 실천 경로를 체계화했습니다.",
+          "트윈 연구 시사점: 사유화와 중앙 관료제를 넘어 지역·공동체가 지식과 데이터를 자치적으로 관리하는 '관계적 커먼즈 프로토콜' 설계에 직접적인 이론적 토대를 제공합니다."
+        ],
+        "keywords": [
+          "#커먼즈",
+          "#동시대학술"
+        ]
+      }
+    ]
+  },
+  {
     "id": "digest-20261126-afternoon",
     "date": "2026-11-26",
     "edition": "afternoon",
