@@ -1,26 +1,26 @@
 {
-  "updated_at": "2026-11-27 22:45",
-  "total_digests": 58,
-  "total_papers_analyzed": 465,
+  "updated_at": "2026-11-28 09:39",
+  "total_digests": 59,
+  "total_papers_analyzed": 473,
   "total_gurus": 39,
   "total_periodicals": 50,
   "total_tracked_keywords": 20,
   "category_distribution": [
     {
       "category": "농생태·식량주권",
-      "count": 122
+      "count": 125
     },
     {
       "category": "공간사회·도시커먼즈",
       "count": 88
     },
     {
-      "category": "재난안전·공공인프라",
+      "category": "커먼즈·공유재",
       "count": 77
     },
     {
-      "category": "커먼즈·공유재",
-      "count": 72
+      "category": "재난안전·공공인프라",
+      "count": 77
     },
     {
       "category": "과학기술학·STS",
@@ -38,35 +38,35 @@
   "top_keywords": [
     {
       "keyword": "#동시대학술",
-      "count": 219
+      "count": 221
     },
     {
       "keyword": "#책임있는AI",
-      "count": 139
+      "count": 144
     },
     {
       "keyword": "#농생태",
-      "count": 122
+      "count": 125
+    },
+    {
+      "keyword": "#커머닝",
+      "count": 90
     },
     {
       "keyword": "#도시공간",
-      "count": 89
+      "count": 90
     },
     {
       "keyword": "#공간사회",
       "count": 88
     },
     {
-      "keyword": "#커머닝",
-      "count": 85
+      "keyword": "#커먼즈",
+      "count": 77
     },
     {
       "keyword": "#재난안전",
       "count": 77
-    },
-    {
-      "keyword": "#커먼즈",
-      "count": 72
     },
     {
       "keyword": "#과학기술학",
@@ -74,7 +74,7 @@
     },
     {
       "keyword": "#대지윤리",
-      "count": 43
+      "count": 44
     },
     {
       "keyword": "#시빅HCI",
@@ -86,7 +86,7 @@
     },
     {
       "keyword": "#소농협동",
-      "count": 19
+      "count": 22
     },
     {
       "keyword": "#돌봄소통",
